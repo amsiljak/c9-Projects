@@ -1,0 +1,101 @@
+{
+    "id": 7162,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR10, zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1303,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\n\nprintf (\"Posljednja rijec: '%s'\", PosljednjaRijec(\"Danas je divan dan!\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Posljednja rijec: 'dan!'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1304,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "printf(\"'%s'\", PosljednjaRijec(\"    Da li  je ovo  tacno?   \"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'tacno?   ' "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1312,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char* s=PosljednjaRijec(\" Proba stringa\");\nprintf(\"'%s'\", s);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'stringa'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1311,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\n\nprintf(\"%s\", PosljednjaRijec(\"troll\"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "troll"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

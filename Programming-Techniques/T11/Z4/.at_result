@@ -1,0 +1,246 @@
+{
+    "buildhost_description": {
+        "id": "lab002c18",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In constructor ‘Liga::Liga(int)’:\nmain.cpp:66:8: warning: ‘Liga::timovi’ will be initialized after [-Wreorder]\n  Tim **timovi;\n        ^~~~~~\nmain.cpp:65:12: warning:   ‘const int Liga::max_br_timova’ [-Wreorder]\n  const int max_br_timova;\n            ^~~~~~~~~~~~~\nmain.cpp:68:11: warning:   when initialized here [-Wreorder]\n  explicit Liga(int velicina_lige):timovi(new Tim*[velicina_lige]),max_br_timova(velicina_lige),broj_timova(0){}\n           ^~~~\nmain.cpp:65:12: warning: ‘Liga::max_br_timova’ will be initialized after [-Wreorder]\n  const int max_br_timova;\n            ^~~~~~~~~~~~~\nmain.cpp:64:6: warning:   ‘int Liga::broj_timova’ [-Wreorder]\n  int broj_timova;\n      ^~~~~~~~~~~\nmain.cpp:68:11: warning:   when initialized here [-Wreorder]\n  explicit Liga(int velicina_lige):timovi(new Tim*[velicina_lige]),max_br_timova(velicina_lige),broj_timova(0){}\n           ^~~~\nmain.cpp: In member function ‘void Liga::RegistrirajUtakmicu(const char*, const char*, int, int)’:\nmain.cpp:177:16: warning: ‘indeks2’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n  timovi[indeks2]->Tim::ObradiUtakmicu(rezultat_2,rezultat_1);\n                ^\nmain.cpp:176:16: warning: ‘indeks1’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n  timovi[indeks1]->Tim::ObradiUtakmicu(rezultat_1,rezultat_2);\n                ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "66",
+                "col": "8",
+                "message": "'Liga::timovi' will be initialized after",
+                "output": "/tmp/buildservice/bs_2638/main.cpp:66:8: warning: ‘Liga::timovi’ will be initialized after [-Wreorder]  Tim **timovi;        ^~~~~~",
+                "code": "Tim **timovi;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "65",
+                "col": "12",
+                "message": "'const int Liga::max_br_timova'",
+                "output": "/tmp/buildservice/bs_2638/main.cpp:65:12: warning:   ‘const int Liga::max_br_timova’ [-Wreorder]  const int max_br_timova;            ^~~~~~~~~~~~~",
+                "code": "const int max_br_timova;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "68",
+                "col": "11",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_2638/main.cpp:68:11: warning:   when initialized here [-Wreorder]  explicit Liga(int velicina_lige):timovi(new Tim*[velicina_lige]),max_br_timova(velicina_lige),broj_timova(0){}           ^~~~",
+                "code": "explicit Liga(int velicina_lige):timovi(new Tim*[velicina_lige]),max_br_timova(velicina_lige),broj_timova(0){}"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "65",
+                "col": "12",
+                "message": "'Liga::max_br_timova' will be initialized after",
+                "output": "/tmp/buildservice/bs_2638/main.cpp:65:12: warning: ‘Liga::max_br_timova’ will be initialized after [-Wreorder]  const int max_br_timova;            ^~~~~~~~~~~~~",
+                "code": "const int max_br_timova;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "64",
+                "col": "6",
+                "message": "'int Liga::broj_timova'",
+                "output": "/tmp/buildservice/bs_2638/main.cpp:64:6: warning:   ‘int Liga::broj_timova’ [-Wreorder]  int broj_timova;      ^~~~~~~~~~~",
+                "code": "int broj_timova;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "68",
+                "col": "11",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_2638/main.cpp:68:11: warning:   when initialized here [-Wreorder]  explicit Liga(int velicina_lige):timovi(new Tim*[velicina_lige]),max_br_timova(velicina_lige),broj_timova(0){}           ^~~~/tmp/buildservice/bs_2638/main.cpp: In member function ‘void Liga::RegistrirajUtakmicu(const char*, const char*, int, int)’:",
+                "code": "explicit Liga(int velicina_lige):timovi(new Tim*[velicina_lige]),max_br_timova(velicina_lige),broj_timova(0){}"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "177",
+                "col": "16",
+                "message": "'indeks2' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_2638/main.cpp:177:16: warning: ‘indeks2’ may be used uninitialized in this function [-Wmaybe-uninitialized]  timovi[indeks2]->Tim::ObradiUtakmicu(rezultat_2,rezultat_1);                ^",
+                "code": "timovi[indeks2]->Tim::ObradiUtakmicu(rezultat_2,rezultat_1);"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "176",
+                "col": "16",
+                "message": "'indeks1' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_2638/main.cpp:176:16: warning: ‘indeks1’ may be used uninitialized in this function [-Wmaybe-uninitialized]  timovi[indeks1]->Tim::ObradiUtakmicu(rezultat_1,rezultat_2);                ^",
+                "code": "timovi[indeks1]->Tim::ObradiUtakmicu(rezultat_1,rezultat_2);"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3709": {
+            "status": 1,
+            "run_result": {
+                "output": "Nesaglasni kapaciteti liga\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3712": {
+            "status": 1,
+            "run_result": {
+                "output": "Nesaglasni kapaciteti liga\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3713": {
+            "status": 1,
+            "run_result": {
+                "output": "Liga popunjena\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3714": {
+            "status": 1,
+            "run_result": {
+                "output": "Tim nije nadjen\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3718": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravan broj golova\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3722": {
+            "status": 1,
+            "run_result": {
+                "output": "Orginalna Liga za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nNakon izmjene kopije: \n\nOrginalna Liga za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               1   0   1   0   1   1   1\nFK Sloboda             1   0   1   0   1   1   1\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3724": {
+            "status": 1,
+            "run_result": {
+                "output": "Orginalna Liga za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nNakon izmjene kopije: \n\nOrginalna Liga za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               1   0   1   0   1   1   1\nFK Sloboda             1   0   1   0   1   1   1\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3726": {
+            "status": 1,
+            "run_result": {
+                "output": "Orginalna Liga za Prvaka: \nNK Zeljeznicar         2   2   0   0   4   0   6\nFK Sloboda             2   1   1   0   2   1   4\nHSK Zrinjski           2   1   1   0   3   2   4\nFK Krupa               2   0   1   1   1   2   1\nFK Radnik Bijeljina    2   0   1   1   1   2   1\nFK Sarajevo            2   0   0   2   1   5   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         2   2   0   0   4   0   6\nFK Sloboda             2   1   1   0   2   1   4\nHSK Zrinjski           2   1   1   0   3   2   4\nFK Krupa               2   0   1   1   1   2   1\nFK Radnik Bijeljina    2   0   1   1   1   2   1\nFK Sarajevo            2   0   0   2   1   5   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3727": {
+            "status": 1,
+            "run_result": {
+                "output": "Djelimicna Liga za Ispadanje: \nNK Siroki Brijeg       1   0   1   0   1   1   1\nNK Vitez               1   0   1   0   1   1   1\n\nOrginalna Liga za Prvaka: \nNK Zeljeznicar         2   2   0   0   4   0   6\nFK Sloboda             2   1   1   0   2   1   4\nHSK Zrinjski           2   1   1   0   3   2   4\nFK Krupa               2   0   1   1   1   2   1\nFK Radnik Bijeljina    2   0   1   1   1   2   1\nFK Sarajevo            2   0   0   2   1   5   0\n\nKopija Lige za Prvaka: \nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           0   0   0   0   0   0   0\nNK Zeljeznicar         0   0   0   0   0   0   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3743": {
+            "status": 1,
+            "run_result": {
+                "output": "Alocirano je: 112 B\nNakon brisanja je ostalo alocirano: 0 B",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3743.cpp: In function ‘void operator delete(void*)’:\nbs_test_3743.cpp:245:63: warning: throw will always call terminate() [-Wterminate]\n   if(adresa && !tekuci) throw std::runtime_error(\"Bad delete!\");\n                                                               ^",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3743.cpp",
+                        "line": "245",
+                        "col": "63",
+                        "message": "throw will always call terminate()",
+                        "output": "/tmp/buildservice/bs_2638/bs_test_3743.cpp:245:63: warning: throw will always call terminate() [-Wterminate]   if(adresa && !tekuci) throw std::runtime_error(\"Bad delete!\");                                                               ^",
+                        "code": "if(adresa && !tekuci) throw std::runtime_error(\"Bad delete!\");"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1559344343
+}

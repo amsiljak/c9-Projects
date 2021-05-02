@@ -1,0 +1,101 @@
+{
+    "id": 5598,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Ispit 6, zadatak 3",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "struct Student niz[] = {\n    {\"A\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"B\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"C\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"D\", \"Student\", 4, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"E\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}}},\n    {\"F\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"G\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"H\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 9}}},\n    {\"I\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"J\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 8}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"K\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"L\", \"Student\", 1, { {\"OR\", 10}}},\n    {\"M\", \"Student\", 1, { {\"Predmet\", 8}}},\n    {\"N\", \"Student\", 4, { {\"Predmet\", 9}, {\"Predmet\", 8}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"O\", \"Student\", 5, { {\"Predmet\", 10}, {\"Predmet\", 10}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"P\", \"Student\", 3, { {\"Predmet\", 8}, {\"Predmet\", 7}, {\"Predmet\", 9}}},\n    {\"Q\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 10}}},\n    {\"R\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 10}}},\n    {\"S\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"T\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 7}, {\"Predmet\", 7}}}\n};\n\ntop_studenti(niz, 20);\nint i;\nfor (i=0; i<10; i++) printf(\"%s \", niz[i].ime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OR\\nH J L M N O P Q R T"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "struct Student niz[] = {\n    {\"A\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"B\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"C\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"D\", \"Student\", 4, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"E\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}}},\n    {\"F\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"G\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"H\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}}},\n    {\"I\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"J\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 8}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"K\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"L\", \"Student\", 1, { {\"neki\", 10}}},\n    {\"M\", \"Student\", 1, { {\"Predmet\", 8}}},\n    {\"N\", \"Student\", 4, { {\"Predmet\", 9}, {\"Predmet\", 8}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"O\", \"Student\", 5, { {\"Predmet\", 10}, {\"Predmet\", 10}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"P\", \"Student\", 3, { {\"Predmet\", 8}, {\"Predmet\", 7}, {\"Predmet\", 9}}},\n    {\"Q\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 10}}},\n    {\"R\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 10}}},\n    {\"S\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 10}, {\"Predmet\", 6}}},\n    {\"T\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 7}, {\"Predmet\", 7}}}\n};\n\ntop_studenti(niz, 20);\nint i;\nfor (i=0; i<10; i++) printf(\"%s \", niz[i].ime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "neki\\nJ L M N O P Q R S T"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "struct Student niz[] = {\n    {\"A\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 9}}},\n    {\"B\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"C\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"D\", \"Student\", 4, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"E\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}}},\n    {\"F\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"G\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"H\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}}},\n    {\"I\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"J\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 8}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"K\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"L\", \"Student\", 1, { {\"Predmet\", 9}}},\n    {\"M\", \"Student\", 4, { {\"alfa\", 10}, {\"beta\", 9}, {\"gama\", 10}, {\"delta\", 10}}},\n    {\"N\", \"Student\", 4, { {\"Predmet\", 9}, {\"Predmet\", 8}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"O\", \"Student\", 5, { {\"Predmet\", 10}, {\"Predmet\", 10}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"P\", \"Student\", 3, { {\"Predmet\", 8}, {\"Predmet\", 7}, {\"Predmet\", 9}}},\n    {\"Q\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 10}}},\n    {\"R\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 10}}},\n    {\"S\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"T\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 7}, {\"Predmet\", 7}}}\n};\n\ntop_studenti(niz, 20);\nint i;\nfor (i=0; i<10; i++) printf(\"%s \", niz[i].ime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "alfa gama delta\\nA J L M N O P Q R T"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "struct Student niz[] = {\n    {\"A\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"B\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"C\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"D\", \"Student\", 4, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"E\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}}},\n    {\"F\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"G\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"H\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 9}}},\n    {\"I\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"J\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 8}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"K\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"L\", \"Student\", 1, { {\"Najbolji predmet\", 10}}},\n    {\"M\", \"Student\", 1, { {\"Predmet\", 8}}},\n    {\"N\", \"Student\", 4, { {\"Predmet\", 9}, {\"Predmet\", 8}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"O\", \"Student\", 5, { {\"Predmet\", 10}, {\"Predmet\", 10}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}}},\n    {\"P\", \"Student\", 3, { {\"Predmet\", 8}, {\"Predmet\", 7}, {\"Predmet\", 9}}},\n    {\"Q\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 10}}},\n    {\"R\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 10}}},\n    {\"S\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 6}}},\n    {\"T\", \"Student\", 5, { {\"Predmet\", 6}, {\"Predmet\", 6}, {\"Predmet\", 7}, {\"Predmet\", 7}, {\"Predmet\", 7}}}\n};\n\n\/* Ako je manje od 5 elemenata, ostaju svi *\/\ntop_studenti(niz, 5);\n\/* Najbolji nema nijednu desetku, nista ne treba ispisati *\/\nint i;\nfor (i=0; i<5; i++) printf(\"%s \", niz[i].ime);\nprintf(\"\\n\");\n\/* Funkcija ipak treba da radi *\/\ntop_studenti(niz, 20);\nfor (i=0; i<10; i++) printf(\"%s \", niz[i].ime);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "A B C D E\\nNajbolji predmet\\nH J L M N O P Q R T"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "id": 7165,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR10, zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1322,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"        volim      OR      \";\nprintf(\"'%s'\", izbaci_viska_razmake(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'volim OR'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1323,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"   ovo   je neki          test    \";\nprintf(\"'%s'\", izbaci_viska_razmake(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'ovo je neki test'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1324,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"     \"; \/\/ Samo razmaci\nchar tekst2[] = \"\"; \/\/ Prazan string\nchar tekst3[] = \"Zdravo\"; \/\/ Nema razmaka\nprintf(\"'%s' \", izbaci_viska_razmake(tekst));\nprintf(\"'%s' \", izbaci_viska_razmake(tekst2));\nprintf(\"'%s'\", izbaci_viska_razmake(tekst3));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'' '' 'Zdravo'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

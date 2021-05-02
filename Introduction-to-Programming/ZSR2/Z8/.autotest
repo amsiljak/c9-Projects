@@ -1,0 +1,164 @@
+{
+    "id": 5301,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR1, zadatak 8",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 5302,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1993 M"
+            },
+            "expected": [
+                "Unesite godinu rodjenja osobe: Unesite spol osobe (m\/M ili z\/Z): Osoba ima 22 godina\/e\/u, klasificirana je u kategoriju: 'fakultet', musko je."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5303,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1997 m"
+            },
+            "expected": [
+                "Unesite godinu rodjenja osobe: Unesite spol osobe (m\/M ili z\/Z): Osoba ima 18 godina\/e\/u, klasificirana je u kategoriju: 'fakultet', musko je.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5304,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2014 z"
+            },
+            "expected": [
+                "Unesite godinu rodjenja osobe: Unesite spol osobe (m\/M ili z\/Z): Osoba ima 1 godina\/e\/u, klasificirana je u kategoriju: 'prije skole', zensko je.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5305,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2007 z"
+            },
+            "expected": [
+                "Unesite godinu rodjenja osobe: Unesite spol osobe (m\/M ili z\/Z): Osoba ima 8 godina\/e\/u, klasificirana je u kategoriju: 'osnovna skola', zensko je."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5306,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1970 m"
+            },
+            "expected": [
+                "Unesite godinu rodjenja osobe: Unesite spol osobe (m\/M ili z\/Z): Osoba ima 45 godina\/e\/u, klasificirana je u kategoriju: 'ostalo', musko je.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5307,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1995 S"
+            },
+            "expected": [
+                "Unesite godinu rodjenja osobe: Unesite spol osobe (m\/M ili z\/Z): Pogresan unos spola osobe!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5308,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2020"
+            },
+            "expected": [
+                "Unesite godinu rodjenja osobe: Neispravna godina rodjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

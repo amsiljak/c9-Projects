@@ -1,0 +1,7 @@
+/rhome/a/asiljak1/workspace/TP/T12/Z6/main.cpp:108:70: warning: friend declaration ‘std::istream& operator>>(std::istream&, Matrica<TipEl>)’ declares a non-template function [-Wnon-template-friend]
+  friend std::istream &operator >>(std::istream &tok,Matrica<TipEl>mat);
+                                                                      ^
+/rhome/a/asiljak1/workspace/TP/T12/Z6/main.cpp:108:70: note: (if this is not what you intended, make sure the function template has already been declared and add <> after the function name here) 
+/rhome/a/asiljak1/workspace/TP/T12/Z6/main.cpp:110:70: warning: friend declaration ‘std::ostream& operator<<(std::ostream&, Matrica<TipEl>)’ declares a non-template function [-Wnon-template-friend]
+  friend std::ostream &operator <<(std::ostream &tok,Matrica<TipEl>mat);
+                                                                      ^

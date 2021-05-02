@@ -1,0 +1,122 @@
+{
+    "id": 5231,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR1, zadatak 12",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 5232,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "112.435"
+            },
+            "expected": [
+                "Unesite stepene: 112.435 = 112^ 26' 6''\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5233,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0"
+            },
+            "expected": [
+                "Unesite stepene: 0 = 0^ 0' 0''"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5234,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "180.05"
+            },
+            "expected": [
+                "Unesite stepene: 180.05 = 180^ 3' 0''"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5235,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "90"
+            },
+            "expected": [
+                "Unesite stepene: 90 = 90^ 0' 0''\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5236,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "45.5624"
+            },
+            "expected": [
+                "Unesite stepene: 45.5624 = 45^ 33' 44''"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

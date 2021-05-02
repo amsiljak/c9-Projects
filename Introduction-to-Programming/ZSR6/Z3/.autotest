@@ -1,0 +1,101 @@
+{
+    "id": 7050,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR6, zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1215,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0 3 1 5 9"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unos neispravan!\\nUnesite broj elemenata niza: Unesite 3 brojeva: \\n{1.0000, 5.0000, 9.0000}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1216,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 0.0004 1.11119 7 9 4 -5.11 99.997"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite 7 brojeva: \\n{0.0000, 1.1100, 7.0000, 9.0000, 4.0000, -5.1100, 100.0000}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1217,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 12.123 12.127 0.467 5 9.546 9.116 3.51"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite 7 brojeva: \\n{12.1200, 12.1300, 0.4700, 5.0000, 9.5500, 9.1200, 3.5100}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1218,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "9854 1 -0.4499999"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unos neispravan!\\nUnesite broj elemenata niza: Unesite 1 brojeva: \\n{-0.4500}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

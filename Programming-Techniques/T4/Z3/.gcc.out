@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/TP/T4/Z3/main.cpp: In function ‘void IzdvojiKrajnjeRijeci(std::vector<std::__cxx11::basic_string<char> >, std::__cxx11::string&, std::__cxx11::string&)’:
+/rhome/a/asiljak1/workspace/TP/T4/Z3/main.cpp:43:30: warning: self-comparison always evaluates to false [-Wtautological-compare]
+                 else if(znak1<znak1)
+                         ~~~~~^~~~~~

@@ -1,0 +1,97 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘rot13’:\nmain.c:7:14: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]\n   if(*s>='A' && *s<='M' || *s>='a' && *s<='m') {\n      ~~~~~~~~^~~~~~~~~~\nmain.c:10:19: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]\n   else if(*s>='N' && *s<='Z' || *s>='n' && *s<='z') {\n           ~~~~~~~~^~~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "7",
+                "col": "14",
+                "message": "suggest parentheses around '&&' within '||'",
+                "output": "/tmp/buildservice/bs_5421/main.c:7:14: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]   if(*s>='A' && *s<='M' || *s>='a' && *s<='m') {      ~~~~~~~~^~~~~~~~~~",
+                "code": "if(*s>='A' && *s<='M' || *s>='a' && *s<='m') {"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "10",
+                "col": "19",
+                "message": "suggest parentheses around '&&' within '||'",
+                "output": "/tmp/buildservice/bs_5421/main.c:10:19: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]   else if(*s>='N' && *s<='Z' || *s>='n' && *s<='z') {           ~~~~~~~~^~~~~~~~~~",
+                "code": "else if(*s>='N' && *s<='Z' || *s>='n' && *s<='z') {"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "914": {
+            "status": 1,
+            "run_result": {
+                "output": "Zbwr vzr wr zrqiwrqvp Yvab",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "915": {
+            "status": 1,
+            "run_result": {
+                "output": "123123",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "916": {
+            "status": 1,
+            "run_result": {
+                "output": "123123 qnanf wr yvwrc v zntybivg qna\n123123 danas je lijep i maglovit dan",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1698": {
+            "status": 1,
+            "run_result": {
+                "output": "''",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1567979331
+}

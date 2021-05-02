@@ -1,0 +1,7 @@
+/rhome/a/asiljak1/workspace/OR/T4/Z1/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/T4/Z1/main.c:14:11: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+    if(i=0 && (j==a-1 || j==0) || (i==b-1) && (j==0 || j==a-1)) {
+         ~~^~~~~~~~~~~~~~~~~~~
+/rhome/a/asiljak1/workspace/OR/T4/Z1/main.c:14:7: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    if(i=0 && (j==a-1 || j==0) || (i==b-1) && (j==0 || j==a-1)) {
+       ^

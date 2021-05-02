@@ -1,0 +1,15 @@
+==25165== Memcheck, a memory error detector
+==25165== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==25165== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==25165== Command: /rhome/a/asiljak1/workspace/OR/ZSR10/Z10/.runme
+==25165== Parent PID: 25151
+==25165== 
+==25165== 
+==25165== HEAP SUMMARY:
+==25165==     in use at exit: 0 bytes in 0 blocks
+==25165==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==25165== 
+==25165== All heap blocks were freed -- no leaks are possible
+==25165== 
+==25165== For counts of detected and suppressed errors, rerun with: -v
+==25165== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

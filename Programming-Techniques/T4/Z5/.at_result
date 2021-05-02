@@ -1,0 +1,213 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘int main()’:\nmain.cpp:33:15: warning: unused variable ‘m’ [-Wunused-variable]\n         int n,m;\n               ^\nmain.cpp:68:15: warning: unused variable ‘m’ [-Wunused-variable]\n         int n,m;\n               ^\nmain.cpp: In instantiation of ‘std::vector<NekiTip> Presjek(std::vector<NekiTip>, std::vector<NekiTip>) [with NekiTip = float]’:\nmain.cpp:56:25:   required from here\nmain.cpp:14:25: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n                 if(v1[i]==v2[j])\n                    ~~~~~^~~~~\nmain.cpp:19:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n                         if(v1[i]==v3[k]) break;\n                            ~~~~~^~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "33",
+                "col": "15",
+                "message": "unused variable 'm'",
+                "output": "/tmp/buildservice/bs_513/main.cpp:33:15: warning: unused variable ‘m’ [-Wunused-variable]         int n,m;               ^",
+                "code": "int n,m;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "68",
+                "col": "15",
+                "message": "unused variable 'm'",
+                "output": "/tmp/buildservice/bs_513/main.cpp:68:15: warning: unused variable ‘m’ [-Wunused-variable]         int n,m;               ^/tmp/buildservice/bs_513/main.cpp: In instantiation of ‘std::vector<NekiTip> Presjek(std::vector<NekiTip>, std::vector<NekiTip>) [with NekiTip = float]’:/tmp/buildservice/bs_513/main.cpp:56:25:   required from here",
+                "code": "int n,m;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "14",
+                "col": "25",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_513/main.cpp:14:25: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]                 if(v1[i]==v2[j])                    ~~~~~^~~~~",
+                "code": "if(v1[i]==v2[j])"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "19",
+                "col": "33",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_513/main.cpp:19:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]                         if(v1[i]==v3[k]) break;                            ~~~~~^~~~~",
+                "code": "if(v1[i]==v3[k]) break;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3274": {
+            "status": 1,
+            "run_result": {
+                "output": "7 6 4 5 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3275": {
+            "status": 1,
+            "run_result": {
+                "output": "x",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3276": {
+            "status": 1,
+            "run_result": {
+                "output": "1 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3277": {
+            "status": 1,
+            "run_result": {
+                "output": "x",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3278": {
+            "status": 1,
+            "run_result": {
+                "output": "1.2 5.6 7.8 9.123 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3279": {
+            "status": 1,
+            "run_result": {
+                "output": "x",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3280": {
+            "status": 1,
+            "run_result": {
+                "output": "abc abcd ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3281": {
+            "status": 1,
+            "run_result": {
+                "output": "x",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3282": {
+            "status": 1,
+            "run_result": {
+                "output": "arf abd abc abcd ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3283": {
+            "status": 1,
+            "run_result": {
+                "output": "abc d ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3300": {
+            "status": 1,
+            "run_result": {
+                "output": "Test za realne brojeve...\nUnesite broj elemenata prvog vektora: Unesite elemente prvog vektora: Unesite broj elemenata drugog vektora: Unesite elemente drugog vektora: Zajednicki elementi su: 7 6 4 5 \n\nTest za stringove...\nUnesite broj elemenata prvog vektora: Unesite elemente prvog vektora (ENTER nakon svakog unosa): Unesite broj elemenata drugog vektora: Unesite elemente drugog vektora (ENTER nakon svakog unosa): Zajednicki elementi su: \nasd www xy \nstrstr kvekk ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1554222549
+}

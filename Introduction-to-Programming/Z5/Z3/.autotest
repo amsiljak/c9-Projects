@@ -1,0 +1,170 @@
+{
+    "id": 5543,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 5, Zadatak 3",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Primjer iz zadatka *\/\n\/* Prvo probamo sa datotekom kojoj fali jedno slovo *\/\nFILE* rad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"CTGATGAACGGCGGCGGCGGCAGTGA\", rad);\nfclose(rad);\n_main();\n\n\/* Dodamo slovo B *\/\nrad = fopen(\"genetski_kod.txt\", \"a\");\nfputs(\"B\", rad);\nfclose(rad);\n_main();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "CGG\\nPogresan format",
+                "CGGPogresan format"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Jos neki pogresni formati *\/\n\/* Nema nijedna potpuna sekvenca *\/\nFILE* rad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"TG\", rad);\nfclose(rad);\n_main();\n\n\/* Malo slovo a *\/\nrad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"TGATGACGCCGGCGGCGGCAGTGaTGA\", rad);\nfclose(rad);\n_main();\n\n\/* Samo jedna sekvenca *\/\nrad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"TGA\", rad);\nfclose(rad);\n_main();\n\n\/* Prazna datoteka *\/\nrad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"\", rad);\nfclose(rad);\n_main();\n\n\/* Nepostojeca datoteka *\/\nremove(\"genetski_kod.txt\");\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pogresan format\\nPogresan format\\nTGA\\nPogresan format\\nPogresan format",
+                "Pogresan formatPogresan formatTGAPogresan formatPogresan format"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Ponavljanje pojedinacnog slova *\/\nFILE* rad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"AAAAACCCCGGGGGGTCTTCTAAA\", rad);\nfclose(rad);\n_main();\n\nrad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"AAAAACCCCCGGGGGTCTTCT\", rad);\nfclose(rad);\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "GGG\\nTCT",
+                "GGGTCT"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Veliki fajlovi *\/\nint i;\nFILE* rad = fopen(\"genetski_kod.txt\", \"w\");\nfor (i=0; i<10000; i++)\n  fputs(\"CTA\", rad);\nfor (i=0; i<10001; i++)\n  fputs(\"CTC\", rad);\nfor (i=0; i<10002; i++)\n  fputs(\"GCT\", rad);\nfor (i=0; i<10001; i++)\n  fputs(\"GAA\", rad);\n\nfclose(rad);\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "GCT"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Sve je jedno slovo *\/\nint i;\nFILE* rad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"AAA AA\", rad);\nfclose(rad);\n_main();\n\nrad = fopen(\"genetski_kod.txt\", \"a\");\nfputs(\"A\", rad);\nfclose(rad);\n_main();\n\nrad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"AAAAAA\", rad);\nfclose(rad);\n_main();\n\nrad = fopen(\"genetski_kod.txt\", \"a\");\nfor (i=0; i<999; i++)\n    fputs(\"A\", rad);\nfclose(rad);\n_main();\n\nrad = fopen(\"genetski_kod.txt\", \"a\");\nfputs(\"ACG\", rad);\nfclose(rad);\n_main();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pogresan format\\nPogresan format\\nAAA\\nAAA\\nAAA",
+                "Pogresan formatPogresan formatAAAAAAAAA"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT6: Pomaknuto za jedan *\/\nFILE* rad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"TGATGAAGGCGGCGGCGGCAGTGATGA\", rad);\nfclose(rad);\n_main();\n\nrad = fopen(\"genetski_kod.txt\", \"a\");\nfputs(\"TGATGATGA\", rad);\nfclose(rad);\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "GGC\\nTGA",
+                "GGCTGA"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT7: fgetc vraca int a ne char *\/\nFILE* rad = fopen(\"genetski_kod.txt\", \"w\");\nfputs(\"TGTTGT\", rad);\nfclose(rad);\n_main();\n\nrad = fopen(\"genetski_kod.txt\", \"a\");\nfputc(255, rad); \/* Neispravan karakter *\/\nfclose(rad);\n_main();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "TGT\\nPogresan format",
+                "TGTPogresan format"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,164 @@
+{
+    "id": 7163,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR2, zadatak 2",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 5003,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "143"
+            },
+            "expected": [
+                "Unesite n: \\nSuma je: 984984\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5004,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "or"
+            },
+            "expected": [
+                "Unesite n: \\nNije unesen broj!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5005,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "17"
+            },
+            "expected": [
+                "Unesite n: \\nSuma je: 1785"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5006,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Zadaci za samostalan rad su dobra priprema za ispit"
+            },
+            "expected": [
+                "Unesite n: \\nNije unesen broj!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5007,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-12345678"
+            },
+            "expected": [
+                "Unesite n: \\nBroj nije prirodan!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5008,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "500"
+            },
+            "expected": [
+                "Unesite n: \\nSuma je: 41791750"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5009,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "=?)(\/)&(%$\/&%(&\/()(="
+            },
+            "expected": [
+                "Unesite n: \\nNije unesen broj!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

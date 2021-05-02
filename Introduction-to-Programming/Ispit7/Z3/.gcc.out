@@ -1,0 +1,7 @@
+/rhome/a/asiljak1/workspace/OR/Ispit7/Z3/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/Ispit7/Z3/main.c:60:1: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+ for (i=0; i<vel; i++)
+ ^~~
+/rhome/a/asiljak1/workspace/OR/Ispit7/Z3/main.c:62:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  return 0;
+  ^~~~~~

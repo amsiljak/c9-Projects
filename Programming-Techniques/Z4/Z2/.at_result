@@ -1,0 +1,125 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3769": {
+            "status": 6,
+            "run_result": {
+                "output": "",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3770": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3770.cpp: In function ‘int main()’:\nbs_test_3770.cpp:21:12: error: ‘GradjaninBiH’ was not declared in this scope\n            GradjaninBiH g(ime, 1212992170000);\n            ^~~~~~~~~~~~\nbs_test_3770.cpp:22:25: error: ‘g’ was not declared in this scope\n            std::cout << g.DajDanRodjenja() <<\"/\"<<g.DajMjesecRodjenja() <<\"/\" <<g.DajGodinuRodjenja()<<std::endl;\n                         ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "12",
+                        "message": "'GradjaninBiH' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_6066/bs_test_3770.cpp:21:12: error: ‘GradjaninBiH’ was not declared in this scope            GradjaninBiH g(ime, 1212992170000);            ^~~~~~~~~~~~",
+                        "code": "GradjaninBiH g(ime, 1212992170000);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'g' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_6066/bs_test_3770.cpp:22:25: error: ‘g’ was not declared in this scope            std::cout << g.DajDanRodjenja() <<\"/\"<<g.DajMjesecRodjenja() <<\"/\" <<g.DajGodinuRodjenja()<<std::endl;                         ^",
+                        "code": "std::cout << g.DajDanRodjenja() <<\"/\"<<g.DajMjesecRodjenja() <<\"/\" <<g.DajGodinuRodjenja()<<std::endl;"
+                    }
+                ]
+            }
+        },
+        "3771": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3771.cpp: In function ‘int main()’:\nbs_test_3771.cpp:21:12: error: ‘GradjaninBiH’ was not declared in this scope\n            GradjaninBiH g(ime, 12,12,1992, 17, GradjaninBiH::Pol::Musko);\n            ^~~~~~~~~~~~\nbs_test_3771.cpp:22:25: error: ‘g’ was not declared in this scope\n            std::cout << g.DajJMBG() <<std::endl;\n                         ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "12",
+                        "message": "'GradjaninBiH' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_6066/bs_test_3771.cpp:21:12: error: ‘GradjaninBiH’ was not declared in this scope            GradjaninBiH g(ime, 12,12,1992, 17, GradjaninBiH::Pol::Musko);            ^~~~~~~~~~~~",
+                        "code": "GradjaninBiH g(ime, 12,12,1992, 17, GradjaninBiH::Pol::Musko);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'g' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_6066/bs_test_3771.cpp:22:25: error: ‘g’ was not declared in this scope            std::cout << g.DajJMBG() <<std::endl;                         ^",
+                        "code": "std::cout << g.DajJMBG() <<std::endl;"
+                    }
+                ]
+            }
+        },
+        "3772": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3772.cpp: In function ‘int main()’:\nbs_test_3772.cpp:21:12: error: ‘GradjaninBiH’ was not declared in this scope\n            GradjaninBiH g(ime, 1212992170000);\n            ^~~~~~~~~~~~\nbs_test_3772.cpp:22:12: error: ‘g’ was not declared in this scope\n            g.PromijeniImeIPrezime(\"Gile Hasisar\");\n            ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "12",
+                        "message": "'GradjaninBiH' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_6066/bs_test_3772.cpp:21:12: error: ‘GradjaninBiH’ was not declared in this scope            GradjaninBiH g(ime, 1212992170000);            ^~~~~~~~~~~~",
+                        "code": "GradjaninBiH g(ime, 1212992170000);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "12",
+                        "message": "'g' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_6066/bs_test_3772.cpp:22:12: error: ‘g’ was not declared in this scope            g.PromijeniImeIPrezime(\"Gile Hasisar\");            ^",
+                        "code": "g.PromijeniImeIPrezime(\"Gile Hasisar\");"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1559836649
+}

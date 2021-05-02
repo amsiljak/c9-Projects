@@ -1,0 +1,144 @@
+{
+    "id": 5437,
+    "name": "Osnove ra\u010dunarstva (2017\/2018), Ispit 2, zadatak 4",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Slavonski brod se pojavljuje u dvije drzave, ostali u jednoj ili nula *\/\nstruct Grad gradovi[10] = {\n\t{\"Sarajevo\", 500000},\n\t{\"Beograd\", 1500000},\n\t{\"Zagreb\", 1000000},\n\t{\"Ljubljana\", 300000},\n\t{\"Skopje\", 400000},\n\t{\"Banja Luka\", 150000},\n\t{\"Slavonski Brod\", 50000}\n};\n\nstruct Drzava drzave[10] = {\n\t{\"BiH\", {{\"Sarajevo\", 500000}, {\"Banja Luka\", 150000}}, 2},\n\t{\"Hrvatska\", {{\"Zagreb\", 1000000}, {\"Slavonski Brod\", 50000}}, 2},\n\t{\"Neka\", {{\"Ljubljana\", 300000}, {\"Slavonski Brod\", 150000}}, 2},\n};\n\nint vel = izbaci_duple(gradovi,7,drzave,3);\nint i;\nfor (i=0; i<vel; i++)\n\tprintf(\"%s\\n\", gradovi[i].naziv);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sarajevo\\nBeograd\\nZagreb\\nLjubljana\\nSkopje\\nBanja Luka"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Sarajevo i Beograd se pojavljuju u dvije drzave, ostali u jednoj ili nula *\/\nstruct Grad gradovi[10] = {\n\t{\"Sarajevo\", 500000},\n\t{\"Beograd\", 1500000},\n\t{\"Zagreb\", 1000000},\n\t{\"Ljubljana\", 300000},\n\t{\"Skopje\", 400000},\n\t{\"Banja Luka\", 150000},\n\t{\"Slavonski Brod\", 50000}\n};\n\nstruct Drzava drzave[10] = {\n\t{\"BiH\", {{\"Sarajevo\", 500000}, {\"Banja Luka\", 150000}}, 2},\n\t{\"Hrvatska\", {{\"Zagreb\", 1000000}, {\"Beograd\", 50000}}, 2},\n\t{\"Neka\", {{\"Sarajevo\", 300000}, {\"Beograd\", 150000}}, 2},\n};\n\nint vel = izbaci_duple(gradovi,7,drzave,3);\nint i;\nfor (i=0; i<vel; i++)\n\tprintf(\"%s\\n\", gradovi[i].naziv);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Zagreb\\nLjubljana\\nSkopje\\nBanja Luka\\nSlavonski Brod"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Izbacujemo sve osim Banja Luke *\/\nstruct Grad gradovi[10] = {\n\t{\"Sarajevo\", 500000},\n\t{\"Beograd\", 1500000},\n\t{\"Zagreb\", 1000000},\n\t{\"Ljubljana\", 300000},\n\t{\"Skopje\", 400000},\n\t{\"Banja Luka\", 150000},\n\t{\"Slavonski Brod\", 50000}\n};\n\nstruct Drzava drzave[10] = {\n\t{\"Zemlja 1\", {\n\t\t{\"Sarajevo\", 500000},\n\t\t{\"Beograd\", 1500000},\n\t\t{\"Zagreb\", 1000000},\n\t\t{\"Ljubljana\", 300000},\n\t\t{\"Skopje\", 400000},\n\t\t{\"Banja Luka\", 150000},\n\t\t{\"Slavonski Brod\", 50000}}, 7},\n\t{\"Neka\", {{\"Mostar\", 100000}, {\"Tuzla\", 100000}}, 2},\n\t{\"Zemlja 2\", {\n\t\t{\"Sarajevo\", 500000},\n\t\t{\"Beograd\", 1500000},\n\t\t{\"Zagreb\", 1000000},\n\t\t{\"Ljubljana\", 300000},\n\t\t{\"Skopje\", 400000},\n\t\t{\"Slavonski Brod\", 50000}}, 7},\n};\n\nint vel = izbaci_duple(gradovi,7,drzave,3);\nint i;\nfor (i=0; i<vel; i++)\n\tprintf(\"%s\\n\", gradovi[i].naziv);\n\n\/* Sada izbacujemo i Banja Luku tako sto je stavljamo umjesto Mostara *\/\nstrcpy(drzave[1].gradovi[0].naziv, \"Banja Luka\");\nvel = izbaci_duple(gradovi,1,drzave,3);\nprintf(\"%d\", vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Banja Luka\\n0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Mali broj gradova *\/\nstruct Grad gradovi[10] = {\n\t{\"Sarajevo\", 500000},\n};\n\nstruct Drzava drzave[10] = {\n\t{\"Zemlja 1\", {\n\t\t{\"Beograd\", 1500000},\n\t\t{\"Zagreb\", 1000000},\n\t\t{\"Ljubljana\", 300000},\n\t\t{\"Skopje\", 400000},\n\t\t{\"Banja Luka\", 150000},\n\t\t{\"Slavonski Brod\", 50000}}, 6},\n\t{\"Neka\", {{\"Mostar\", 100000}, {\"Tuzla\", 100000}}, 2},\n\t{\"Zemlja 2\", {\n\t\t{\"Sarajevo\", 500000},\n\t\t{\"Beograd\", 1500000},\n\t\t{\"Zagreb\", 1000000},\n\t\t{\"Ljubljana\", 300000},\n\t\t{\"Skopje\", 400000},\n\t\t{\"Slavonski Brod\", 50000}}, 7},\n};\n\n\/* Probavamo prazan niz gradova *\/\nint vel = izbaci_duple(gradovi,0,drzave,3);\nprintf(\"%d\\n\", vel);\n\n\/* Probavamo prazan niz drzava *\/\nvel = izbaci_duple(gradovi,1,drzave,0);\nprintf(\"%d\\n\", vel);\n\n\/* Sada ne izbacujemo nista jer se Sarajevo pojavljuje u samo jednoj drzavi *\/\nvel = izbaci_duple(gradovi,1,drzave,3);\nint i;\nfor (i=0; i<vel; i++)\n\tprintf(\"%s\\n\", gradovi[i].naziv);\n\n\/* Stavljamo Sarajevo umjesto Mostara tako da ce ipak biti izbaceno *\/\nstrcpy(drzave[1].gradovi[0].naziv, \"Sarajevo\");\nvel = izbaci_duple(gradovi,1,drzave,3);\nprintf(\"%d\", vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0\\n1\\nSarajevo\\n0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Izbacujemo sve iz niza gradova *\/\nstruct Grad gradovi[10] = {\n    {\"Sarajevo\", 500000},\n    {\"Beograd\", 1500000},\n    {\"Zagreb\", 1000000},\n    {\"Ljubljana\", 300000},\n    {\"Skopje\", 400000},\n    {\"Banja Luka\", 150000},\n    {\"Slavonski Brod\", 50000}\n};\n\nstruct Drzava drzave[10] = {\n\t{\"Zemlja 1\", {\n\t\t{\"Beograd\", 1500000},\n\t\t{\"Zagreb\", 1000000},\n\t\t{\"Ljubljana\", 300000},\n\t\t{\"Skopje\", 400000},\n\t\t{\"Banja Luka\", 150000},\n\t\t{\"Slavonski Brod\", 50000}}, 6},\n\t{\"Neka\", {{\"Sarajevo\", 100000}, {\"Beograd\", 100000}, {\"Zagreb\", 1000000}}, 3},\n\t{\"Zemlja 2\", {\n\t\t{\"Sarajevo\", 500000},\n\t\t{\"Beograd\", 1500000},\n\t\t{\"Zagreb\", 1000000},\n\t\t{\"Ljubljana\", 300000},\n\t\t{\"Mostar\", 100000},\n\t\t{\"Banja Luka\", 150000},\n\t\t{\"Skopje\", 400000},\n\t\t{\"Slavonski Brod\", 50000}}, 8},\n};\n\nint vel = izbaci_duple(gradovi,7,drzave,3);\nprintf(\"%d\\n\", vel);\n\n\/* Dodatna provjera za funkciju koja ne radi nista *\/\nstruct Grad gradovi2[10] = {{\"Sarajevo\", 500000}};\nstruct Drzava drzave2[10] = {\n\t{\"Zemlja 1\", {{\"Sarajevo\", 500000}}, 1},\n\t{\"Zemlja 2\", {{\"Tuzla\", 500000}}, 1},\n};\n\nvel = izbaci_duple(gradovi2,1,drzave2,2);\nint i;\nfor (i=0; i<vel; i++)\n\tprintf(\"%s\\n\", gradovi2[i].naziv);\nstrcpy(drzave2[1].gradovi[0].naziv, \"Sarajevo\");\nvel = izbaci_duple(gradovi2,1,drzave2,2);\nprintf(\"%d\", vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0\\nSarajevo\\n0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

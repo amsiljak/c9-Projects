@@ -1,0 +1,101 @@
+{
+    "id": 7167,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR10, zadatak 6",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1341,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\n\nchar n1[100] = \"Bosna\", n2[100] = \"Hercegovina\";\nchar *p1 = PopuniLijevo(n1, 15);\nchar *p2 = PopuniLijevo(n2, 15);\nprintf (\"'%s'\\n'%s'\", p1, p2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'          Bosna'\\n'    Hercegovina'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1342,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\n\nchar n1[100] = \"Bosna\", n2[100] = \"Hercegovina\";\nchar *p1 = PopuniLijevo(n1, 15);\nchar *p2 = PopuniDesno(n2, 15);\nprintf (\"'%s'\\n'%s'\", p1, p2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'          Bosna'\\n'Hercegovina    '"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1343,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\n\nchar n1[100] = \"\", n2[100] = \"\";\nchar *p1 = PopuniLijevo(n1, 15);\nchar *p2 = PopuniDesno(n2, 15);\nprintf (\"'%s'\\n'%s'\", p1, p2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'               '\\n'               '"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1344,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\n\nchar n1[100] = \"Rijad\", n2[100] = \"Pedljak\";\nchar *p1 = PopuniLijevo(n1, 1);\nchar *p2 = PopuniDesno(n2, 1);\nprintf (\"'%s'\\n'%s'\", p1, p2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Rijad'\\n'Pedljak'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "id": 5597,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Ispit 6, zadatak 2",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"Vatra vata vraTa tava Vrat VARTA\";\nprintf(\"%s\", izbaci_anagrame(tekst, \"trava\"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "vata tava Vrat",
+                "vata  tava Vrat"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"Ovo je neki primjer malo duzeg teksta\";\nchar anagrami[] = \"Ana gram oloma vo oov jejeje\";\nprintf(\"%s\", izbaci_anagrame(tekst, anagrami));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "je neki primjer malo duzeg teksta"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char prazan[] = \"\";\nchar tekst[] = \"hello world\";\nchar tekst2[] = \"world hello\";\nprintf(\"'%s'\\n\", izbaci_anagrame(prazan, tekst));\nprintf(\"'%s'\\n\", izbaci_anagrame(tekst, prazan));\nprintf(\"Primjer: %s\", izbaci_anagrame(tekst, tekst2));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "''\\n'hello world'\\nPrimjer: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"abc cba bac abab cab\";\nprintf(\"%s\\n\", izbaci_anagrame(tekst, \"abc\"));\nchar tekst2[] = \"abc cba bac acb cab\";\nprintf(\"%s\\n\", izbaci_anagrame(tekst2, \"abc\"));\nchar tekst3[] = \"abc cba babc ab ccacb\";\nprintf(\"%s\\n\", izbaci_anagrame(tekst3, \"ba\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "abab\\n\\nabc cba babc  ccacb"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"abc\";\nprintf(\"'%s'\\n\", izbaci_anagrame(tekst, \"ab ac bc abb bab cbb\"));\nprintf(\"'%s'\\n\", izbaci_anagrame(tekst, \"ab ac bc abb bab cbb bac\"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'abc'\\n''"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

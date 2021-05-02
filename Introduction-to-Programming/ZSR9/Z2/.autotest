@@ -1,0 +1,122 @@
+{
+    "id": 7163,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), ZSR9, zadatak 2",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1309,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \" danas je divan   dan   \";\nprintf(\"'%s'\", PosljednjaRijec(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'dan'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1310,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"troll\";\nprintf(\"'%s'\", PosljednjaRijec(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'troll'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1311,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \"    \"; \/\/ Da li ispisuje prazno kada su sve razmaci?\nprintf(\"'%s'\", PosljednjaRijec(tekst)); \n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "''"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1312,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[] = \" aaa... proba!?@#()*% \"; \/\/ Ostali znakovi\nprintf(\"'%s'\", PosljednjaRijec(tekst)); ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'proba!?@#()*%'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1313,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char niz[]=\"    OR  \";\nprintf(\"'%s'\",PosljednjaRijec(niz));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'OR'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

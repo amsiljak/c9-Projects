@@ -1,0 +1,252 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_1.c: In function ‘main’:\nbs_test_1.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration]\n vel = ucitaj(planine, 1000);\n       ^~~~~~\n/tmp/cc2ugq7u.o: In function `main':\nbs_test_1.c:(.text+0x83): undefined reference to `ucitaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "7",
+                        "message": "implicit declaration of function 'ucitaj'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_1.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration] vel = ucitaj(planine, 1000);       ^~~~~~/tmp/cc2ugq7u.o: In function `main':bs_test_1.c:(.text+0x83): undefined reference to `ucitaj'collect2: error: ld returned 1 exit status",
+                        "code": "vel = ucitaj(planine, 1000);"
+                    }
+                ]
+            }
+        },
+        "2": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_2.c: In function ‘main’:\nbs_test_2.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration]\n vel = ucitaj(planine, 1000);\n       ^~~~~~\n/tmp/ccA4nNcz.o: In function `main':\nbs_test_2.c:(.text+0x83): undefined reference to `ucitaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "7",
+                        "message": "implicit declaration of function 'ucitaj'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_2.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration] vel = ucitaj(planine, 1000);       ^~~~~~/tmp/ccA4nNcz.o: In function `main':bs_test_2.c:(.text+0x83): undefined reference to `ucitaj'collect2: error: ld returned 1 exit status",
+                        "code": "vel = ucitaj(planine, 1000);"
+                    }
+                ]
+            }
+        },
+        "3": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3.c: In function ‘main’:\nbs_test_3.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration]\n vel = ucitaj(planine, 1000);\n       ^~~~~~\n/tmp/cc1m5CvG.o: In function `main':\nbs_test_3.c:(.text+0x83): undefined reference to `ucitaj'\nbs_test_3.c:(.text+0x13f): undefined reference to `ucitaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "7",
+                        "message": "implicit declaration of function 'ucitaj'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_3.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration] vel = ucitaj(planine, 1000);       ^~~~~~/tmp/cc1m5CvG.o: In function `main':bs_test_3.c:(.text+0x83): undefined reference to `ucitaj'bs_test_3.c:(.text+0x13f): undefined reference to `ucitaj'collect2: error: ld returned 1 exit status",
+                        "code": "vel = ucitaj(planine, 1000);"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_4.c: In function ‘main’:\nbs_test_4.c:36:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration]\n vel = ucitaj(planine, 1000);\n       ^~~~~~\n/tmp/ccxxPm1O.o: In function `main':\nbs_test_4.c:(.text+0x111): undefined reference to `ucitaj'\nbs_test_4.c:(.text+0x1b7): undefined reference to `ucitaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 19,
+                        "col": "7",
+                        "message": "implicit declaration of function 'ucitaj'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_4.c:36:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration] vel = ucitaj(planine, 1000);       ^~~~~~/tmp/ccxxPm1O.o: In function `main':bs_test_4.c:(.text+0x111): undefined reference to `ucitaj'bs_test_4.c:(.text+0x1b7): undefined reference to `ucitaj'collect2: error: ld returned 1 exit status",
+                        "code": "vel = ucitaj(planine, 1000);"
+                    }
+                ]
+            }
+        },
+        "5": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_5.c: In function ‘main’:\nbs_test_5.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration]\n vel = ucitaj(planine, 1000);\n       ^~~~~~\n/tmp/ccdF21VT.o: In function `main':\nbs_test_5.c:(.text+0x83): undefined reference to `ucitaj'\nbs_test_5.c:(.text+0x105): undefined reference to `ucitaj'\nbs_test_5.c:(.text+0x187): undefined reference to `ucitaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "7",
+                        "message": "implicit declaration of function 'ucitaj'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_5.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration] vel = ucitaj(planine, 1000);       ^~~~~~/tmp/ccdF21VT.o: In function `main':bs_test_5.c:(.text+0x83): undefined reference to `ucitaj'bs_test_5.c:(.text+0x105): undefined reference to `ucitaj'bs_test_5.c:(.text+0x187): undefined reference to `ucitaj'collect2: error: ld returned 1 exit status",
+                        "code": "vel = ucitaj(planine, 1000);"
+                    }
+                ]
+            }
+        },
+        "6": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_6.c: In function ‘main’:\nbs_test_6.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration]\n vel = ucitaj(planine, 1000);\n       ^~~~~~\n/tmp/ccUwT8k2.o: In function `main':\nbs_test_6.c:(.text+0x83): undefined reference to `ucitaj'\nbs_test_6.c:(.text+0x118): undefined reference to `ucitaj'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "7",
+                        "message": "implicit declaration of function 'ucitaj'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_6.c:26:7: warning: implicit declaration of function ‘ucitaj’ [-Wimplicit-function-declaration] vel = ucitaj(planine, 1000);       ^~~~~~/tmp/ccUwT8k2.o: In function `main':bs_test_6.c:(.text+0x83): undefined reference to `ucitaj'bs_test_6.c:(.text+0x118): undefined reference to `ucitaj'collect2: error: ld returned 1 exit status",
+                        "code": "vel = ucitaj(planine, 1000);"
+                    }
+                ]
+            }
+        },
+        "7": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_7.c: In function ‘main’:\nbs_test_7.c:27:1: warning: implicit declaration of function ‘zapisi’ [-Wimplicit-function-declaration]\n zapisi(planine, vel);\n ^~~~~~\n/tmp/ccUJ09H6.o: In function `main':\nbs_test_7.c:(.text+0x1a3): undefined reference to `zapisi'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 10,
+                        "col": "1",
+                        "message": "implicit declaration of function 'zapisi'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_7.c:27:1: warning: implicit declaration of function ‘zapisi’ [-Wimplicit-function-declaration] zapisi(planine, vel); ^~~~~~/tmp/ccUJ09H6.o: In function `main':bs_test_7.c:(.text+0x1a3): undefined reference to `zapisi'collect2: error: ld returned 1 exit status",
+                        "code": "zapisi(planine, vel);"
+                    }
+                ]
+            }
+        },
+        "8": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_8.c: In function ‘main’:\nbs_test_8.c:27:1: warning: implicit declaration of function ‘zapisi’ [-Wimplicit-function-declaration]\n zapisi(planine, vel);\n ^~~~~~\n/tmp/ccxW6Gmf.o: In function `main':\nbs_test_8.c:(.text+0x1aa): undefined reference to `zapisi'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 10,
+                        "col": "1",
+                        "message": "implicit declaration of function 'zapisi'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_8.c:27:1: warning: implicit declaration of function ‘zapisi’ [-Wimplicit-function-declaration] zapisi(planine, vel); ^~~~~~/tmp/ccxW6Gmf.o: In function `main':bs_test_8.c:(.text+0x1aa): undefined reference to `zapisi'collect2: error: ld returned 1 exit status",
+                        "code": "zapisi(planine, vel);"
+                    }
+                ]
+            }
+        },
+        "9": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_9.c: In function ‘main’:\nbs_test_9.c:26:1: warning: implicit declaration of function ‘ispis’ [-Wimplicit-function-declaration]\n ispis(planine, vel);\n ^~~~~\n/tmp/ccfGVWgj.o: In function `main':\nbs_test_9.c:(.text+0x1a3): undefined reference to `ispis'\nbs_test_9.c:(.text+0x1c6): undefined reference to `ispis'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "1",
+                        "message": "implicit declaration of function 'ispis'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_9.c:26:1: warning: implicit declaration of function ‘ispis’ [-Wimplicit-function-declaration] ispis(planine, vel); ^~~~~/tmp/ccfGVWgj.o: In function `main':bs_test_9.c:(.text+0x1a3): undefined reference to `ispis'bs_test_9.c:(.text+0x1c6): undefined reference to `ispis'collect2: error: ld returned 1 exit status",
+                        "code": "ispis(planine, vel);"
+                    }
+                ]
+            }
+        },
+        "10": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_10.c: In function ‘main’:\nbs_test_10.c:26:1: warning: implicit declaration of function ‘ispis’ [-Wimplicit-function-declaration]\n ispis(planine, vel);\n ^~~~~\n/tmp/cc4SaUmj.o: In function `main':\nbs_test_10.c:(.text+0x1a3): undefined reference to `ispis'\nbs_test_10.c:(.text+0x1eb): undefined reference to `ispis'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "1",
+                        "message": "implicit declaration of function 'ispis'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_10.c:26:1: warning: implicit declaration of function ‘ispis’ [-Wimplicit-function-declaration] ispis(planine, vel); ^~~~~/tmp/cc4SaUmj.o: In function `main':bs_test_10.c:(.text+0x1a3): undefined reference to `ispis'bs_test_10.c:(.text+0x1eb): undefined reference to `ispis'collect2: error: ld returned 1 exit status",
+                        "code": "ispis(planine, vel);"
+                    }
+                ]
+            }
+        },
+        "11": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_11.c: In function ‘main’:\nbs_test_11.c:27:1: warning: implicit declaration of function ‘ispis’ [-Wimplicit-function-declaration]\n ispis(planine, vel);\n ^~~~~\n/tmp/ccD71Srn.o: In function `main':\nbs_test_11.c:(.text+0x1ad): undefined reference to `ispis'\nbs_test_11.c:(.text+0x1da): undefined reference to `ispis'\nbs_test_11.c:(.text+0x207): undefined reference to `ispis'\nbs_test_11.c:(.text+0x22a): undefined reference to `ispis'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 10,
+                        "col": "1",
+                        "message": "implicit declaration of function 'ispis'",
+                        "output": "/tmp/buildservice/bs_420/bs_test_11.c:27:1: warning: implicit declaration of function ‘ispis’ [-Wimplicit-function-declaration] ispis(planine, vel); ^~~~~/tmp/ccD71Srn.o: In function `main':bs_test_11.c:(.text+0x1ad): undefined reference to `ispis'bs_test_11.c:(.text+0x1da): undefined reference to `ispis'bs_test_11.c:(.text+0x207): undefined reference to `ispis'bs_test_11.c:(.text+0x22a): undefined reference to `ispis'collect2: error: ld returned 1 exit status",
+                        "code": "ispis(planine, vel);"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1568105447
+}

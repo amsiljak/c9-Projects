@@ -1,0 +1,143 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘bool Test3()’:\nmain.cpp:288:19: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(mapa[3.4]!=5.5) return false;\n                   ^~~\nmain.cpp: In instantiation of ‘TipVrijednosti& NizMapa<TipKljuca, TipVrijednosti>::operator[](TipKljuca) [with TipKljuca = double; TipVrijednosti = double]’:\nmain.cpp:285:13:   required from here\nmain.cpp:218:32: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n                 if(niz[i].first== kljuc) return niz[i].second;\n                    ~~~~~~~~~~~~^~~~~~~~\nmain.cpp: In instantiation of ‘TipVrijednosti NizMapa<TipKljuca, TipVrijednosti>::operator[](TipKljuca) const [with TipKljuca = double; TipVrijednosti = double]’:\nmain.cpp:335:1:   required from here\nmain.cpp:234:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n                 if(niz[i].first == kljuc) return niz[i].second;\n                    ~~~~~~~~~~~~~^~~~~~~~\nmain.cpp: In instantiation of ‘void NizMapa<TipKljuca, TipVrijednosti>::obrisi(const TipKljuca&) [with TipKljuca = double; TipVrijednosti = double]’:\nmain.cpp:335:1:   required from here\nmain.cpp:251:40: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n                 if(niz.trenutni().first==kljuc) {\n",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "288",
+                "col": "19",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_682/main.cpp:288:19: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(mapa[3.4]!=5.5) return false;                   ^~~/tmp/buildservice/bs_682/main.cpp: In instantiation of ‘TipVrijednosti& NizMapa<TipKljuca, TipVrijednosti>::operator[](TipKljuca) [with TipKljuca = double; TipVrijednosti = double]’:/tmp/buildservice/bs_682/main.cpp:285:13:   required from here",
+                "code": "if(mapa[3.4]!=5.5) return false;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "218",
+                "col": "32",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_682/main.cpp:218:32: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]                 if(niz[i].first== kljuc) return niz[i].second;                    ~~~~~~~~~~~~^~~~~~~~/tmp/buildservice/bs_682/main.cpp: In instantiation of ‘TipVrijednosti NizMapa<TipKljuca, TipVrijednosti>::operator[](TipKljuca) const [with TipKljuca = double; TipVrijednosti = double]’:/tmp/buildservice/bs_682/main.cpp:335:1:   required from here",
+                "code": "if(niz[i].first== kljuc) return niz[i].second;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "234",
+                "col": "33",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_682/main.cpp:234:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]                 if(niz[i].first == kljuc) return niz[i].second;                    ~~~~~~~~~~~~~^~~~~~~~/tmp/buildservice/bs_682/main.cpp: In instantiation of ‘void NizMapa<TipKljuca, TipVrijednosti>::obrisi(const TipKljuca&) [with TipKljuca = double; TipVrijednosti = double]’:/tmp/buildservice/bs_682/main.cpp:335:1:   required from here",
+                "code": "if(niz[i].first == kljuc) return niz[i].second;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "251",
+                "col": "40",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_682/main.cpp:251:40: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]                 if(niz.trenutni().first==kljuc) {",
+                "code": "if(niz.trenutni().first==kljuc) {"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1629": {
+            "status": 1,
+            "run_result": {
+                "output": "2 Hrvatska '' '' 3 '' 0 '' ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1630": {
+            "status": 1,
+            "run_result": {
+                "output": "2 2 2 BiH 2 BiH 1 '' 0 ''",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1631": {
+            "status": 1,
+            "run_result": {
+                "output": "3 Sarajevo Tuzla 4",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1632": {
+            "status": 1,
+            "run_result": {
+                "output": "2 300 0 2 400 3",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1633": {
+            "status": 1,
+            "run_result": {
+                "output": "10000",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1634": {
+            "status": 1,
+            "run_result": {
+                "output": "200 2 1 0 0 0 300",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1576599749
+}

@@ -1,0 +1,10 @@
+/rhome/a/asiljak1/workspace/TP/T10/Z3/main.cpp: In constructor ‘Vektor3d::Vektor3d(int, int, int)’:
+/rhome/a/asiljak1/workspace/TP/T10/Z3/main.cpp:15:18: warning: ‘Vektor3d::z’ will be initialized after [-Wreorder]
+     double x, y, z;
+                  ^
+/rhome/a/asiljak1/workspace/TP/T10/Z3/main.cpp:13:17: warning:   ‘int Vektor3d::broj_ispisa’ [-Wreorder]
+     mutable int broj_ispisa;
+                 ^~~~~~~~~~~
+/rhome/a/asiljak1/workspace/TP/T10/Z3/main.cpp:18:2: warning:   when initialized here [-Wreorder]
+  Vektor3d(int a,int b,int c) :x(a),y(b),z(c),broj_ispisa(0){};
+  ^~~~~~~~

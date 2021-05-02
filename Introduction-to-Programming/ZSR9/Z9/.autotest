@@ -1,0 +1,122 @@
+{
+    "id": 7225,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 10, zadatak 19",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2194,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "double d;\nint a = UnesiRealan (\"123.123\", &d);\nprintf(\"%d %g\", a, d);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 123.123"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2195,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "double d;\nprintf(\"%d \", UnesiRealan (\"123.123.\", &d));\nprintf(\"%d \", UnesiRealan (\"123..123\", &d));\nprintf(\"%d \", UnesiRealan (\".123.123\", &d));\nprintf(\"%d \", UnesiRealan (\"123.123.123\", &d));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 0 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2196,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "double d;\nint a = UnesiRealan (\"456\", &d);\nprintf(\"%d %g\\n\", a, d);\na = UnesiRealan (\"654.\", &d);\nprintf(\"%d %g\\n\", a, d);\na = UnesiRealan (\"333.0\", &d);\nprintf(\"%d %g\\n\", a, d);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 456\\n1 654\\n1 333"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2197,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "double d;\nint a = UnesiRealan (\"0.9\", &d);\nprintf(\"%d %g\\n\", a, d);\na = UnesiRealan (\".8\", &d);\nprintf(\"%d %g\\n\", a, d);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 0.9\\n1 0.8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2198,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "double d;\nprintf(\"%d \", UnesiRealan (\"a\", &d));\nprintf(\"%d \", UnesiRealan (\"123a\", &d));\nprintf(\"%d \", UnesiRealan (\"a123\", &d));\nprintf(\"%d \", UnesiRealan (\"123.123a\", &d));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 0 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

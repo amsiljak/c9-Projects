@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/TP/T5/Z4/main.cpp: In function ‘bool potpunkvadrat(int)’:
+/rhome/a/asiljak1/workspace/TP/T5/Z4/main.cpp:25:29: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  return int(sqrt(n))==sqrt(n);
+                             ^

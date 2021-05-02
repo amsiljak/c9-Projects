@@ -1,0 +1,40 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 3,
+    "compile_result": {
+        "status": 2,
+        "output": "main.c: In function ‘main’:\nmain.c:28:60: error: expected ‘)’ before ‘;’ token\n   printf(\"Prolaznost: %g%%\", (polozili[x]*100./brocjena[x]);\n                                                            ^\nmain.c:29:2: error: expected ‘;’ before ‘}’ token\n  }\n  ^",
+        "parsed_output": [
+            {
+                "type": "error",
+                "file": "main.c",
+                "line": "28",
+                "col": "60",
+                "message": "expected ')' before ';' token",
+                "output": "/tmp/buildservice/bs_4119/main.c:28:60: error: expected ‘)’ before ‘;’ token   printf(\"Prolaznost: %g%%\", (polozili[x]*100./brocjena[x]);                                                            ^",
+                "code": "printf(\"Prolaznost: %g%%\", (polozili[x]*100./brocjena[x]);"
+            },
+            {
+                "type": "error",
+                "file": "main.c",
+                "line": "29",
+                "col": "2",
+                "message": "expected ';' before '}' token",
+                "output": "/tmp/buildservice/bs_4119/main.c:29:2: error: expected ‘;’ before ‘}’ token  }  ^",
+                "code": "}"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": [],
+    "queue_items": 0,
+    "time": 1567978275
+}

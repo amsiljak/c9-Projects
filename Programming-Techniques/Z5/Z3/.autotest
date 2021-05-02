@@ -1,0 +1,119 @@
+{
+    "id": 5524,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 6, zadatak 1",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "try\n    {\n\n        Skladiste ETF;\n        ETF.DodajSanduk(50, \"Voce\", {1,3,5,6});\n        ETF.DodajVrecu(0.1, \"Brasno\", 25.5);\n        ETF.DodajBure(5, \"Krv\", 1300, 150);\n        ETF.DodajSpremnik(new Vreca(0.5, \"Secer\", 40), true);\n        Bure *b = new Bure(15, \"Voda\", 1000, 200);\n        ETF.DodajSpremnik(b, false);\n        delete b;\n        ETF.IzlistajSkladiste();\n\n    }\n    catch(std::range_error re)\n    {\n        std::cout << re.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vrsta spremnika: Bure\\nSadrzaj: Voda\\nVlastita tezina: 15 (kg)\\nSpecificna tezina tecnosti: 1000 (kg\/m^3)\\nZapremina tecnosti: 200 (l)\\nUkupna tezina: 215 (kg)\\nVrsta spremnika: Bure\\nSadrzaj: Krv\\nVlastita tezina: 5 (kg)\\nSpecificna tezina tecnosti: 1300 (kg\/m^3)\\nZapremina tecnosti: 150 (l)\\nUkupna tezina: 200 (kg)\\nVrsta spremnika: Sanduk\\nSadrzaj: Voce\\nTezine predmeta: 1 3 5 6 (kg)\\nVlastita tezina: 50 (kg)\\nUkupna tezina: 65 (kg)\\nVrsta spremnika: Vreca\\nSadrzaj: Secer\\nVlastita tezina: 0.5 (kg)\\nTezina pohranjene materije: 40 (kg)\\nUkupna tezina: 40.5 (kg)\\nVrsta spremnika: Vreca\\nSadrzaj: Brasno\\nVlastita tezina: 0.1 (kg)\\nTezina pohranjene materije: 25.5 (kg)\\nUkupna tezina: 25.6 (kg)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    try\n    {\n\n        Skladiste ETF;\n        ETF.DodajSanduk(50, \"Voce\", {1,3,5,6});\n        ETF.DodajVrecu(0.1, \"Brasno\", 25.5);\n        ETF.DodajBure(5, \"Krv\", 1300, 150);\n        ETF.DodajSpremnik(new Vreca(0.5, \"Secer\", 40), true);\n        Bure *b = new Bure(15, \"Voda\", 1000, 200);\n        ETF.DodajSpremnik(b, false);\n        delete b;\n        ETF.DajNajlaksi().Ispisi();\n        std::cout << ETF.BrojPreteskih(40) << std::endl;\n        ETF.DajNajtezi().Ispisi();\n    }\n    catch(std::range_error re)\n    {\n        std::cout << re.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vrsta spremnika: Vreca\\nSadrzaj: Brasno\\nVlastita tezina: 0.1 (kg)\\nTezina pohranjene materije: 25.5 (kg)\\nUkupna tezina: 25.6 (kg)\\n4\\nVrsta spremnika: Sanduk\\nSadrzaj: Voce\\nTezine predmeta: 1 3 5 6 (kg)\\nVlastita tezina: 50 (kg)\\nUkupna tezina: 65 (kg)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "   try\n    {\n\n        Skladiste ETF;\n        ETF.DodajSanduk(50, \"Voce\", {1,3,5,6});\n        ETF.DodajVrecu(0.1, \"Brasno\", 25.5);\n        ETF.DodajBure(5, \"Krv\", 1300, 150);\n        Spremnik *s = ETF.DodajSpremnik(new Vreca(0.5, \"Secer\", 40), true);\n        ETF.BrisiSpremnik(s);\n        ETF.IzlistajSkladiste();\n    }\n    catch(std::range_error re)\n    {\n        std::cout << re.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vrsta spremnika: Bure\\nSadrzaj: Krv\\nVlastita tezina: 5 (kg)\\nSpecificna tezina tecnosti: 1300 (kg\/m^3)\\nZapremina tecnosti: 150 (l)\\nUkupna tezina: 200 (kg)\\nVrsta spremnika: Sanduk\\nSadrzaj: Voce\\nTezine predmeta: 1 3 5 6 (kg)\\nVlastita tezina: 50 (kg)\\nUkupna tezina: 65 (kg)\\nVrsta spremnika: Vreca\\nSadrzaj: Brasno\\nVlastita tezina: 0.1 (kg)\\nTezina pohranjene materije: 25.5 (kg)\\nUkupna tezina: 25.6 (kg)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    try\n    {\n\n        Skladiste ETF;\n        Spremnik *s = ETF.DodajSpremnik(new Vreca(0.5, \"Secer\", 40), true);\n        ETF.BrisiSpremnik(s);\n        ETF.DajNajtezi().Ispisi();\n    }\n    catch(std::range_error re)\n    {\n        std::cout << re.what();\n    }\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Skladiste je prazno"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "id": 7024,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 7, zadatak 2",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1194,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\n\/\/primjer iz teksta zadatka\nint niz1[] = {1, 3, 2};\nint niz2[10] = {0, 3, 2, 2, 2, 4, 6, 1, 9, 10};\nIspisi (niz1, 3);\nprintf(\"\\n\");\nIspisi (niz2, 10);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{1, 3, 2}\\n{0, 3, 2, 2, 2, 4, 6, 1, 9, 10}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1195,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\n\/\/prazan niz\nint niz[] = {};\nIspisi(niz, 0);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1196,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int niz[10],i;\nfor(i=0;i<10;i++)\n    niz[i]=i+1;\nIspisi(niz,10);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

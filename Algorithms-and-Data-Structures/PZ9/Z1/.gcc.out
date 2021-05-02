@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/ASP/PZ9/Z1/main.cpp: In member function ‘TipVrijednosti& HashMapa<TipKljuca, TipVrijednosti>::operator[](TipKljuca) [with TipKljuca = int; TipVrijednosti = int]’:
+/rhome/a/asiljak1/workspace/ASP/PZ9/Z1/main.cpp:373:5: warning: control reaches end of non-void function [-Wreturn-type]
+     }
+     ^

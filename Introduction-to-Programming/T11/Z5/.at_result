@@ -1,0 +1,157 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘proteklo’:\nmain.c:14:12: warning: ‘s3’ is used uninitialized in this function [-Wuninitialized]\n  v3.sati=s3/3600;\n          ~~^~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "14",
+                "col": "12",
+                "message": "'s3' is used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_443/main.c:14:12: warning: ‘s3’ is used uninitialized in this function [-Wuninitialized]  v3.sati=s3/3600;          ~~^~~~~",
+                "code": "v3.sati=s3/3600;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1748": {
+            "status": 6,
+            "run_result": {
+                "output": "Proteklo: 0h:0m:54s",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==15137== Memcheck, a memory error detector\n==15137== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==15137== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==15137== Command: bs_test_1748\n==15137== Parent PID: 15136\n==15137== \n==15137== Use of uninitialised value of size 8\n==15137==    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n==15137==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15137==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15137==    by 0x400864: main (bs_test_1748.c:43)\n==15137== \n==15137== Conditional jump or move depends on uninitialised value(s)\n==15137==    at 0x3631243985: _itoa_word (in /lib64/libc-2.12.so)\n==15137==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15137==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15137==    by 0x400864: main (bs_test_1748.c:43)\n==15137== \n==15137== Conditional jump or move depends on uninitialised value(s)\n==15137==    at 0x3631244FC3: vfprintf (in /lib64/libc-2.12.so)\n==15137==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15137==    by 0x400864: main (bs_test_1748.c:43)\n==15137== \n==15137== Conditional jump or move depends on uninitialised value(s)\n==15137==    at 0x3631244FE1: vfprintf (in /lib64/libc-2.12.so)\n==15137==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15137==    by 0x400864: main (bs_test_1748.c:43)\n==15137== \n==15137== \n==15137== HEAP SUMMARY:\n==15137==     in use at exit: 0 bytes in 0 blocks\n==15137==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==15137== \n==15137== All heap blocks were freed -- no leaks are possible\n==15137== \n==15137== For counts of detected and suppressed errors, rerun with: -v\n==15137== Use --track-origins=yes to see where uninitialised values come from\n==15137== ERROR SUMMARY: 14 errors from 4 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Use of uninitialised value of size 8\n    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n    by 0x400864: main (bs_test_1748.c:43)\n",
+                        "file": "TEST_CODE",
+                        "line": 5
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1749": {
+            "status": 6,
+            "run_result": {
+                "output": "Proteklo: 0h:0m:54s",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==15155== Memcheck, a memory error detector\n==15155== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==15155== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==15155== Command: bs_test_1749\n==15155== Parent PID: 15154\n==15155== \n==15155== Use of uninitialised value of size 8\n==15155==    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n==15155==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15155==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15155==    by 0x400864: main (bs_test_1749.c:43)\n==15155== \n==15155== Conditional jump or move depends on uninitialised value(s)\n==15155==    at 0x3631243985: _itoa_word (in /lib64/libc-2.12.so)\n==15155==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15155==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15155==    by 0x400864: main (bs_test_1749.c:43)\n==15155== \n==15155== Conditional jump or move depends on uninitialised value(s)\n==15155==    at 0x3631244FC3: vfprintf (in /lib64/libc-2.12.so)\n==15155==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15155==    by 0x400864: main (bs_test_1749.c:43)\n==15155== \n==15155== Conditional jump or move depends on uninitialised value(s)\n==15155==    at 0x3631244FE1: vfprintf (in /lib64/libc-2.12.so)\n==15155==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15155==    by 0x400864: main (bs_test_1749.c:43)\n==15155== \n==15155== \n==15155== HEAP SUMMARY:\n==15155==     in use at exit: 0 bytes in 0 blocks\n==15155==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==15155== \n==15155== All heap blocks were freed -- no leaks are possible\n==15155== \n==15155== For counts of detected and suppressed errors, rerun with: -v\n==15155== Use --track-origins=yes to see where uninitialised values come from\n==15155== ERROR SUMMARY: 14 errors from 4 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Use of uninitialised value of size 8\n    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n    by 0x400864: main (bs_test_1749.c:43)\n",
+                        "file": "TEST_CODE",
+                        "line": 5
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1750": {
+            "status": 6,
+            "run_result": {
+                "output": "Proteklo: 0h:0m:54s",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==15173== Memcheck, a memory error detector\n==15173== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==15173== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==15173== Command: bs_test_1750\n==15173== Parent PID: 15172\n==15173== \n==15173== Use of uninitialised value of size 8\n==15173==    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n==15173==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15173==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15173==    by 0x40084F: main (bs_test_1750.c:42)\n==15173== \n==15173== Conditional jump or move depends on uninitialised value(s)\n==15173==    at 0x3631243985: _itoa_word (in /lib64/libc-2.12.so)\n==15173==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15173==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15173==    by 0x40084F: main (bs_test_1750.c:42)\n==15173== \n==15173== Conditional jump or move depends on uninitialised value(s)\n==15173==    at 0x3631244FC3: vfprintf (in /lib64/libc-2.12.so)\n==15173==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15173==    by 0x40084F: main (bs_test_1750.c:42)\n==15173== \n==15173== Conditional jump or move depends on uninitialised value(s)\n==15173==    at 0x3631244FE1: vfprintf (in /lib64/libc-2.12.so)\n==15173==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15173==    by 0x40084F: main (bs_test_1750.c:42)\n==15173== \n==15173== \n==15173== HEAP SUMMARY:\n==15173==     in use at exit: 0 bytes in 0 blocks\n==15173==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==15173== \n==15173== All heap blocks were freed -- no leaks are possible\n==15173== \n==15173== For counts of detected and suppressed errors, rerun with: -v\n==15173== Use --track-origins=yes to see where uninitialised values come from\n==15173== ERROR SUMMARY: 14 errors from 4 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Use of uninitialised value of size 8\n    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n    by 0x40084F: main (bs_test_1750.c:42)\n",
+                        "file": "TEST_CODE",
+                        "line": 4
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1751": {
+            "status": 6,
+            "run_result": {
+                "output": "Proteklo: 0h:0m:54s",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==15191== Memcheck, a memory error detector\n==15191== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==15191== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==15191== Command: bs_test_1751\n==15191== Parent PID: 15190\n==15191== \n==15191== Use of uninitialised value of size 8\n==15191==    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n==15191==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15191==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15191==    by 0x400864: main (bs_test_1751.c:43)\n==15191== \n==15191== Conditional jump or move depends on uninitialised value(s)\n==15191==    at 0x3631243985: _itoa_word (in /lib64/libc-2.12.so)\n==15191==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15191==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15191==    by 0x400864: main (bs_test_1751.c:43)\n==15191== \n==15191== Conditional jump or move depends on uninitialised value(s)\n==15191==    at 0x3631244FC3: vfprintf (in /lib64/libc-2.12.so)\n==15191==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15191==    by 0x400864: main (bs_test_1751.c:43)\n==15191== \n==15191== Conditional jump or move depends on uninitialised value(s)\n==15191==    at 0x3631244FE1: vfprintf (in /lib64/libc-2.12.so)\n==15191==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15191==    by 0x400864: main (bs_test_1751.c:43)\n==15191== \n==15191== \n==15191== HEAP SUMMARY:\n==15191==     in use at exit: 0 bytes in 0 blocks\n==15191==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==15191== \n==15191== All heap blocks were freed -- no leaks are possible\n==15191== \n==15191== For counts of detected and suppressed errors, rerun with: -v\n==15191== Use --track-origins=yes to see where uninitialised values come from\n==15191== ERROR SUMMARY: 14 errors from 4 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Use of uninitialised value of size 8\n    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n    by 0x400864: main (bs_test_1751.c:43)\n",
+                        "file": "TEST_CODE",
+                        "line": 5
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1752": {
+            "status": 6,
+            "run_result": {
+                "output": "\nUnesite prvo vrijeme (h m s): \n\nUnesite drugo vrijeme (h m s): \n\nIzmedju dva vremena je proteklo 0 sati, 0 minuta i 0 sekundi.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==15209== Memcheck, a memory error detector\n==15209== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==15209== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==15209== Command: bs_test_1752\n==15209== Parent PID: 15208\n==15209== \n==15209== Use of uninitialised value of size 8\n==15209==    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n==15209==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15209==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15209==    by 0x4007DE: _main (bs_test_1752.c:32)\n==15209==    by 0x400802: main (bs_test_1752.c:40)\n==15209== \n==15209== Conditional jump or move depends on uninitialised value(s)\n==15209==    at 0x3631243985: _itoa_word (in /lib64/libc-2.12.so)\n==15209==    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n==15209==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15209==    by 0x4007DE: _main (bs_test_1752.c:32)\n==15209==    by 0x400802: main (bs_test_1752.c:40)\n==15209== \n==15209== Conditional jump or move depends on uninitialised value(s)\n==15209==    at 0x3631244FC3: vfprintf (in /lib64/libc-2.12.so)\n==15209==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15209==    by 0x4007DE: _main (bs_test_1752.c:32)\n==15209==    by 0x400802: main (bs_test_1752.c:40)\n==15209== \n==15209== Conditional jump or move depends on uninitialised value(s)\n==15209==    at 0x3631244FE1: vfprintf (in /lib64/libc-2.12.so)\n==15209==    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n==15209==    by 0x4007DE: _main (bs_test_1752.c:32)\n==15209==    by 0x400802: main (bs_test_1752.c:40)\n==15209== \n==15209== \n==15209== HEAP SUMMARY:\n==15209==     in use at exit: 0 bytes in 0 blocks\n==15209==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==15209== \n==15209== All heap blocks were freed -- no leaks are possible\n==15209== \n==15209== For counts of detected and suppressed errors, rerun with: -v\n==15209== Use --track-origins=yes to see where uninitialised values come from\n==15209== ERROR SUMMARY: 12 errors from 4 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Use of uninitialised value of size 8\n    at 0x363124397B: _itoa_word (in /lib64/libc-2.12.so)\n    by 0x3631246532: vfprintf (in /lib64/libc-2.12.so)\n    by 0x363124F069: printf (in /lib64/libc-2.12.so)\n    by 0x4007DE: _main (bs_test_1752.c:32)\n    by 0x400802: main (bs_test_1752.c:40)\n",
+                        "file": "main.c",
+                        "line": 30
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1567979172
+}

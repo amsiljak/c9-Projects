@@ -1,0 +1,8 @@
+/rhome/a/asiljak1/workspace/OR/T10/Z6/main.c: In function ‘tritacke’:
+/rhome/a/asiljak1/workspace/OR/T10/Z6/main.c:4:2: error: ‘nije_slovo’ undeclared (first use in this function)
+  nije_slovo=1;
+  ^~~~~~~~~~
+/rhome/a/asiljak1/workspace/OR/T10/Z6/main.c:4:2: note: each undeclared identifier is reported only once for each function it appears in
+/rhome/a/asiljak1/workspace/OR/T10/Z6/main.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^

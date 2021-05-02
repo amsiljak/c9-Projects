@@ -1,0 +1,294 @@
+{
+    "id": 5440,
+    "name": "Osnove ra\u010dunarstva (2017\/2018), Ispit 3, zadatak 3",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Prvo visina pa ime *\/\nstruct Planina planine[1000];\nint vel, i;\n\nFILE* txt = fopen(\"planine.txt\", \"w\");\nfputs(\"2067 Bjelasnica\\n1627 Trebevic\\n1913 Jahorina\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nfor (i=0; i<vel; i++) {\n\tprintf(\"%s - %d\\n\", planine[i].naziv, planine[i].visina);\n}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Bjelasnica - 2067\\nTrebevic - 1627\\nJahorina - 1913"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Prvo ime pa visina *\/\nstruct Planina planine[1000];\nint vel, i;\n\nFILE* txt = fopen(\"planine.txt\", \"w\");\nfputs(\"Bjelasnica 2067\\nTrebevic 1627\\nJahorina 1913\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nfor (i=0; i<vel; i++) {\n\tprintf(\"%s - %d\\n\", planine[i].naziv, planine[i].visina);\n}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Bjelasnica - 2067\\nTrebevic - 1627\\nJahorina - 1913"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Dvije rijeci *\/\nstruct Planina planine[1000];\nint vel, i;\n\nFILE* txt = fopen(\"planine.txt\", \"w\");\nfputs(\"Bjelasnica 2067\\nTrebevic 1627\\nMount Everest 8848\\nJahorina 1913\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nfor (i=0; i<vel; i++) {\n\tprintf(\"%s - %d\\n\", planine[i].naziv, planine[i].visina);\n}\n\ntxt = fopen(\"planine.txt\", \"w\");\nfputs(\"2067 Bjelasnica\\n1627 Trebevic\\n8848 Mount Everest\\n1913 Jahorina\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nfor (i=0; i<vel; i++) {\n\tprintf(\"%s - %d\\n\", planine[i].naziv, planine[i].visina);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Bjelasnica - 2067\\nTrebevic - 1627\\nMount Everest - 8848\\nJahorina - 1913\\nBjelasnica - 2067\\nTrebevic - 1627\\nMount Everest - 8848\\nJahorina - 1913"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Prevelika datoteka, prazna datoteka *\/\nstruct Planina planine[1000];\nint vel, i, pos;\n\nFILE* txt = fopen(\"planine.txt\", \"w\");\nchar ime[10] = \"AAAAAAAA\";\nfor (i=0; i<2000; i++) {\n\tfprintf(txt, \"%d %s\\n\", i+1000, ime);\n\tpos = 0;\n\twhile(1) {\n\t\time[pos]++;\n\t\tif (ime[pos]<='Z') break;\n\t\time[pos]='A';\n\t\tpos++;\n\t}\n}\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nprintf(\"Vel: %d\\n\", vel);\nprintf(\"%s %d\\n\", planine[vel-1].naziv, planine[vel-1].visina);\n\ntxt = fopen(\"planine.txt\", \"w\");\nfputs(\"\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nprintf(\"Vel: %d\\n\", vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 1000\\nLMBAAAAA 1999\\nVel: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Razliciti primjeri lose formatiranih datoteka *\/\nstruct Planina planine[1000];\nint vel, i, pos;\n\nFILE* txt = fopen(\"planine.txt\", \"w\");\nfputs(\"   Bj  el a  sni   ca    2067\\nTrebevic 1627\\nMount Everest 8848\\nJahorina 1913\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nif (vel>=3 && vel<=5) printf(\"OK\\n\"); else printf(\"Vel: %d\", vel);\n\ntxt = fopen(\"planine.txt\", \"w\");\nfputs(\"  2067   Bj  el a  sni   ca    \\n1627 Trebevic\\n8848 Mount Everest\\n1913 Jahorina\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nif (vel>=3 && vel<=5) printf(\"OK\\n\"); else printf(\"Vel: %d\", vel);\n\n\ntxt = fopen(\"planine.txt\", \"w\");\nfputs(\"2067   Bj  el a  sni   ca    \\n  1627 Trebevic\\n8848 Mount Everest\\n1913 Jahorina\\n\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nif (vel>=3 && vel<=5) printf(\"OK\\n\"); else printf(\"Vel: %d\", vel);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK\\nOK\\nOK\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Predugacak naziv planine *\/\nstruct Planina planine[1000];\nint vel;\n\nFILE* txt = fopen(\"planine.txt\", \"w\");\nfputs(\"Bjelasnica 2067\\nOvoJeJakoDugacakNazivZaPlaninuKojiJeCakDuziIOdPedesetZnakova 1627\\nMount Everest 8848\\nJahorina 1913\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nprintf(\"Vel: %d\\n\", vel);\nif (vel>1) printf(\"%s - %d\\n\", planine[1].naziv, planine[1].visina);\n\ntxt = fopen(\"planine.txt\", \"w\");\nfputs(\"2067 Bjelasnica\\n1627 Trebevic\\n8848 Mount Everest\\n1913 OvoJeJakoDugacakNazivZaPlaninuKojiJeCakDuziIOdPedesetZnakova\", txt);\nfclose(txt);\n\nvel = ucitaj(planine, 1000);\nprintf(\"Vel: %d\\n\", vel);\nif (vel>1) printf(\"%s - %d\\n\", planine[3].naziv, planine[3].visina);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 4\\nOvoJeJakoDugacakNazivZaPlaninuKojiJeCakDuziIOdPede - 1627\\nVel: 4\\nOvoJeJakoDugacakNazivZaPlaninuKojiJeCakDuziIOdPede - 1913\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT7: Provjera binarne datoteke *\/\nstruct Planina planine[1000] = {\n\t{ \"Bjelasnica\", 2067},\n\t{ \"Trebevic\", 1627},\n\t{ \"Jahorina\",  1913},\n\t{ \"Mount Everest\", 8848}\n};\nint vel=4, i;\n\nzapisi(planine, vel);\n\nfor (i=0; i<vel; i++) {\n\tplanine[i].visina=0;\n\tplanine[i].naziv[0] = '\\0';\n}\n\nFILE* fp = fopen(\"planine.dat\", \"rb\");\nvel = fread(planine, sizeof(struct Planina), 100, fp);\nfclose(fp);\nfor (i=0; i<vel; i++) {\n    printf(\"%s - %d\\n\", planine[i].naziv, planine[i].visina);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Bjelasnica - 2067\\nTrebevic - 1627\\nJahorina - 1913\\nMount Everest - 8848"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT8: Druga provjera binarne datoteke *\/\nstruct Planina planine[1000] = {\n\t{ \"Bjelasnica\", 2067},\n\t{ \"Trebevic\", 1627},\n\t{ \"Jahorina\",  1913},\n\t{ \"Mount Everest\", 8848}\n};\nint vel=4, i=0, c;\n\nzapisi(planine, vel);\n\nFILE* fp = fopen(\"planine.dat\", \"rb\");\ndo {\n        c = fgetc(fp);\n        if (i>=164 && i<=174) printf(\"%d \", c);\n        i++;\n} while (c != EOF);\nfclose(fp);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "121 7 0 0 77 111 117 110 116 32 69"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT9: Jednostavan test za funkciju ispis *\/\nstruct Planina planine[1000] = {\n\t{ \"Bjelasnica\", 2067},\n\t{ \"Trebevic\", 1627},\n\t{ \"Jahorina\",  1913},\n\t{ \"Mount Everest\", 8848}\n};\nint vel=4;\nispis(planine, vel);\nplanine[0].visina = 1967;\nispis(planine, vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Jahorina 1913\\nBjelasnica 1967"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 10,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT10: Funkcija ispis: planine sa velikim slovom A i koje pocinju slovom A *\/\nstruct Planina planine[1000] = {\n\t{ \"Bjelasnica\", 2067},\n\t{ \"Trebevic\", 1627},\n\t{ \"JahorinA\",  1913},\n\t{ \"Mount Averest\", 8848}\n};\nint vel=4;\nispis(planine, vel);\nstrcpy(planine[1].naziv, \"Ararat\");\nplanine[1].visina = 1999;\nplanine[0].visina = 1998;\nispis(planine, vel);",
+            "global_above_main": "",
+            "global_top": "#include <string.h>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "JahorinA 1913\\nArarat 1999"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 11,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT11: Situacije kada se ne ispisuje nista *\/\nstruct Planina planine[1000] = {\n\t{ \"Bjelasnica\", 2067},\n\t{ \"Trebevic\", 2027},\n\t{ \"JahorinA\",  2017},\n\t{ \"Mount Averest\", 8848}\n};\nint vel=4;\nprintf(\"Poziv 1:\\n\");\nispis(planine, vel);\nplanine[1].visina = 1627;\nprintf(\"Poziv 2:\\n\");\nispis(planine, vel);\nplanine[3].visina = 0;\nprintf(\"Poziv 3:\\n\");\nispis(planine, vel);\nprintf(\"Poziv 4:\\n\");\nispis(planine, 0);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Poziv 1:\\nPoziv 2:\\nPoziv 3:\\nMount Averest 0\\nPoziv 4:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,295 @@
+{
+    "id": 289001,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR12, Zadatak 7",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "false",
+    "test_specifications": [
+        {
+            "id": "2366",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": 60,
+                "vmem": 1000000,
+                "stdin": "1\nAmila\nAmilic\n4\n3\nXX\nAA\nRI\n0\n2\nabcd@efg.hi\n6\n"
+            },
+            "expected": [
+                "Dodan student sa email adresom: aamilic1@etf.unsa.ba"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2367",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Datoteka je popunjena u testu 1 *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "60",
+                "vmem": "1000000",
+                "stdin": "2\naamilic1@etf.unsa.ba\nAmila\nAmilic\n2\nTK\n6\n"
+            },
+            "expected": [
+                "Trenutni podaci su: Amila Amilic RI3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2368",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Datoteka je popunjena u testu 1 *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": 60,
+                "vmem": 1000000,
+                "stdin": "4\ntest\n6\n"
+            },
+            "expected": [
+                "Nije pronadjen nijedan student."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2369",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Datoteka je popunjena u testu 1 *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "60",
+                "vmem": "1000000",
+                "stdin": "4\nmil\n6\n"
+            },
+            "expected": [
+                "Pronadjeni su sljedeci studenti:\\n1. Amilic Amila (TK2) - aamilic1@etf.unsa.ba"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2370",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Datoteka je popunjena u testu 1 *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "60",
+                "vmem": "1000000",
+                "stdin": "5\n2\nTK\n6\n"
+            },
+            "expected": [
+                "1. Amilic Amila (TK2) - aamilic1@etf.unsa.ba"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2371",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Datoteka je popunjena u testu 1 *\/\nstruct Adresa niz[1000];\nint vel=ucitaj(niz);\nprintf(\"Ucitano %d adresa.\\n\", vel);\nprintf(\"%s\\n\", niz[0].prezime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "60",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Ucitano 1 adresa.\\nAmilic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2372",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Datoteka je popunjena u testu 1 *\/\nstruct Adresa niz[1000];\nint vel=ucitaj(niz);\n\nstruct Adresa novi = {\"Alma\", \"Amilic\", \"\", \"RI\", 2};\nodredi_adresu(niz, vel, &novi);\nprintf(\"%s\\n\", novi.email);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": 60,
+                "vmem": 1000000,
+                "stdin": ""
+            },
+            "expected": [
+                "aamilic2@etf.unsa.ba"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2373",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Datoteka je popunjena u testu 1 *\/\nstruct Adresa niz[1000];\nint vel=ucitaj(niz);\n\n\/* Dodajemo jos adresa u niz *\/\nstruct Adresa a1 = {\"Mujo\", \"Mujic\", \"\", \"AE\", 1};\nstruct Adresa a2 = {\"Sanja\", \"Sanjic\", \"\", \"EE\", 2};\nstruct Adresa a3 = {\"Hana\", \"Hanic\", \"\", \"RI\", 3};\nstruct Adresa a4 = {\"Alma\", \"Amilic\", \"\", \"RI\", 2};\nodredi_adresu(niz, vel, &a1);\nniz[vel++] = a1;\nodredi_adresu(niz, vel, &a2);\nniz[vel++] = a2;\nodredi_adresu(niz, vel, &a3);\nniz[vel++] = a3;\nodredi_adresu(niz, vel, &a4);\nniz[vel++] = a4;\n\n\/* Zapisujemo promijenjeni niz *\/\nzapisi(niz, vel);\n\n\/* Da li je niz ispravno zapisan? *\/\nint vel2=ucitaj(niz);\nprintf(\"Ucitano %d adresa.\", vel2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": 60,
+                "vmem": 1000000,
+                "stdin": ""
+            },
+            "expected": [
+                "Ucitano 5 adresa."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2374",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Datoteka je popunjena u testu 8 *\/\nstruct Adresa niz[1000];\nint vel=ucitaj(niz);\n\nprintf(\"%d \", pretraga(niz,vel,\"mil\"));\nprintf(\"%d \", pretraga(niz,vel,\"anja\"));\nprintf(\"%d \", pretraga(niz,vel,\"anjic\"));\nprintf(\"%d\", pretraga(niz,vel,\"nesto\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": 60,
+                "vmem": 1000000,
+                "stdin": ""
+            },
+            "expected": [
+                "0 2 2 -1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2375",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Provjera pretrage sa vise rezultata *\/\n\/* Datoteka je popunjena u testu 8 *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "60",
+                "vmem": "1000000",
+                "stdin": "4\nmil\n6\n"
+            },
+            "expected": [
+                "Pronadjeni su sljedeci studenti:\\n1. Amilic Amila (TK2) - aamilic1@etf.unsa.ba\\n2. Amilic Alma (RI2) - aamilic2@etf.unsa.ba"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": "2376",
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Datoteka je popunjena u testu 8 *\/\nstruct Adresa niz[1000];\nint vel=ucitaj(niz);\n\nint rez=obrisi_adresu(niz, vel, \"nepostojeca\");\nprintf(\"%d \", rez);\n\nrez=obrisi_adresu(niz, vel, \"mmujic1@etf.unsa.ba\");\nprintf(\"%d\\n\", rez);\nvel--;\n\nint i;\nfor (i=0; i<vel; i++)\n   printf(\"%s,\", niz[i].email);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": 60,
+                "vmem": 1000000,
+                "stdin": ""
+            },
+            "expected": [
+                "0 1\\naamilic1@etf.unsa.ba,ssanjic1@etf.unsa.ba,hhanic1@etf.unsa.ba,aamilic2@etf.unsa.ba,",
+                "0 1\\naamilic1@etf.unsa.ba,aamilic2@etf.unsa.ba,ssanjic1@etf.unsa.ba,hhanic1@etf.unsa.ba,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        }
+    ]
+}

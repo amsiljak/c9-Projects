@@ -1,0 +1,122 @@
+{
+    "id": 7034,
+    "name": "Osnove ra\u010dunarstva (2015\/2016), Tutorijal 9, zadatak 5",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 809,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char recenica[200] = \"Danas    je    lijep    i     suncan    dan.    \";\nprintf(\"Broj rijeci u recenici je: %d\\n\",prva_rijec(recenica));\nprintf(\"%s\", recenica);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj rijeci u recenici je: 6\\nDanas"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 810,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char recenica[200] = \"Popokatepetl\";\nprintf(\"Broj rijeci u recenici je: %d\\n\",prva_rijec(recenica));\nprintf(\"%s\", recenica);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj rijeci u recenici je: 1\\nPopokatepetl"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 811,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char recenica[200] = \"I jogurt ujutru godi\";\nprintf(\"Broj rijeci u recenici je: %d\\n\",prva_rijec(recenica));\nprintf(\"%s\", recenica);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj rijeci u recenici je: 4\\nI"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 812,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/recenica pocinje s razmakom, i ima dodatnih razmaka izmedju rijeci\nchar recenica[200] = \"    I     jogurt.   ujutru     godi.    \";\nprintf(\"Broj rijeci u recenici je: %d\\n\",prva_rijec(recenica));\nprintf(\"%s\", recenica);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj rijeci u recenici je: 4\\n    I"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 813,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "   char recenica[100] = \"da li radi\";\n   printf(\"%d\",prva_rijec(recenica));\n   printf(\"\\n%s\",recenica);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3\\nda"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "id": 5094,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR1, zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 5095,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "17.777"
+            },
+            "expected": [
+                "Unesite broj: ^ 1:             17.77700\\n^ 2:            316.02173\\n^ 3:           5617.91828\\n^ 4:          99869.73320\\n^ 5:        1775384.24710\\n^ 6: 31561005.76068\\n^ 7: 561059999.40761\\n^ 8: 9973963609.46904\\n^ 9: 177307151085.53107\\n^ 10: 3151989224847.48584"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5096,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "33.123"
+            },
+            "expected": [
+                "Unesite broj: ^ 1:             33.12300\\n^ 2:           1097.13313\\n^ 3:          36340.34063\\n^ 4:        1203701.10275\\n^ 5:       39870191.62637\\n^ 6: 1320620357.24012\\n^ 7: 43742908092.86459\\n^ 8: 1448896344759.95386\\n^ 9: 47991793627483.94531\\n^ 10: 1589632180323150.50000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5097,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1.23"
+            },
+            "expected": [
+                "Unesite broj: ^ 1:              1.23000\\n^ 2:              1.51290\\n^ 3:              1.86087\\n^ 4:              2.28887\\n^ 5:              2.81531\\n^ 6: 3.46283\\n^ 7: 4.25928\\n^ 8: 5.23891\\n^ 9: 6.44386\\n^ 10: 7.92595"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

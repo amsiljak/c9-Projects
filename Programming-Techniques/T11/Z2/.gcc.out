@@ -1,0 +1,3 @@
+/rhome/a/asiljak1/workspace/TP/T11/Z2/main.cpp:27:33: error: invalid constructor; you probably meant ‘StedniRacun (const StedniRacun&)’
+  StedniRacun(const StedniRacun s){(*pnb)++; aktivni++;}
+                                 ^

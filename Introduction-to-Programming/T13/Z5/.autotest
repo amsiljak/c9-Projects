@@ -1,0 +1,101 @@
+{
+    "id": 7211,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 13, zadatak 5",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Samo standardni ulaz i izlaz *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nMuho\nMuhic\n18\n14\n2\n3\n1\nMirza\nMerzic\n20\n20\n2\n3\n1\nNiko\nFaZe\n0\n0\n2\n3\n0"
+            },
+            "expected": [
+                "Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: \\n1. Muhic Muho - 18, 14\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Izlazna datoteka usmeni.dat je kreirana\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: \\n1. Muhic Muho - 18, 14\\n2. Merzic Mirza - 20, 20\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Izlazna datoteka usmeni.dat je kreirana\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: \\n1. Muhic Muho - 18, 14\\n2. Merzic Mirza - 20, 20\\n3. FaZe Niko - 0, 0\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Izlazna datoteka usmeni.dat je kreirana\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Isti test, samo sada provjeravamo da li je datoteka ok *\/\n_main();\n\n\/* U binarnoj datoteci se trebaju nalaziti Merzic Mirza i Muhic Muho *\/\nucitaj_usmeni(2);",
+            "global_above_main": "void ucitaj_usmeni(int ocekivanih) {\nint i;\nFILE* dat = fopen(\"usmeni.dat\", \"rb\");\nif (dat == NULL) {\n    printf (\"Studentki main nije napravio datoteku usmeni.dat ili je nije zatvorio (fclose)!\");\n} else {\n    struct binarniStudent {\n        char prezime[20];\n        char ime[15];\n        int  broj_bodova;\n    } studenti[1000];\n    struct binarniStudent ucitani[2];\n    int broj = fread(ucitani, sizeof *ucitani, 10 \/*namjerno stavljamo da vise ucita ako ima *\/, dat);\n    fclose(dat);\n    if (broj != ocekivanih) {\n        printf (\"Ocekivani broj studenata: %d, ucitano: %d!\\n\", ocekivanih, broj);\n    }\n    printf (\"\\nUcitani studenti iz datoteke usmeni.dat:\\n\");\n    for (i = 0; i < broj; ++i) {\n        struct binarniStudent s = ucitani[i];\n        printf (\"'%s' '%s' %d\\n\", s.prezime, s.ime, s.broj_bodova);\n    }\n\n}\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nMuho\nMuhic\n18\n14\n2\n3\n1\nMirza\nMerzic\n20\n20\n2\n3\n1\nNiko\nFaZe\n0\n0\n2\n3\n0"
+            },
+            "expected": [
+                "Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: \\n1. Muhic Muho - 18, 14\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Izlazna datoteka usmeni.dat je kreirana\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: \\n1. Muhic Muho - 18, 14\\n2. Merzic Mirza - 20, 20\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Izlazna datoteka usmeni.dat je kreirana\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: \\n1. Muhic Muho - 18, 14\\n2. Merzic Mirza - 20, 20\\n3. FaZe Niko - 0, 0\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Izlazna datoteka usmeni.dat je kreirana\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz:\\nUcitani studenti iz datoteke usmeni.dat:\\n'Merzic' 'Mirza' 40\\n'Muhic' 'Muho' 32"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Niko nije polozio *\/\n_main();\n\nucitaj_usmeni(0);",
+            "global_above_main": "void ucitaj_usmeni(int ocekivanih) {\nint i;\nFILE* dat = fopen(\"usmeni.dat\", \"rb\");\nif (dat == NULL) {\n    printf (\"Studentki main nije napravio datoteku usmeni.dat ili je nije zatvorio (fclose)!\");\n} else {\n    struct binarniStudent {\n        char prezime[20];\n        char ime[15];\n        int  broj_bodova;\n    } studenti[1000];\n    struct binarniStudent ucitani[2];\n    int broj = fread(ucitani, sizeof *ucitani, 10 \/*namjerno stavljamo da vise ucita ako ima *\/, dat);\n    fclose(dat);\n    if (broj != ocekivanih) {\n        printf (\"Ocekivani broj studenata: %d, ucitano: %d!\\n\", ocekivanih, broj);\n    }\n    printf (\"\\nUcitani studenti iz datoteke usmeni.dat:\\n\");\n    for (i = 0; i < broj; ++i) {\n        struct binarniStudent s = ucitani[i];\n        printf (\"'%s' '%s' %d\\n\", s.prezime, s.ime, s.broj_bodova);\n    }\n\n}\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nNiko\nFaZe\n1\n2\n2\n3\n1\nOpet_neki\nCep\n3\n4\n2\n3\n0"
+            },
+            "expected": [
+                "Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: \\n1. FaZe Niko - 1, 2\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Izlazna datoteka usmeni.dat je kreirana\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: \\n1. FaZe Niko - 1, 2\\n2. Cep Opet_neki - 3, 4\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Izlazna datoteka usmeni.dat je kreirana\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz:\\nUcitani studenti iz datoteke usmeni.dat:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Da li je datoteka \"usmeni.dat\" dobro sortirana? *\/\n_main();\n\n\/* U binarnoj datoteci se trebaju nalaziti Merzic Mirza i Muhic Muho *\/\nucitaj_usmeni(3);",
+            "global_above_main": "void ucitaj_usmeni(int ocekivanih) {\nint i;\nFILE* dat = fopen(\"usmeni.dat\", \"rb\");\nif (dat == NULL) {\n    printf (\"Studentki main nije napravio datoteku usmeni.dat ili je nije zatvorio (fclose)!\");\n} else {\n    struct binarniStudent {\n        char prezime[20];\n        char ime[15];\n        int  broj_bodova;\n    } studenti[1000];\n    struct binarniStudent ucitani[2];\n    int broj = fread(ucitani, sizeof *ucitani, 10 \/*namjerno stavljamo da vise ucita ako ima *\/, dat);\n    fclose(dat);\n    if (broj != ocekivanih) {\n        printf (\"Ocekivani broj studenata: %d, ucitano: %d!\\n\", ocekivanih, broj);\n    }\n    printf (\"\\nUcitani studenti iz datoteke usmeni.dat:\\n\");\n    for (i = 0; i < broj; ++i) {\n        struct binarniStudent s = ucitani[i];\n        printf (\"'%s' '%s' %d\\n\", s.prezime, s.ime, s.broj_bodova);\n    }\n\n}\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\na\ns\n11\n10\n1\nq\nw\n13\n20\n1\ne\nr\n20\n20\n1\ng\nh\n1\n20\n2\n3\n0"
+            },
+            "expected": [
+                "Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: \\n1. s a - 11, 10\\n2. w q - 13, 20\\n3. r e - 20, 20\\n4. h g - 1, 20\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz: Izlazna datoteka usmeni.dat je kreirana\\nUnesite 1 za unos, 2 za ispis, 3 za usmeni, 0 za izlaz:\\nUcitani studenti iz datoteke usmeni.dat:\\n'r' 'e' 40\\n'w' 'q' 33\\n's' 'a' 21"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

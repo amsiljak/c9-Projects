@@ -1,0 +1,257 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:78:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nmain.c:3:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "78",
+                "col": "19",
+                "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                "output": "/tmp/buildservice/bs_6465/main.c:78:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                "code": "ukloni_komentare(&s);"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1702": {
+            "status": 1,
+            "run_result": {
+                "output": "int main() {\n\tprintf(\"Hello world\"); \n\treturn 0;\n}",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1702.c: In function ‘_main’:\nbs_test_1702.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nbs_test_1702.c:5:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1702.c",
+                        "line": "80",
+                        "col": "19",
+                        "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                        "output": "/tmp/buildservice/bs_6465/bs_test_1702.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                        "code": "ukloni_komentare(&s);"
+                    }
+                ]
+            }
+        },
+        "1703": {
+            "status": 1,
+            "run_result": {
+                "output": "abcdefgh/*ovaj komentar nije zatvoren!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1703.c: In function ‘_main’:\nbs_test_1703.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nbs_test_1703.c:5:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1703.c",
+                        "line": "80",
+                        "col": "19",
+                        "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                        "output": "/tmp/buildservice/bs_6465/bs_test_1703.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                        "code": "ukloni_komentare(&s);"
+                    }
+                ]
+            }
+        },
+        "1704": {
+            "status": 1,
+            "run_result": {
+                "output": "testtri",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1704.c: In function ‘_main’:\nbs_test_1704.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nbs_test_1704.c:5:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1704.c",
+                        "line": "80",
+                        "col": "19",
+                        "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                        "output": "/tmp/buildservice/bs_6465/bs_test_1704.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                        "code": "ukloni_komentare(&s);"
+                    }
+                ]
+            }
+        },
+        "1705": {
+            "status": 6,
+            "run_result": {
+                "output": "aa**/*bb",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1705.c: In function ‘_main’:\nbs_test_1705.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nbs_test_1705.c:5:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1705.c",
+                        "line": "80",
+                        "col": "19",
+                        "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                        "output": "/tmp/buildservice/bs_6465/bs_test_1705.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                        "code": "ukloni_komentare(&s);"
+                    }
+                ]
+            }
+        },
+        "1706": {
+            "status": 1,
+            "run_result": {
+                "output": "''",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1706.c: In function ‘_main’:\nbs_test_1706.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nbs_test_1706.c:5:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1706.c",
+                        "line": "80",
+                        "col": "19",
+                        "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                        "output": "/tmp/buildservice/bs_6465/bs_test_1706.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                        "code": "ukloni_komentare(&s);"
+                    }
+                ]
+            }
+        },
+        "1707": {
+            "status": 1,
+            "run_result": {
+                "output": "   abc \n   def",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1707.c: In function ‘_main’:\nbs_test_1707.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nbs_test_1707.c:5:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1707.c",
+                        "line": "80",
+                        "col": "19",
+                        "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                        "output": "/tmp/buildservice/bs_6465/bs_test_1707.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                        "code": "ukloni_komentare(&s);"
+                    }
+                ]
+            }
+        },
+        "1708": {
+            "status": 1,
+            "run_result": {
+                "output": "''",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1708.c: In function ‘_main’:\nbs_test_1708.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nbs_test_1708.c:5:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1708.c",
+                        "line": "80",
+                        "col": "19",
+                        "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                        "output": "/tmp/buildservice/bs_6465/bs_test_1708.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                        "code": "ukloni_komentare(&s);"
+                    }
+                ]
+            }
+        },
+        "1709": {
+            "status": 1,
+            "run_result": {
+                "output": "''",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1709.c: In function ‘_main’:\nbs_test_1709.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nbs_test_1709.c:5:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1709.c",
+                        "line": "80",
+                        "col": "19",
+                        "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                        "output": "/tmp/buildservice/bs_6465/bs_test_1709.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                        "code": "ukloni_komentare(&s);"
+                    }
+                ]
+            }
+        },
+        "1710": {
+            "status": 6,
+            "run_result": {
+                "output": "abc/ je C++ komentar*/def\njkl",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1710.c: In function ‘_main’:\nbs_test_1710.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]\n  ukloni_komentare(&s);\n                   ^\nbs_test_1710.c:5:7: note: expected ‘char *’ but argument is of type ‘char (*)[64]’\n char *ukloni_komentare(char *s) {\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1710.c",
+                        "line": "80",
+                        "col": "19",
+                        "message": "passing argument 1 of 'ukloni_komentare' from incompatible pointer type",
+                        "output": "/tmp/buildservice/bs_6465/bs_test_1710.c:80:19: warning: passing argument 1 of ‘ukloni_komentare’ from incompatible pointer type [-Wincompatible-pointer-types]  ukloni_komentare(&s);                   ^",
+                        "code": "ukloni_komentare(&s);"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1567979359
+}

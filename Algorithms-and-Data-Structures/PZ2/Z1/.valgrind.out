@@ -1,0 +1,35 @@
+==5374== Memcheck, a memory error detector
+==5374== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5374== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==5374== Command: /rhome/a/asiljak1/workspace/ASP/PZ2/Z1/.runme
+==5374== Parent PID: 5352
+==5374== 
+==5374== Invalid write of size 4
+==5374==    at 0x109CC4: main (main.cpp:521)
+==5374==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==5374== 
+==5374== 
+==5374== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==5374==  Access not within mapped region at address 0x0
+==5374==    at 0x109CC4: main (main.cpp:521)
+==5374==  If you believe this happened as a result of a stack
+==5374==  overflow in your program's main thread (unlikely but
+==5374==  possible), you can try to increase the size of the
+==5374==  main thread stack using the --main-stacksize= flag.
+==5374==  The main thread stack size used in this run was 8388608.
+==5374== 
+==5374== HEAP SUMMARY:
+==5374==     in use at exit: 240 bytes in 15 blocks
+==5374==   total heap usage: 16 allocs, 1 frees, 72,944 bytes allocated
+==5374== 
+==5374== LEAK SUMMARY:
+==5374==    definitely lost: 0 bytes in 0 blocks
+==5374==    indirectly lost: 0 bytes in 0 blocks
+==5374==      possibly lost: 0 bytes in 0 blocks
+==5374==    still reachable: 240 bytes in 15 blocks
+==5374==         suppressed: 0 bytes in 0 blocks
+==5374== Reachable blocks (those to which a pointer was found) are not shown.
+==5374== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==5374== 
+==5374== For counts of detected and suppressed errors, rerun with: -v
+==5374== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

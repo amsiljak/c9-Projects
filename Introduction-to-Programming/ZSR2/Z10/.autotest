@@ -1,0 +1,143 @@
+{
+    "id": 5276,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR1, zadatak 10",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 5277,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-123"
+            },
+            "expected": [
+                "Unesite cijeli broj: Zbir zadnje dvije cifre (2 i 3) je: 5\\nRazlika zadnje dvije cifre (2 i 3) je: -1\\nProizvod zadnje dvije cifre (2 i 3) je: 6\\nKolicnik zadnje dvije cifre (2 i 3) je: 0.666667"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5278,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "75"
+            },
+            "expected": [
+                "Unesite cijeli broj: Zbir zadnje dvije cifre (7 i 5) je: 12\\nRazlika zadnje dvije cifre (7 i 5) je: 2\\nProizvod zadnje dvije cifre (7 i 5) je: 35\\nKolicnik zadnje dvije cifre (7 i 5) je: 1.400000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5279,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "123456"
+            },
+            "expected": [
+                "Unesite cijeli broj: Zbir zadnje dvije cifre (5 i 6) je: 11\\nRazlika zadnje dvije cifre (5 i 6) je: -1\\nProizvod zadnje dvije cifre (5 i 6) je: 30\\nKolicnik zadnje dvije cifre (5 i 6) je: 0.833333"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5280,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "12300"
+            },
+            "expected": [
+                "Unesite cijeli broj: Zbir zadnje dvije cifre (0 i 0) je: 0\\nRazlika zadnje dvije cifre (0 i 0) je: 0\\nProizvod zadnje dvije cifre (0 i 0) je: 0\\nKolicnik zadnje dvije cifre (0 i 0) je: Nemoguce!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5281,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7"
+            },
+            "expected": [
+                "Unesite cijeli broj: Zbir zadnje dvije cifre (0 i 7) je: 7\\nRazlika zadnje dvije cifre (0 i 7) je: -7\\nProizvod zadnje dvije cifre (0 i 7) je: 0\\nKolicnik zadnje dvije cifre (0 i 7) je: 0.000000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5282,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "20001"
+            },
+            "expected": [
+                "Unesite cijeli broj: Zbir zadnje dvije cifre (0 i 1) je: 1\\nRazlika zadnje dvije cifre (0 i 1) je: -1\\nProizvod zadnje dvije cifre (0 i 1) je: 0\\nKolicnik zadnje dvije cifre (0 i 1) je: 0.000000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

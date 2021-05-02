@@ -1,0 +1,7 @@
+/rhome/a/asiljak1/workspace/OR/P1/Z16/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/P1/Z16/main.c:9:40: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+    if(i==0 || i==n-1 || i==2 || j==n-1 && i>2 || j==0 && i<2) printf("*");
+                                 ~~~~~~~^~~~~~
+/rhome/a/asiljak1/workspace/OR/P1/Z16/main.c:9:55: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+    if(i==0 || i==n-1 || i==2 || j==n-1 && i>2 || j==0 && i<2) printf("*");
+                                                  ~~~~~^~~~~~

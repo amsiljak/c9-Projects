@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/TP/Z14/Z2/main.cpp: In member function ‘void Skladiste::UcitajIzDatoteke(const char*)’:
+/rhome/a/asiljak1/workspace/TP/Z14/Z2/main.cpp:190:9: warning: ‘slovo’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         if(slovo=='S')
+         ^~

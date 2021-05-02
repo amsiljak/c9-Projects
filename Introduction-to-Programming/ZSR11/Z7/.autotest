@@ -1,0 +1,227 @@
+{
+    "id": 5575,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), ZSR 11, zadatak 7",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT1 Juninho99\n\/\/ Da li funkcije mogu raditi ispravno sa jednostavnim datumima\n\/\/ Tu se prije svega misli na logiku datuma i vremena, bez izlaza iz opsega i tome sli\u010dnog, potreban je realan i mogu\u0107 ispis\n\nunsigned int s=450000000;\n\/\/ To je ustvari 5.4.14. 8:0:0  \n\nstruct DatumVrijeme d1 = {\n        {1,2,3},{4,5,6}\n};\n\nstruct DatumVrijeme d2 = {\n        {20,5,2019},{15,31,10}\n};\n\nstruct DatumVrijeme p = saberi(d1,d2);\n\nstruct DatumVrijeme k = oduzmi(d2,s);\n\nstruct DatumVrijeme l = dodaj(d2,s);\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",p.d.dan, p.d.mjesec, p.d.godina, p.v.sat, p.v.minuta, p.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 21.7.2022. 19:36:16\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",k.d.dan, k.d.mjesec, k.d.godina, k.v.sat, k.v.minuta, k.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 14.2.2005. 7:31:10\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 25.9.2033. 23:31:10",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "21.7.2022. 19:36:16\\n14.2.2005. 7:31:10\\n25.9.2033. 23:31:10"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT2 Juninho99\n\/\/ Da li funkcije mogu raditi ispravno sa velikim datumima (velikom godinom)\n\/\/ Program se nikad ne smije krahirati\n\nunsigned int s=454545454;\n\nstruct DatumVrijeme d1 = {\n        {1,1,5000000},{2,2,2}\n};\n\nstruct DatumVrijeme d2 = {\n        {1,1,4000000},{2,2,2}\n};\n\nstruct DatumVrijeme p = saberi(d1,d2);\n\nstruct DatumVrijeme k = dodaj(d1,s);\n\nstruct DatumVrijeme l = dodaj(d2,s);\n\nstruct DatumVrijeme m = oduzmi(d1,s);\n\nstruct DatumVrijeme n = oduzmi(d2,s);\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",p.d.dan, p.d.mjesec, p.d.godina, p.v.sat, p.v.minuta, p.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 2.2.9000000. 4:4:4\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",k.d.dan, k.d.mjesec, k.d.godina, k.v.sat, k.v.minuta, k.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 29.6.5000014. 0:39:36\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 29.6.4000014. 0:39:36\n        \nprintf (\"%d.%d.%d. %d:%d:%d\\n\",m.d.dan, m.d.mjesec, m.d.godina, m.v.sat, m.v.minuta, m.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 5.8.4999985. 3:24:28\n        \nprintf (\"%d.%d.%d. %d:%d:%d\\n\",n.d.dan, n.d.mjesec, n.d.godina, n.v.sat, n.v.minuta, n.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 5.8.3999985. 3:24:28",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2.2.9000000. 4:4:4\\n29.6.5000014. 0:39:36\\n29.6.4000014. 0:39:36\\n5.8.4999985. 3:24:28\\n5.8.3999985. 3:24:28\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT3 Juninho99\n\/\/ \u0160ta \u0107e se desiti ako je broj sekundi 0, ni\u0161ta\n\/\/ To je ujedno i minimalni element 'unsigned int', on ne poznaje negativne brojeve\n\/\/ Program se nikad ne smije krahirati\n\nunsigned int s=0;\n\nstruct DatumVrijeme d1 = {\n        {1,1,5000000},{2,2,2}\n};\n\nstruct DatumVrijeme d2 = {\n        {1,1,4000000},{2,2,2}\n};\n\nstruct DatumVrijeme p = saberi(d1,d2);\n\nstruct DatumVrijeme k = dodaj(d1,s);\n\nstruct DatumVrijeme l = dodaj(d2,s);\n\nstruct DatumVrijeme m = oduzmi(d1,s);\n\nstruct DatumVrijeme n = oduzmi(d2,s);\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",p.d.dan, p.d.mjesec, p.d.godina, p.v.sat, p.v.minuta, p.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 2.2.9000000. 4:4:4\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",k.d.dan, k.d.mjesec, k.d.godina, k.v.sat, k.v.minuta, k.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 1.1.5000000. 2:2:2\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 1.1.4000000. 2:2:2\n        \nprintf (\"%d.%d.%d. %d:%d:%d\\n\",m.d.dan, m.d.mjesec, m.d.godina, m.v.sat, m.v.minuta, m.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 1.1.5000000. 2:2:2\n        \nprintf (\"%d.%d.%d. %d:%d:%d\\n\",n.d.dan, n.d.mjesec, n.d.godina, n.v.sat, n.v.minuta, n.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 1.1.4000000. 2:2:2",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2.2.9000000. 4:4:4\\n1.1.5000000. 2:2:2\\n1.1.4000000. 2:2:2\\n1.1.5000000. 2:2:2\\n1.1.4000000. 2:2:2\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT4 Juninho99\n\/\/ \u0160ta \u0107e se desiti ako je neki element datuma (vremena) manji od 0, ni\u0161ta\n\/\/ Program treba vratiti takav datum, to nam je znak da ne\u0161to ne valja\n\/\/ Program se nikad ne smije krahirati\n\nunsigned int s=12345678;\n\nstruct DatumVrijeme d1 = {\n        {-1,5,10620},{2,5,19}\n};\n\nstruct DatumVrijeme d2 = {\n        {21,1,2019},{7,-4,20}\n};\n\nstruct DatumVrijeme p = saberi(d1,d2);\n\nstruct DatumVrijeme k = dodaj(d1,s);\n\nstruct DatumVrijeme l = dodaj(d2,s);\n\nstruct DatumVrijeme m = oduzmi(d1,s);\n\nstruct DatumVrijeme n = oduzmi(d2,s);\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",p.d.dan, p.d.mjesec, p.d.godina, p.v.sat, p.v.minuta, p.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ -1.5.10620. 2:5:19\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",k.d.dan, k.d.mjesec, k.d.godina, k.v.sat, k.v.minuta, k.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ -1.5.10620. 2:5:19\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 21.1.2019. 7:-4:20\n        \nprintf (\"%d.%d.%d. %d:%d:%d\\n\",m.d.dan, m.d.mjesec, m.d.godina, m.v.sat, m.v.minuta, m.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ -1.5.10620. 2:5:19\n        \nprintf (\"%d.%d.%d. %d:%d:%d\\n\",n.d.dan, n.d.mjesec, n.d.godina, n.v.sat, n.v.minuta, n.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 21.1.2019. 7:-4:20",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "-1.5.10620. 2:5:19\\n-1.5.10620. 2:5:19\\n21.1.2019. 7:-4:20\\n-1.5.10620. 2:5:19\\n21.1.2019. 7:-4:20"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT5 Juninho99\n\/\/ Provjeravamo specifi\u010dne slu\u010dajeve za funkciju saberi\n\/\/ Program se nikad ne smije krahirati\n\nstruct DatumVrijeme d1 = {\n        {1,5,2010},{15,5,19}\n};\n\nstruct DatumVrijeme d2 = {\n        {7,1,2019},{23,59,59}\n};\n\nstruct DatumVrijeme d3 = {\n        {15,2,2019},{23,59,59}\n};\n\nstruct DatumVrijeme d4 = {\n        {20,2,2019},{23,59,59}\n};\n\nstruct DatumVrijeme d5 = {\n        {20,8,2010},{23,59,59}\n};\n\nstruct DatumVrijeme p = saberi(d1,d2);\n        \/\/ Da li \u0107emo dobiti jo\u0161 jedan dan u datumu ako smo taj dan dobili iz vremena (15 + 20 > 24)\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",p.d.dan, p.d.mjesec, p.d.godina, p.v.sat, p.v.minuta, p.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 9.6.4029. 15:5:18\n        \nstruct DatumVrijeme k = saberi(d3,d2);\n        \/\/ Da li \u0107emo dobiti jo\u0161 jedan dan u datumu ako smo taj dan dobili iz vremena (23 + 23 > 24)\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",k.d.dan, k.d.mjesec, k.d.godina, k.v.sat, k.v.minuta, k.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 23.3.4038. 23:59:58\n        \nstruct DatumVrijeme l = saberi(d4,d3);\n        \/\/ Da li dobijamo jo\u0161 jedan mjesec koji je nastao od zbira dana (20 + 15 + 1 > 30)\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 6.5.4038. 23:59:58\n        \nstruct DatumVrijeme m = saberi(d5,d1);\n        \/\/ Da li dobijamo jo\u0161 jednu godinu koja je nastala iz zbira mjeseci (8 + 5 > 12)\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",m.d.dan, m.d.mjesec, m.d.godina, m.v.sat, m.v.minuta, m.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 22.1.4021. 15:5:18",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "9.6.4029. 15:5:18\\n23.3.4038. 23:59:58\\n6.5.4038. 23:59:58\\n22.1.4021. 15:5:18"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT6 Juninho99\n\/\/ Provjeravamo specifi\u010dne slu\u010dajeve sa mjesecima za funkciju saberi\n\/\/ Program se nikad ne smije krahirati\n\nstruct DatumVrijeme d2 = {\n        {7,1,2019},{23,59,59}\n};\n\nstruct DatumVrijeme d4 = {\n        {21,1,2019},{0,0,0}\n};\n\nstruct DatumVrijeme d5 = {\n        {22,1,2019},{0,0,0}\n};\n\nstruct DatumVrijeme d6 = {\n        {22,1,2001},{0,0,0}\n};\n\nstruct DatumVrijeme d1 = {\n        {22,1,2001},{5,5,5}\n};\n\nstruct DatumVrijeme d3 = {\n        {21,1,81},{5,5,5}\n};\n\nstruct DatumVrijeme d7 = {\n        {23,10,81},{5,5,5}\n};\n\nstruct DatumVrijeme d8 = {\n        {23,2,81},{5,5,5}\n};\n\nstruct DatumVrijeme l = saberi(d4,d2);\n        \/\/ Februar ima 28 dana, godina nije prestupna\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 28.2.4038. 23:59:59\n        \nstruct DatumVrijeme m = saberi(d5,d2);\n        \/\/ Februar ima 28 dana, godina nije prestupna, da li \u0107e funkcija pre\u0107i na mjesec mart\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",m.d.dan, m.d.mjesec, m.d.godina, m.v.sat, m.v.minuta, m.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 1.3.4038. 23:59:59\n        \nstruct DatumVrijeme n = saberi(d6,d2);\n        \/\/ Februar ima 29 dana, godina 4020-ta je prestupna, dodatni dan smo dobili kroz zbir sati, imamo li mjesec mart?\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",n.d.dan, n.d.mjesec, n.d.godina, n.v.sat, n.v.minuta, n.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 29.2.4020. 23:59:59\n        \nstruct DatumVrijeme k = saberi(d1,d2);\n        \/\/ Februar ima 29 dana, godina 4020-ta je prestupna\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",k.d.dan, k.d.mjesec, k.d.godina, k.v.sat, k.v.minuta, k.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 1.3.4020. 5:5:4\n        \nstruct DatumVrijeme p = saberi(d3,d2);\n        \/\/ Februar ima 28 dana, godina 2100-ta nije prestupna\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",p.d.dan, p.d.mjesec, p.d.godina, p.v.sat, p.v.minuta, p.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 1.3.2100. 5:5:4\n        \nstruct DatumVrijeme t = saberi(d7,d2);\n        \/\/ Novembar ima 30 dana, da li imamo mjesec decembar\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",t.d.dan, t.d.mjesec, t.d.godina, t.v.sat, t.v.minuta, t.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 1.12.2100. 5:5:4\n        \nstruct DatumVrijeme r = saberi(d8,d2);\n        \/\/ Mart ima 31 dan\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",r.d.dan, r.d.mjesec, r.d.godina, r.v.sat, r.v.minuta, r.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 31.3.2100. 5:5:4",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "28.2.4038. 23:59:59\\n1.3.4038. 23:59:59\\n29.2.4020. 23:59:59\\n1.3.4020. 5:5:4\\n1.3.2100. 5:5:4\\n1.12.2100. 5:5:4\\n31.3.2100. 5:5:4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT7 Juninho99\n\/\/ \u0160ta \u0107e se desiti ako upi\u0161emo nemogu\u0107 datum, ni\u0161ta, program vra\u0107a takav datum, a to nam je znak da ne\u0161to nije uredu\n\/\/ Program se nikad ne smije krahirati\n\nunsigned int s = 30000000;\n\nstruct DatumVrijeme d1 = {\n        {79,1,2019},{16,25,13}\n};\n\nstruct DatumVrijeme d2 = {\n        {25,13,2010},{5,41,30}\n};\n\nstruct DatumVrijeme d3 = {\n        {22,1,209},{30,10,23}\n};\n\nstruct DatumVrijeme d4 = {\n        {20,7,155},{19,61,59}\n};\n\nstruct DatumVrijeme d5 = {\n        {10,8,2001},{23,24,100}\n};\n\nstruct DatumVrijeme l = saberi(d1,d2);\n        \/\/ Problem je u danima\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 79.1.2019. 16:25:13\n        \nstruct DatumVrijeme m = oduzmi(d2,s);\n        \/\/ Problem je u mjesecu\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",m.d.dan, m.d.mjesec, m.d.godina, m.v.sat, m.v.minuta, m.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 25.13.2010. 5:41:30\n        \nstruct DatumVrijeme n = dodaj(d3,s);\n        \/\/ Problem je u satima\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",n.d.dan, n.d.mjesec, n.d.godina, n.v.sat, n.v.minuta, n.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 22.1.209. 30:10:23\n        \nstruct DatumVrijeme k = saberi(d4,d5);\n        \/\/ Problem je u minutama\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",k.d.dan, k.d.mjesec, k.d.godina, k.v.sat, k.v.minuta, k.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 20.7.155. 19:61:59\n        \nstruct DatumVrijeme p = oduzmi(d5,s);\n        \/\/ Problem je u sekundama\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",p.d.dan, p.d.mjesec, p.d.godina, p.v.sat, p.v.minuta, p.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 10.8.2001. 23:24:100",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "79.1.2019. 16:25:13\\n25.13.2010. 5:41:30\\n22.1.209. 30:10:23\\n20.7.155. 19:61:59\\n10.8.2001. 23:24:100"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT8 Juninho99\n\/\/ Provjeravamo posebne slu\u010dajeve za funkciju oduzmi\n\/\/ Program se nikad ne smije krahirati\n\nunsigned int s1 = 32103210;\n\/\/ \u0160to je ustvari 6.1.1. 13:33:30  \nunsigned int s2 = 123456789;\n\/\/ \u0160to je ustvari 29.11.3. 21:33:9\n\nstruct DatumVrijeme d1 = {\n        {6,1,1},{13,33,29}\n};\n\nstruct DatumVrijeme d2 = {\n        {29,11,3},{21,33,9}\n};\n\nstruct DatumVrijeme d3 = {\n        {1,1,2},{1,1,2}\n};\n\nstruct DatumVrijeme l = oduzmi(d1,s1);\n        \/\/ Jedna sekunda razlike, ako bi se funkcija izvr\u0161ila dobili bismo -1 sekundu, tako da program vra\u0107a po\u010detni datum\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 6.1.1. 13:33:29\n        \nstruct DatumVrijeme m = oduzmi(d2,s2);\n        \/\/ Datum i broj sekundi isti, no me\u0111utim ne postoji datum 0.0.0 0:0:0\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",m.d.dan, m.d.mjesec, m.d.godina, m.v.sat, m.v.minuta, m.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 29.11.3. 21:33:9\n        \nstruct DatumVrijeme n = oduzmi(d3,s2);\n        \/\/ Mali datum, veliki broj sekundi\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",n.d.dan, n.d.mjesec, n.d.godina, n.v.sat, n.v.minuta, n.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 1.1.2. 1:1:2",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6.1.1. 13:33:29\\n29.11.3. 21:33:9\\n1.1.2. 1:1:2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT9 Juninho99\n\/\/ Provjeravamo posebne slu\u010dajeve za funkciju dodaj\n\/\/ Program se nikad ne smije krahirati\n\nunsigned int s1 = 131622400;\n\/\/ \u0160to je ustvari 2.3.4. 9:46:40  \nunsigned int s2 = 125454521;\n\/\/ \u0160to je ustvari 23.12.3. 0:28:41\n\nstruct DatumVrijeme d1 = {\n        {1,1,1},{1,1,1}\n};\n\nstruct DatumVrijeme d2 = {\n        {2,2,2},{2,2,2}\n};\n\nstruct DatumVrijeme l = dodaj(d1,s1);\n        \/\/ Ako su nam u datumu sve jedinice, odmah mo\u017eemo znati rezultat dodavanja sekundi, a da li i program to ispi\u0161e...\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 3.4.5. 10:47:41\n        \nstruct DatumVrijeme m = dodaj(d2,s2);\n        \/\/ Datum ima sve dvice, da li program radi kako treba\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",m.d.dan, m.d.mjesec, m.d.godina, m.v.sat, m.v.minuta, m.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 25.2.6. 2:30:43",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3.4.5. 10:47:41\\n25.2.6. 2:30:43"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT10 Juninho99\n\/\/ Kombinacija funkcija\n\/\/ Program se nikad ne smije krahirati\n\nunsigned int s1 = 30000000;\nunsigned int s2 = 41241341;\n\nstruct DatumVrijeme d1 = {\n        {24,1,2019},{16,25,13}\n};\n\nstruct DatumVrijeme d2 = {\n        {25,11,2010},{5,41,30}\n};\n\nstruct DatumVrijeme d3 = {\n        {22,5,209},{15,10,23}\n};\n\nstruct DatumVrijeme d4 = {\n        {20,7,155},{19,59,59}\n};\n\nstruct DatumVrijeme d5 = {\n        {10,8,2001},{23,24,11}\n};\n\nstruct DatumVrijeme l = saberi(oduzmi(d1,s1),dodaj(d1,s2));\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",l.d.dan, l.d.mjesec, l.d.godina, l.v.sat, l.v.minuta, l.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 27.8.4038. 11:26:7\n        \nstruct DatumVrijeme m = oduzmi(saberi(d2,d3),s1);\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",m.d.dan, m.d.mjesec, m.d.godina, m.v.sat, m.v.minuta, m.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 4.6.2219. 15:31:53\n        \nstruct DatumVrijeme n = dodaj(oduzmi(d4,s2),s1);\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",n.d.dan, n.d.mjesec, n.d.godina, n.v.sat, n.v.minuta, n.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 11.4.155. 17:24:18\n        \nstruct DatumVrijeme k = saberi(saberi(d2,d3),saberi(d4,d5));\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",k.d.dan, k.d.mjesec, k.d.godina, k.v.sat, k.v.minuta, k.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 18.9.4377. 16:16:3\n        \nstruct DatumVrijeme p = saberi(saberi(saberi(d3,d5),dodaj(d2,s2)),saberi(saberi(saberi(d4,d2),d5),saberi(oduzmi(d1,s2),d4)));\n\nprintf (\"%d.%d.%d. %d:%d:%d\\n\",p.d.dan, p.d.mjesec, p.d.godina, p.v.sat, p.v.minuta, p.v.sekunda);\n        \/\/ O\u010dekivani izlaz: \n        \/\/ 9.4.10565. 9:46:56",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "27.8.4038. 11:26:7\\n4.6.2219. 15:31:53\\n11.4.155. 17:24:18\\n18.9.4377. 16:16:3\\n9.4.10565. 9:46:56"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

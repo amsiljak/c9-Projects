@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/OR/Z1/Z3/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/Z1/Z3/main.c:7:43: warning: unused variable ‘k2’ [-Wunused-variable]
+  double knov, kuk, z, s, n, procenat, k1, k2;
+                                           ^~

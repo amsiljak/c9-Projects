@@ -1,0 +1,24 @@
+==20645== Memcheck, a memory error detector
+==20645== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==20645== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==20645== Command: /rhome/a/asiljak1/workspace/TP/T5/Z5/.runme
+==20645== Parent PID: 20618
+==20645== 
+==20645== 
+==20645== Process terminating with default action of signal 15 (SIGTERM)
+==20645==    at 0x5875081: read (read.c:27)
+==20645==    by 0x57F2147: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:531)
+==20645==    by 0x57F33F1: _IO_default_uflow (genops.c:380)
+==20645==    by 0x512B95C: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==20645==    by 0x5139739: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==20645==    by 0x513996D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==20645==    by 0x108DDE: main (main.cpp:34)
+==20645== 
+==20645== HEAP SUMMARY:
+==20645==     in use at exit: 0 bytes in 0 blocks
+==20645==   total heap usage: 2 allocs, 2 frees, 73,728 bytes allocated
+==20645== 
+==20645== All heap blocks were freed -- no leaks are possible
+==20645== 
+==20645== For counts of detected and suppressed errors, rerun with: -v
+==20645== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

@@ -1,0 +1,14 @@
+/rhome/a/asiljak1/workspace/OR/T13/Z2/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/T13/Z2/main.c:58:38: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘int *’ [-Wformat=]
+         fprintf(izlaz, "%-20s%-15s%-2d%-2d\n",studenti[niz[i]].prezime, studenti[niz[i]].ime, &studenti[niz[i]].broj_bodova1,
+                                   ~~~^                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                   %-2ls
+/rhome/a/asiljak1/workspace/OR/T13/Z2/main.c:58:42: warning: format ‘%d’ expects argument of type ‘int’, but argument 6 has type ‘int *’ [-Wformat=]
+         fprintf(izlaz, "%-20s%-15s%-2d%-2d\n",studenti[niz[i]].prezime, studenti[niz[i]].ime, &studenti[niz[i]].broj_bodova1,
+                                       ~~~^
+                                       %-2ls
+      &studenti[niz[i]].broj_bodova2);
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       
+/rhome/a/asiljak1/workspace/OR/T13/Z2/main.c:16:14: warning: unused variable ‘ukupno’ [-Wunused-variable]
+  int br_cl=0,ukupno;
+              ^~~~~~

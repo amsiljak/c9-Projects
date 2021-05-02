@@ -1,0 +1,105 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "2158": {
+            "status": 6,
+            "run_result": {
+                "output": "*****\n*   *\n*****\n*****\n*   *\n*   *\n*****\nBroj uspjesnih je: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2159": {
+            "status": 6,
+            "run_result": {
+                "output": "******\n*    *\n*    *\n*    *\n*    *\n******\n******\n*    *\n*    *\n*    *\n*    *\n******\n******\n*    *\n*    *\n*    *\n*    *\n******\nBroj uspjesnih je: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2160": {
+            "status": 6,
+            "run_result": {
+                "output": "*******\n*     *\n*     *\n*     *\n*     *\n*     *\n*******\n*\nBroj uspjesnih je: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2161": {
+            "status": 6,
+            "run_result": {
+                "output": "******\n*    *\n*    *\n*    *\n*    *\n******\nBroj uspjesnih je: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3104": {
+            "status": 6,
+            "run_result": {
+                "output": "******\n*    *\n*    *\n*    *\n*    *\n******\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBroj uspjesnih je: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3105": {
+            "status": 1,
+            "run_result": {
+                "output": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nBroj uspjesnih je: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1568054141
+}

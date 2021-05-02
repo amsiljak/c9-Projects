@@ -1,0 +1,26 @@
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp: In function ‘bool DaLiSuSlicni(const Trougao&, const Trougao&)’:
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp:122:46: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         while (tacka.DajUgao(a)==t2.DajUgao(b)) {a++; b++; prva++; if(b==4) b=1; if(prva==3) return true;}
+                                              ^
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp: In function ‘bool DaLiSuPodudarni(const Trougao&, const Trougao&)’:
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp:134:53: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         while(tacka.DajStranicu(a)==t2.DajStranicu(b)) {a++; b++; prva++; if(b==4) b=1; if(prva==3) return true;} 
+                                                     ^
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp: In member function ‘void Trougao::Skaliraj(double)’:
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp:154:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     if(faktor==0) throw std::domain_error("Nekorektan faktor skaliranja");
+                ^
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp: In member function ‘void Trougao::Skaliraj(const Tacka&, double)’:
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp:164:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     if(faktor==0) throw std::domain_error("Nekorektan faktor skaliranja");
+                ^
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp: In function ‘int main()’:
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp:314:26: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                     if(id=false) std::cout<<"Parovi identicnih trouglova: "<<std::endl;
+                        ~~^~~~~~
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp:329:23: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(pod=false) std::cout<<"Parovi podudarnih trouglova: "<<std::endl;
+                    ~~~^~~~~~
+/rhome/a/asiljak1/workspace/TP/Z4/Z1/main.cpp:344:24: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+                 if(sluc=false) std::cout<<"Parovi slicnih trouglova: "<<std::endl;
+                    ~~~~^~~~~~

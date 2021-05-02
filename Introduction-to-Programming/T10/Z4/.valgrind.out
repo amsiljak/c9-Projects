@@ -1,0 +1,15 @@
+==4719== Memcheck, a memory error detector
+==4719== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4719== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4719== Command: /rhome/a/asiljak1/workspace/OR/T10/Z4/.runme
+==4719== Parent PID: 4706
+==4719== 
+==4719== 
+==4719== HEAP SUMMARY:
+==4719==     in use at exit: 0 bytes in 0 blocks
+==4719==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==4719== 
+==4719== All heap blocks were freed -- no leaks are possible
+==4719== 
+==4719== For counts of detected and suppressed errors, rerun with: -v
+==4719== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

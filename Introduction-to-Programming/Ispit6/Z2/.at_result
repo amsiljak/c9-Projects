@@ -1,0 +1,126 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_1.c: In function ‘main’:\nbs_test_1.c:14:14: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration]\n printf(\"%s\", izbaci_anagrame(tekst, \"trava\"));\n              ^~~~~~~~~~~~~~~\n/tmp/ccqTClFh.o: In function `main':\nbs_test_1.c:(.text+0x7f): undefined reference to `izbaci_anagrame'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "14",
+                        "message": "implicit declaration of function 'izbaci_anagrame'",
+                        "output": "/tmp/buildservice/bs_1056/bs_test_1.c:14:14: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration] printf(\"%s\", izbaci_anagrame(tekst, \"trava\"));              ^~~~~~~~~~~~~~~/tmp/ccqTClFh.o: In function `main':bs_test_1.c:(.text+0x7f): undefined reference to `izbaci_anagrame'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"%s\", izbaci_anagrame(tekst, \"trava\"));"
+                    }
+                ]
+            }
+        },
+        "2": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_2.c: In function ‘main’:\nbs_test_2.c:15:14: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration]\n printf(\"%s\", izbaci_anagrame(tekst, anagrami));\n              ^~~~~~~~~~~~~~~\n/tmp/ccdxBA1o.o: In function `main':\nbs_test_2.c:(.text+0xbf): undefined reference to `izbaci_anagrame'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "implicit declaration of function 'izbaci_anagrame'",
+                        "output": "/tmp/buildservice/bs_1056/bs_test_2.c:15:14: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration] printf(\"%s\", izbaci_anagrame(tekst, anagrami));              ^~~~~~~~~~~~~~~/tmp/ccdxBA1o.o: In function `main':bs_test_2.c:(.text+0xbf): undefined reference to `izbaci_anagrame'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"%s\", izbaci_anagrame(tekst, anagrami));"
+                    }
+                ]
+            }
+        },
+        "3": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3.c: In function ‘main’:\nbs_test_3.c:16:18: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration]\n printf(\"'%s'\\n\", izbaci_anagrame(prazan, tekst));\n                  ^~~~~~~~~~~~~~~\n/tmp/ccEzX7Zw.o: In function `main':\nbs_test_3.c:(.text+0x73): undefined reference to `izbaci_anagrame'\nbs_test_3.c:(.text+0x9c): undefined reference to `izbaci_anagrame'\nbs_test_3.c:(.text+0xc5): undefined reference to `izbaci_anagrame'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "18",
+                        "message": "implicit declaration of function 'izbaci_anagrame'",
+                        "output": "/tmp/buildservice/bs_1056/bs_test_3.c:16:18: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration] printf(\"'%s'\\n\", izbaci_anagrame(prazan, tekst));                  ^~~~~~~~~~~~~~~/tmp/ccEzX7Zw.o: In function `main':bs_test_3.c:(.text+0x73): undefined reference to `izbaci_anagrame'bs_test_3.c:(.text+0x9c): undefined reference to `izbaci_anagrame'bs_test_3.c:(.text+0xc5): undefined reference to `izbaci_anagrame'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"'%s'\\n\", izbaci_anagrame(prazan, tekst));"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_4.c: In function ‘main’:\nbs_test_4.c:14:18: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration]\n printf(\"'%s'\\n\", izbaci_anagrame(tekst, \"abc\"));\n                  ^~~~~~~~~~~~~~~\n/tmp/cckA7lVA.o: In function `main':\nbs_test_4.c:(.text+0x6d): undefined reference to `izbaci_anagrame'\nbs_test_4.c:(.text+0xbe): undefined reference to `izbaci_anagrame'\nbs_test_4.c:(.text+0x10f): undefined reference to `izbaci_anagrame'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "18",
+                        "message": "implicit declaration of function 'izbaci_anagrame'",
+                        "output": "/tmp/buildservice/bs_1056/bs_test_4.c:14:18: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration] printf(\"'%s'\\n\", izbaci_anagrame(tekst, \"abc\"));                  ^~~~~~~~~~~~~~~/tmp/cckA7lVA.o: In function `main':bs_test_4.c:(.text+0x6d): undefined reference to `izbaci_anagrame'bs_test_4.c:(.text+0xbe): undefined reference to `izbaci_anagrame'bs_test_4.c:(.text+0x10f): undefined reference to `izbaci_anagrame'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"'%s'\\n\", izbaci_anagrame(tekst, \"abc\"));"
+                    }
+                ]
+            }
+        },
+        "5": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_5.c: In function ‘main’:\nbs_test_5.c:14:18: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration]\n printf(\"'%s'\\n\", izbaci_anagrame(tekst, \"ab ac bc abb bab cbb\"));\n                  ^~~~~~~~~~~~~~~\n/tmp/ccC11nYJ.o: In function `main':\nbs_test_5.c:(.text+0x4a): undefined reference to `izbaci_anagrame'\nbs_test_5.c:(.text+0x71): undefined reference to `izbaci_anagrame'\ncollect2: error: ld returned 1 exit status",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "18",
+                        "message": "implicit declaration of function 'izbaci_anagrame'",
+                        "output": "/tmp/buildservice/bs_1056/bs_test_5.c:14:18: warning: implicit declaration of function ‘izbaci_anagrame’ [-Wimplicit-function-declaration] printf(\"'%s'\\n\", izbaci_anagrame(tekst, \"ab ac bc abb bab cbb\"));                  ^~~~~~~~~~~~~~~/tmp/ccC11nYJ.o: In function `main':bs_test_5.c:(.text+0x4a): undefined reference to `izbaci_anagrame'bs_test_5.c:(.text+0x71): undefined reference to `izbaci_anagrame'collect2: error: ld returned 1 exit status",
+                        "code": "printf(\"'%s'\\n\", izbaci_anagrame(tekst, \"ab ac bc abb bab cbb\"));"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1551351373
+}

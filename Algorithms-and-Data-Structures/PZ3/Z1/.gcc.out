@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/ASP/PZ3/Z1/main.cpp: In function ‘bool Test4()’:
+/rhome/a/asiljak1/workspace/ASP/PZ3/Z1/main.cpp:113:13: warning: unused variable ‘x’ [-Wunused-variable]
+         int x = s2.vrh();
+             ^

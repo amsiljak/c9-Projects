@@ -1,0 +1,111 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:5:52: warning: ‘max’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n  int niz[BROJ_EL], suma=0, i, suma1=0, br1=0, min, max;\n                                                    ^~~\nmain.c:5:47: warning: ‘min’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n  int niz[BROJ_EL], suma=0, i, suma1=0, br1=0, min, max;\n                                               ^~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "5",
+                "col": "52",
+                "message": "'max' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_8638/main.c:5:52: warning: ‘max’ may be used uninitialized in this function [-Wmaybe-uninitialized]  int niz[BROJ_EL], suma=0, i, suma1=0, br1=0, min, max;                                                    ^~~",
+                "code": "int niz[BROJ_EL], suma=0, i, suma1=0, br1=0, min, max;"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "5",
+                "col": "47",
+                "message": "'min' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_8638/main.c:5:47: warning: ‘min’ may be used uninitialized in this function [-Wmaybe-uninitialized]  int niz[BROJ_EL], suma=0, i, suma1=0, br1=0, min, max;                                               ^~~",
+                "code": "int niz[BROJ_EL], suma=0, i, suma1=0, br1=0, min, max;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1384": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je 5.50.\nSrednja vrijednost parnih brojeva je 6.00.\nNajveci element je 10 a najmanji 1.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1385": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je 1.00.\nSrednja vrijednost parnih brojeva je 0.00.\nNajveci element je 1 a najmanji 1.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1386": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je -5.50.\nSrednja vrijednost parnih brojeva je -6.00.\nNajveci element je -1 a najmanji -10.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1387": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je 1.50.\nSrednja vrijednost parnih brojeva je 2.00.\nNajveci element je 2 a najmanji 1.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1388": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je 2.70.\nSrednja vrijednost parnih brojeva je 2.80.\nNajveci element je 6 a najmanji 0.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1544884683
+}

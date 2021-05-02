@@ -1,0 +1,122 @@
+{
+    "id": 5596,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Ispit 6, zadatak 1",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Trivijalan slucaj *\/\ndouble niz[] = {1, 1.5, 2, 2.5, 3};\nint vel = izbaci_dvije_decimale(niz, 5);\nint i;\nfor (i=0; i<vel; i++)\n\tprintf(\"%g \", niz[i]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Situacije sa vise cifara *\/\ndouble niz[] = {1.1199, 0.34, 5.671, 20.41287, 7};\nint vel = izbaci_dvije_decimale(niz, 5);\nint i;\nfor (i=0; i<vel; i++)\n\tprintf(\"%g \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1.1199 20.4129 7"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Negativni brojevi *\/\ndouble niz[] = {-1.234, 10.01, 0, 10.5, -0.22445, 10};\nint vel = izbaci_dvije_decimale(niz, 6);\nint i;\nfor (i=0; i<vel; i++)\n\tprintf(\"%g \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10.01 0 -0.22445 10"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Nista se ne izbacuje *\/\ndouble niz[] = {8.5, 8.2, 8.7, 8.34, 8.001, 8.701, 8};\nint vel = izbaci_dvije_decimale(niz, 7);\nint i;\nfor (i=0; i<vel; i++)\n\tprintf(\"%g \", niz[i]);\nprintf(\"\\n\");\n\n\/* Dodajemo ipak jedan broj koji treba izbaciti *\/\nniz[0] = 8.9;\nvel = izbaci_dvije_decimale(niz, 7);\nfor (i=0; i<vel; i++)\n\tprintf(\"%g \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "8.5 8.2 8.7 8.34 8.001 8.701 8                   \\n8.2 8.7 8.34 8.001 8.701 8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Izbacujemo sve *\/\ndouble niz[] = {11.5598, 8.98, 11.39, 8.37, 11.19, 8.28};\nint vel = izbaci_dvije_decimale(niz, 6);\nint i;\nprintf(\"Vel: %d\\n\", vel);\n\n\/* Rad sa praznim nizom *\/\nvel = izbaci_dvije_decimale(niz, 0);\nprintf(\"Vel: %d\\n\", vel);\n\n\/* Ovo ne treba izbaciti *\/\nniz[0] = 15.87;\nvel = izbaci_dvije_decimale(niz, 1);\nfor (i=0; i<vel; i++)\n\tprintf(\"%g \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 0\\nVel: 0\\n15.87"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z3/main.c: In function ‘posljednja_rijec’:
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z3/main.c:5:12: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  char* pok=s;
+            ^

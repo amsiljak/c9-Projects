@@ -1,0 +1,119 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1170": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza A: Unesite elemente niza B: Niz C glasi: 5,3,8,2,3,1,5,1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1466": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza A: Unesite elemente niza B: Niz C glasi: 5,6,7,8,9,10,11,12,13,14,15,16",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1467": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza A: Unesite elemente niza B: Niz C glasi: 5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1468": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza A: Unesite elemente niza B: Niz C glasi: 7,8,9,10,11,12,13,14,15,16",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1469": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza A: Unesite elemente niza B: Niz C glasi: 5,6,7,8,9,10,11,12,13,14",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1470": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza A: Unesite elemente niza B: Niz C glasi: 1,2,3",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1471": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza A: Unesite elemente niza B: Niz C glasi: 5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1567979597
+}

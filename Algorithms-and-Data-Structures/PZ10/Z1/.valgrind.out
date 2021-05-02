@@ -1,0 +1,39 @@
+==11086== Memcheck, a memory error detector
+==11086== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==11086== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==11086== Command: /rhome/a/asiljak1/workspace/ASP/PZ10/Z1/.runme
+==11086== Parent PID: 11052
+==11086== 
+==11086== Invalid read of size 8
+==11086==    at 0x10A138: Grana<bool>::dajDolazniCvor() (main.cpp:185)
+==11086==    by 0x1098AF: void dfs<bool>(UsmjereniGraf<bool>*, std::vector<Cvor<bool>, std::allocator<Cvor<bool> > >&, Cvor<bool>) (main.cpp:237)
+==11086==    by 0x10940B: main (main.cpp:343)
+==11086==  Address 0x10 is not stack'd, malloc'd or (recently) free'd
+==11086== 
+==11086== 
+==11086== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==11086==  Access not within mapped region at address 0x10
+==11086==    at 0x10A138: Grana<bool>::dajDolazniCvor() (main.cpp:185)
+==11086==    by 0x1098AF: void dfs<bool>(UsmjereniGraf<bool>*, std::vector<Cvor<bool>, std::allocator<Cvor<bool> > >&, Cvor<bool>) (main.cpp:237)
+==11086==    by 0x10940B: main (main.cpp:343)
+==11086==  If you believe this happened as a result of a stack
+==11086==  overflow in your program's main thread (unlikely but
+==11086==  possible), you can try to increase the size of the
+==11086==  main thread stack using the --main-stacksize= flag.
+==11086==  The main thread stack size used in this run was 8388608.
+==11086== 
+==11086== HEAP SUMMARY:
+==11086==     in use at exit: 824 bytes in 23 blocks
+==11086==   total heap usage: 24 allocs, 1 frees, 73,528 bytes allocated
+==11086== 
+==11086== LEAK SUMMARY:
+==11086==    definitely lost: 0 bytes in 0 blocks
+==11086==    indirectly lost: 0 bytes in 0 blocks
+==11086==      possibly lost: 0 bytes in 0 blocks
+==11086==    still reachable: 824 bytes in 23 blocks
+==11086==         suppressed: 0 bytes in 0 blocks
+==11086== Reachable blocks (those to which a pointer was found) are not shown.
+==11086== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==11086== 
+==11086== For counts of detected and suppressed errors, rerun with: -v
+==11086== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

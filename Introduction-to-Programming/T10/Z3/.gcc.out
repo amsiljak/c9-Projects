@@ -1,0 +1,13 @@
+/rhome/a/asiljak1/workspace/OR/T10/Z3/main.c: In function ‘char* izbaci_rijec(char*, int)’:
+/rhome/a/asiljak1/workspace/OR/T10/Z3/main.c:16:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while(*pocetak++=*s++);
+           ~~~~~~~~~~^~~~~
+/rhome/a/asiljak1/workspace/OR/T10/Z3/main.c:22:12: error: a function-definition is not allowed here before ‘{’ token
+ int main() {
+            ^
+/rhome/a/asiljak1/workspace/OR/T10/Z3/main.c:25:1: error: expected ‘}’ at end of input
+ }
+ ^
+/rhome/a/asiljak1/workspace/OR/T10/Z3/main.c:25:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^

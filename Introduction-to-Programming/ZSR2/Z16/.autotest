@@ -1,0 +1,171 @@
+{
+    "id": 5327,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR1, zadatak 16",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 5328,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 1 -14"
+            },
+            "expected": [
+                "Unesite tri cijela broja: Broj 3 ne pripada niti jednom intervalu\\nBroj 1 pripada intervalu [-1, 1]\\nBroj -14 pripada intervalu [-20, -8]\\nSvi brojevi ne pripadaju jednom te istom intervalu.",
+                "Unesite 3 cijela broja: Broj 3 ne pripada niti jednom intervalu\\nBroj 1 pripada intervalu [-1, 1]\\nBroj -14 pripada intervalu [-20, -8]\\nSvi brojevi ne pripadaju jednom te istom intervalu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5329,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();\n\/\/Ako niti jedan broj ne pripada niti jednom od intervala onda tehnicki svi pripadaju istom :)",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "51 52 53"
+            },
+            "expected": [
+                "Unesite tri cijela broja: Broj 51 ne pripada niti jednom intervalu\\nBroj 52 ne pripada niti jednom intervalu\\nBroj 53 ne pripada niti jednom intervalu\\nSvi brojevi ne pripadaju jednom te istom intervalu.",
+                "Unesite 3 cijela broja: Broj 51 ne pripada niti jednom intervalu\\nBroj 52 ne pripada niti jednom intervalu\\nBroj 53 ne pripada niti jednom intervalu\\nSvi brojevi ne pripadaju jednom te istom intervalu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5330,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "41 0 200"
+            },
+            "expected": [
+                "Unesite tri cijela broja: Broj 41 pripada intervalu [40, 50]\\nBroj 0 pripada intervalu [-1, 1]\\nBroj 200 ne pripada niti jednom intervalu\\nSvi brojevi ne pripadaju jednom te istom intervalu.",
+                "Unesite 3 cijela broja: Broj 41 pripada intervalu [40, 50]\\nBroj 0 pripada intervalu [-1, 1]\\nBroj 200 ne pripada niti jednom intervalu\\nSvi brojevi ne pripadaju jednom te istom intervalu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5331,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-10 -2 1"
+            },
+            "expected": [
+                "Unesite tri cijela broja: Broj -10 pripada intervalu [-20, -8]\\nBroj -2 ne pripada niti jednom intervalu\\nBroj 1 pripada intervalu [-1, 1]\\nSvi brojevi ne pripadaju jednom te istom intervalu.",
+                "Unesite 3 cijela broja: Broj -10 pripada intervalu [-20, -8]\\nBroj -2 ne pripada niti jednom intervalu\\nBroj 1 pripada intervalu [-1, 1]\\nSvi brojevi ne pripadaju jednom te istom intervalu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5332,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "38 39 40"
+            },
+            "expected": [
+                "Unesite tri cijela broja: Broj 38 ne pripada niti jednom intervalu\\nBroj 39 ne pripada niti jednom intervalu\\nBroj 40 pripada intervalu [40, 50]\\nSvi brojevi ne pripadaju jednom te istom intervalu.",
+                "Unesite 3 cijela broja: Broj 38 ne pripada niti jednom intervalu\\nBroj 39 ne pripada niti jednom intervalu\\nBroj 40 pripada intervalu [40, 50]\\nSvi brojevi ne pripadaju jednom te istom intervalu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5333,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "100 102 104"
+            },
+            "expected": [
+                "Unesite tri cijela broja: Broj 100 pripada intervalu [77, 101]\\nBroj 102 ne pripada niti jednom intervalu\\nBroj 104 ne pripada niti jednom intervalu\\nSvi brojevi ne pripadaju jednom te istom intervalu.",
+                "Unesite 3 cijela broja: Broj 100 pripada intervalu [77, 101]\\nBroj 102 ne pripada niti jednom intervalu\\nBroj 104 ne pripada niti jednom intervalu\\nSvi brojevi ne pripadaju jednom te istom intervalu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5334,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "80 77 90"
+            },
+            "expected": [
+                "Unesite 3 cijela broja: Broj 80 pripada intervalu [77, 101]\\nBroj 77 pripada intervalu [77, 101]\\nBroj 90 pripada intervalu [77, 101]\\nSvi brojevi pripadaju jednom intervalu.",
+                "Unesite tri cijela broja: Broj 80 pripada intervalu [77, 101]\\nBroj 77 pripada intervalu [77, 101]\\nBroj 90 pripada intervalu [77, 101]\\nSvi brojevi pripadaju jednom intervalu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

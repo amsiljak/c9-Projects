@@ -1,0 +1,15 @@
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z3/main.c: In function ‘top_studenti’:
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z3/main.c:17:41: warning: unused variable ‘temp’ [-Wunused-variable]
+  float prosjek[1000]={0},suma[1000]={0},temp;
+                                         ^~~~
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z3/main.c: At top level:
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z3/main.c:55:2: error: expected identifier or ‘(’ before ‘return’
+  return 0;
+  ^~~~~~
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z3/main.c:56:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z3/main.c: In function ‘top_studenti’:
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z3/main.c:54:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^

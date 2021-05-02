@@ -1,0 +1,269 @@
+{
+    "id": 234405,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 1, zadatak 2",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2263,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "char tekst[100] = \"aaaaabbb!cccccccccccc\";\nprintf(\"'%s'\\n\", kompresuj(tekst));\n\/* Jos jednom kompresujem kompresovano! *\/\nprintf(\"'%s'\\n\", kompresuj(tekst));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'!a5bbb!!!c12'\\n'!!a!51bbb!!!!!!c!11!21'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2264,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "char tekst[100] = \"!a5bbb!!!c12\";\nprintf(\"'%s'\", dekompresuj(tekst));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'aaaaabbb!cccccccccccc'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2265,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Ne radi ni\u0161ta, nijedan char se ne ponavlja vi\u0161e od tri puta *\/\nchar tekst[] = \"Ovo je neki primjer teksta. wwwxxxyyzzz\";\nprintf(\"'%s'\", kompresuj(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Ovo je neki primjer teksta. wwwxxxyyzzz'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2266,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Ne radi ni\u0161ta, nijedan char se ne ponavlja vi\u0161e od tri puta *\/\nchar tekst[] = \"Ovo je neki primjer teksta. wwwxxxyyzzz\";\nprintf(\"'%s'\", dekompresuj(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Ovo je neki primjer teksta. wwwxxxyyzzz'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2267,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Neki interesantni karakteri *\/\nchar tekst[] = \"!@@@@##$$$$$$%%%%^^^^^^^^&&&&&&****((()))))___++++00001111122223345555666777777788889\";\nprintf(\"'%s'\", kompresuj(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'!!!@4##!$6!%4!^8!&6!*4(((!)5___!+4!04!15!24!32!41!54!63!77!84!91'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2268,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Neki interesantni karakteri *\/\nchar tekst[100] = \"!!!@4##!$6!%3!^8!&6!*4(((!)5___!+4!04!15!24!32!41!54!63!77!!84!91\";\nprintf(\"'%s'\", dekompresuj(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'!@@@@##$$$$$$%%%%^^^^^^^^&&&&&&****((()))))___++++00001111122223345555666777777788889'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2269,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Razmaci *\/\nchar tekst[] = \"          Tekstaaaaaa                \";\nprintf(\"'%s'\", kompresuj(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'! 10Tekst!a6! 16'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2270,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Razmaci *\/\nchar tekst[100] = \"! 10Tekst!a6! 16\";\nprintf(\"'%s'\", dekompresuj(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'          Tekstaaaaaa                '"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2271,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Uzvicnici (worst case scenario) *\/\nchar tekst[200] = \"!!!!!!!!!!!!!!!!!!!!!\";\nprintf(\"'%s'\\n\", kompresuj(tekst));\nprintf(\"'%s'\\n\", dekompresuj(tekst));\nprintf(\"'%s'\\n\", kompresuj(tekst));\nprintf(\"'%s'\\n\", kompresuj(tekst));\nprintf(\"'%s'\\n\", kompresuj(tekst));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'\\n'!!!!!!!!!!!!!!!!!!!!!'\\n'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'\\n'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'\\n'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2272,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Dugacak string (bice produzen) *\/\nchar tekst[10000];\nint blokova=100;\nint i, j; char slovo='a';\nchar* pos = tekst;\nfor (i=0; i<blokova; i++) {\n    for (j=0; j<100; j++) {\n        *pos++ = slovo;\n    }\n    slovo++;\n    if (slovo == 'z') slovo='a';\n}\nkompresuj(tekst);\npos = tekst;\nslovo = 'a';\nfor (i=0; i<blokova; i++) {\n    if (*pos++ != '!') printf(\"Greska %d %c\\n\", i, *pos);\n    if (*pos++ != slovo) printf(\"Greska %d %c\\n\", i, *pos);\n    if (*pos++ != '1') printf(\"Greska %d %c\\n\", i, *pos);\n    if (*pos++ != '0') printf(\"Greska %d %c\\n\", i, *pos);\n    if (*pos++ != '0') printf(\"Greska %d %c\\n\", i, *pos);\n    slovo++;\n    if (slovo == 'z') slovo='a';\n}\n\ndekompresuj(tekst);\n\npos=tekst;\nslovo='a';\nfor (i=0; i<blokova; i++) {\n    for (j=0; j<100; j++) {\n       if (*pos++ != slovo) printf(\"Dekompresuj greska %d %d %c\\n\", i, j, *pos);\n    }\n    slovo++;\n    if (slovo == 'z') slovo='a';\n}\nprintf(\"OK\");",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

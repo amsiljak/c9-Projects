@@ -1,0 +1,17 @@
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z2/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z2/main.c:25:14: warning: missing braces around initializer [-Wmissing-braces]
+  int B[3][3]={1,2,3,4};
+              ^
+               {    }{}
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z2/main.c:30:7: warning: passing argument 1 of ‘f1’ from incompatible pointer type [-Wincompatible-pointer-types]
+  b=f1(B+1,b+1);
+       ^
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z2/main.c:2:5: note: expected ‘int *’ but argument is of type ‘int (*)[3]’
+ int f1(int *a, int b)
+     ^~
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z2/main.c:32:7: warning: passing argument 1 of ‘f2’ from incompatible pointer type [-Wincompatible-pointer-types]
+  b=f2(B);
+       ^
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z2/main.c:7:5: note: expected ‘int *’ but argument is of type ‘int (*)[3]’
+ int f2(int* p)
+     ^~

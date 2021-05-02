@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/ASP/PZ4/Z1/main.cpp: In function ‘bool Test3()’:
+/rhome/a/asiljak1/workspace/ASP/PZ4/Z1/main.cpp:137:13: warning: unused variable ‘a’ [-Wunused-variable]
+         int a = r.celo();
+             ^

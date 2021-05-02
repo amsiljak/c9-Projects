@@ -1,0 +1,269 @@
+{
+    "id": 1754,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 1, zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1755,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i, br_gradova;\nstruct Grad gradovi[10];\nFILE* ulaz = fopen(\"gradovi.txt\", \"w\");\nfputs(\"Sarajevo 345123\", ulaz);\nfputc(10, ulaz); \/* Pouzdan nacin za novi red na Linuxu *\/\nfputs(\"Tuzla 123456\", ulaz);\nfputc(10, ulaz);\nfputs(\"Mostar 101010\", ulaz);\nfputc(10, ulaz);\nfputs(\"Banja Luka 234987\", ulaz);\nfclose(ulaz);\nbr_gradova=ucitaj(gradovi, 10);\nprintf(\"%d\\n\", br_gradova);\nfor (i=0; i<br_gradova; i++)\n    printf(\"%s,%d\\n\", gradovi[i].naziv, gradovi[i].br_stanovnika);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4\\nSarajevo,345123\\nTuzla,123456\\nMostar,101010\\nBanja Luka,234987"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1756,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nstruct Grad gradovi[10];\nstrcpy(gradovi[0].naziv, \"New York\");\ngradovi[0].br_stanovnika = 1234567;\nstrcpy(gradovi[1].naziv, \"Washington\");\ngradovi[1].br_stanovnika = 987654;\nstrcpy(gradovi[2].naziv, \"Los Angeles\");\ngradovi[2].br_stanovnika = 1357924;\n\nzapisi(gradovi, 3, 1000000);\n\nFILE* izlaz = fopen(\"izlaz.txt\", \"r\");\nwhile (!feof(izlaz)) \n    printf(\"%c\", fgetc(izlaz));\nfclose(izlaz);",
+            "global_above_main": "#include <string.h>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "New York\\nLos Angeles"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1757,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i, br_gradova;\nstruct Grad gradovi[10];\nFILE* ulaz = fopen(\"gradovi.txt\", \"w\");\nfputs(\"Zenica 101010\", ulaz);\nfputc(10, ulaz);\n\n\/* A B C Grad ima <100000 stanovnika *\/\nchar tekst[] = \"A B C Grad 99999\";\nfor (i=0; i<9; i++) {\n   fputs(tekst, ulaz);\n   fputc(10, ulaz);\n   tekst[0]++;\n}\n\n\/* Mostar nece biti ucitan jer je jedanaesti *\/\nfputs(\"Mostar 121212\", ulaz);\nfclose(ulaz);\n\nbr_gradova=ucitaj(gradovi, 10);\nzapisi(gradovi, br_gradova, 100000);\n\nprintf(\"%d\\n\", br_gradova);\nFILE* izlaz = fopen(\"izlaz.txt\", \"r\");\nwhile (!feof(izlaz)) \n    printf(\"%c\", fgetc(izlaz));\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10\\nZenica"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1758,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nstruct Grad gradovi[10];\nstrcpy(gradovi[0].naziv, \"Sarajevo\");\ngradovi[0].br_stanovnika = 500000;\nstrcpy(gradovi[1].naziv, \"Banja Luka\");\ngradovi[1].br_stanovnika = 200000;\nstrcpy(gradovi[2].naziv, \"Bijeljina\");\ngradovi[2].br_stanovnika = 100000;\n\n\/* Niti jedan grad nema ovoliko stanovnika *\/\nzapisi(gradovi, 3, 600000);\n\nprintf(\"Izlaz glasi:\");\nFILE* izlaz = fopen(\"izlaz.txt\", \"r\");\nwhile (!feof(izlaz)) \n    printf(\"%c\", fgetc(izlaz));\nfclose(izlaz);",
+            "global_above_main": "#include <string.h>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlaz glasi:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1759,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i, br_gradova;\nstruct Grad gradovi[10];\nFILE* ulaz = fopen(\"gradovi.txt\", \"w\");\n\/* Testiramo limit na duzinu imena grada *\/\nfputs(\"Grad grad Grad grad Grad gradd 5\", ulaz);\nfputc(10, ulaz);\nfputs(\"AGrad grad Grad grad Grad grad 8\", ulaz);\nfputc(10, ulaz);\nfputs(\"BGrad grad Grad grad Grad grad 12\", ulaz);\nfputc(10, ulaz);\nfputs(\"CGrad grad Grad grad Grad grad 1\", ulaz);\nfclose(ulaz);\n\nbr_gradova=ucitaj(gradovi, 10);\nzapisi(gradovi, br_gradova, 6);\n\nprintf(\"%d\\n\", br_gradova);\nFILE* izlaz = fopen(\"izlaz.txt\", \"r\");\nwhile (!feof(izlaz)) \n    printf(\"%c\", fgetc(izlaz));\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4\\nAGrad grad Grad grad Grad grad\\nBGrad grad Grad grad Grad grad"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2273,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nstruct Grad gradovi[10];\nstrcpy(gradovi[0].naziv, \"New York\");\ngradovi[0].br_stanovnika = 1234567;\nstrcpy(gradovi[1].naziv, \"Washington\");\ngradovi[1].br_stanovnika = 987654;\nstrcpy(gradovi[2].naziv, \"Los Angeles\");\ngradovi[2].br_stanovnika = 1357924;\nstrcpy(gradovi[3].naziv, \"New Jersey\");\ngradovi[3].br_stanovnika = 987654;\n\nispis(gradovi, 4, 'N');\n",
+            "global_above_main": "#include <string.h>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "New York\\nNew Jersey"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2274,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nstruct Grad gradovi[10];\nstrcpy(gradovi[0].naziv, \"Sarajevo\");\ngradovi[0].br_stanovnika = 500000;\nstrcpy(gradovi[1].naziv, \"Banja Luka\");\ngradovi[1].br_stanovnika = 200000;\nstrcpy(gradovi[2].naziv, \"Tuzla\");\ngradovi[2].br_stanovnika = 150000;\nstrcpy(gradovi[3].naziv, \"Mostar\");\ngradovi[3].br_stanovnika = 100000;\n\n\/* Nijedan grad ne ispunjava uslov *\/\nprintf(\"Gradovi sa slovom N su:\");\nispis(gradovi, 4, 'N');",
+            "global_above_main": "#include <string.h>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Gradovi sa slovom N su:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2325,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Puno gradova *\/\nint i, br_gradova;\nstruct Grad gradovi[10000];\nFILE* ulaz = fopen(\"gradovi.txt\", \"w\");\n\nchar tekst[] = \"A B C Grad\";\nfor (i=10000; i<20000; i++) {\n   fprintf(ulaz, \"%s %d\", tekst, i);\n   fputc(10, ulaz);\n   tekst[0]++;\n   if (tekst[0] > 'Z') {\n       tekst[0] = 'A';\n       tekst[2]++;\n   }\n   if (tekst[2] > 'Z') {\n       tekst[2] = 'A';\n       tekst[4]++;\n   }\n   if (tekst[4] > 'Z') {\n       tekst[4] = 'A';\n   }\n}\nfclose(ulaz);\n\nbr_gradova=ucitaj(gradovi, 10000);\nzapisi(gradovi, br_gradova, 19990);\n\nprintf(\"%d\\n\", br_gradova);\nFILE* izlaz = fopen(\"izlaz.txt\", \"r\");\nwhile (!feof(izlaz)) \n    printf(\"%c\", fgetc(izlaz));\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10000\\nH V Q Grad\\nI V Q Grad\\nJ V Q Grad\\nK V Q Grad\\nL V Q Grad\\nM V Q Grad\\nN V Q Grad\\nO V Q Grad\\nP V Q Grad\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2326,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Puno gradova *\/\nint i, br_gradova;\nstruct Grad gradovi[10000];\nFILE* ulaz = fopen(\"gradovi.txt\", \"w\");\n\nchar tekst[] = \"A B C Grad\";\nfor (i=10000; i<20000; i++) {\n   fprintf(ulaz, \"%s %d\", tekst, i);\n   fputc(10, ulaz);\n   tekst[0]++;\n   if (tekst[0] > 'Z') {\n       tekst[0] = 'A';\n       tekst[2]++;\n   }\n   if (tekst[2] > 'Z') {\n       tekst[2] = 'A';\n       tekst[4]++;\n   }\n   if (tekst[4] > 'Z') {\n       tekst[4] = 'A';\n   }\n}\nfclose(ulaz);\n\nbr_gradova=ucitaj(gradovi, 10000);\nispis(gradovi, br_gradova, 'Z');\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Z B C Grad\\nZ C C Grad\\nZ D C Grad\\nZ E C Grad\\nZ F C Grad\\nZ G C Grad\\nZ H C Grad\\nZ I C Grad\\nZ J C Grad\\nZ K C Grad\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 2327,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Nula gradova *\/\nint i, br_gradova;\nstruct Grad gradovi[10];\nFILE* ulaz = fopen(\"gradovi.txt\", \"w\");\nfclose(ulaz);\n\nbr_gradova=ucitaj(gradovi, 10);\nzapisi(gradovi, br_gradova, 123456);\n\nprintf(\"%d\\n\", br_gradova);\nprintf(\"Izlaz glasi:\");\nFILE* izlaz = fopen(\"izlaz.txt\", \"r\");\nwhile (!feof(izlaz)) \n    printf(\"%c\", fgetc(izlaz));\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0\\nIzlaz glasi:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

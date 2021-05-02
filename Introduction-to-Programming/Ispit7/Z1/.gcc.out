@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/OR/Ispit7/Z1/main.c: In function ‘Farey’:
+/rhome/a/asiljak1/workspace/OR/Ispit7/Z1/main.c:16:31: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    for(l=0;l<br;l++) if(niz[l]==(double)i/j) uslov=0;
+                               ^~

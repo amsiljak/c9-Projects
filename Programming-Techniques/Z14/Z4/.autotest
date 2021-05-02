@@ -1,0 +1,69 @@
+{
+    "id": 5531,
+    "name": "Tehnike programiranja (2017\/2018), Tutorijal 14, zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\tdouble niz[] = {1, 2, 0.5, 0.2, 6.23};\n\tdouble novi[5]{};\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku(\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)novi, sizeof novi);\n\tfor (int i = 0; i < 5; ++i) std::cout << novi[i] << \", \";\n\tff.close();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6.23, 0.2, 0.5, 2, 1,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\tdouble niz[] = {-1, -2, -3, -4, -5, -5.5, -76, 1, 2, 3, 0, 100};\n\tdouble novi[12]{};\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku(\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)novi, sizeof novi);\n\tfor (int i = 0; i < 12; ++i) std::cout << novi[i] << \", \";\n\tff.close();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "100, 0, 3, 2, 1, -76, -5.5, -5, -4, -3, -2, -1,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

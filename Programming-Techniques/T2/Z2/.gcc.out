@@ -1,0 +1,8 @@
+/rhome/a/asiljak1/workspace/TP/T2/Z2/main.cpp: In function ‘bool TestPerioda(std::vector<double>, int)’:
+/rhome/a/asiljak1/workspace/TP/T2/Z2/main.cpp:9:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if(v.at(i)!=v.at(i+p)) return false;
+                                 ^
+/rhome/a/asiljak1/workspace/TP/T2/Z2/main.cpp: In function ‘int main()’:
+/rhome/a/asiljak1/workspace/TP/T2/Z2/main.cpp:32:15: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if(n==0.f) break;
+               ^~~

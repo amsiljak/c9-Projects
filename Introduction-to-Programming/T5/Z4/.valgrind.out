@@ -1,0 +1,36 @@
+==31798== Memcheck, a memory error detector
+==31798== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==31798== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==31798== Command: /rhome/a/asiljak1/workspace/OR/T5/Z4/.runme
+==31798== Parent PID: 31785
+==31798== 
+==31798== Conditional jump or move depends on uninitialised value(s)
+==31798==    at 0x108793: main (main.c:9)
+==31798== 
+==31798== Conditional jump or move depends on uninitialised value(s)
+==31798==    at 0x1087C3: main (main.c:10)
+==31798== 
+==31798== Conditional jump or move depends on uninitialised value(s)
+==31798==    at 0x1087EF: main (main.c:11)
+==31798== 
+==31798== Conditional jump or move depends on uninitialised value(s)
+==31798==    at 0x1087FB: main (main.c:12)
+==31798== 
+==31798== 
+==31798== Process terminating with default action of signal 1 (SIGHUP)
+==31798==    at 0x514E07F: read (read.c:27)
+==31798==    by 0x50CB147: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:531)
+==31798==    by 0x50CC3F1: _IO_default_uflow (genops.c:380)
+==31798==    by 0x50A9BE9: _IO_vfscanf (vfscanf.c:630)
+==31798==    by 0x50B9FD7: __isoc99_scanf (isoc99_scanf.c:37)
+==31798==    by 0x10876E: main (main.c:8)
+==31798== 
+==31798== HEAP SUMMARY:
+==31798==     in use at exit: 0 bytes in 0 blocks
+==31798==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==31798== 
+==31798== All heap blocks were freed -- no leaks are possible
+==31798== 
+==31798== For counts of detected and suppressed errors, rerun with: -v
+==31798== Use --track-origins=yes to see where uninitialised values come from
+==31798== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)

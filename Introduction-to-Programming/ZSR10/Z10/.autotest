@@ -1,0 +1,269 @@
+{
+    "id": 234415,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 4, Zadatak 2",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2036,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "char tekst[] = \"Ovo je neki primjer.\";\nchar slova[100];\nprebroji(tekst,slova);\nprintf(\"'%s'\", slova);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'EIJORKMNPV'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2037,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "char tekst[] = \"\";\nchar slova[100] = \"\";\nprebroji(tekst,slova);\nprintf(\"'%s'\", slova);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "''"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2038,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "char tekst[] = \",.\/`~!@#$%^&*()_+-={}:|';][\";\nchar slova[100] = \"\";\nprebroji(tekst,slova);\nprintf(\"'%s'\", slova);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "''"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2039,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "char tekst[] = \"Svako 1 put\";\nchar slova[100];\nprebroji(tekst,slova);\nprintf(\"'%s'\", slova);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'AKOPSTUV'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2040,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "char tekst[] = \"c  bb  aaa\";\nchar slova[100];\nprebroji(tekst,slova);\nprintf(\"'%s'\", slova);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'ABC'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2693,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "char tekst[] = \"aaaAAaaaAAAAaa\";\nchar slova[100];\nprebroji(tekst,slova);\nprintf(\"'%s'\", slova);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'A'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3023,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/* AT7: da li je modificiran originalni niz? *\/\n    char tekst[] = \"123Cdef32gba1\";\n    char slova[100];\n    prebroji(tekst,slova);\n    printf(\"tekst: '%s'\\n\", tekst);\n    printf(\"slova: '%s'\", slova);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "tekst: '123Cdef32gba1'\\nslova: 'ABCDEFG'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3024,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/* AT8: da li je prekoracuje duzina niza 'slova'? *\/\n    char tekst1[] = \"!\\tE\\\"#L$%e&\/i(Nn)_:      ;\";\n    char slova1[5]; \/* za nul-granicnik *\/\n    char tekst2[] = \"\\n123456eV876R R RVdddVVVAANNEEE\";\n    char slova2[7]; \/* za nul-granicnik *\/\n    prebroji(tekst1, slova1);\n    prebroji(tekst2, slova2);\n    printf(\"1: '%s'\\n\", slova1);\n    printf(\"2: '%s'\", slova2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1: 'ENIL'\\n2: 'VEDRAN'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3025,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/* AT9: ne smije se koristiti pomocni niz *\/\n    \/* N1 - velika slova *\/\n    \/* N2 - brojevi i znakovi *\/\n    \/* N3 - mala slova *\/\n    #define N1 (26 * 245)\n    #define N2 (33 * 120)\n    #define N3 (26 * 127)\n    char tekst[N1 + N2 + N3 + 1] = \"\";\n    int i;\n    \/* popunjavamo niz 'tekst' formatom:\n       ABCD... !\"#$ ... 0123456789:;<=>?@... abcd...z\n    *\/\n    for (i = 0; i < N1; ++i)\n        tekst[i] = i % 26 + 65; \/* ABC...Z *\/\n    for (i = N1; i < N1 + N2; ++i)\n        tekst[i] = i % 33 + 32; \/*  !\"...?@ *\/\n    for (i = N1 + N2; i < N1 + N2 + N3; ++i)\n        tekst[i] = i % 26 + 97; \/* abc...z *\/\n\n    char slova[27]; \/* za nul-granicnik *\/\n    prebroji(tekst, slova);\n    printf(\"Alphabet: '%s'\", slova); \/* cijeli engl. alfabet *\/",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3026,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/* AT10: prazan string? ili ne? *\/\n    char tekst[] = \"\\0R0OORo2017\";\n    char slova[27]; \/* za nul-granicnik *\/\n    prebroji(tekst, slova);\n    printf(\"1: '%s'\\n\", slova);\n    *tekst = 'o'; \/* ipak nije prazan! *\/\n    prebroji(tekst, slova);\n    printf(\"2: '%s'\", slova);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1: ''\\n2: 'OR'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

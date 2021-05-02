@@ -1,0 +1,143 @@
+{
+    "id": 5542,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 5, Zadatak 2",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Osnovni primjer. Kvadrat 2 nije obuhvacen kruznicom 1 jer je prevelik.\n   Da li je ocuvan redoslijed kod izbacivanja? *\/\nstruct Kruznica kr[] = {\n\t{{1,1},1}, {{5,5},2}, {{-10,-10}, 3}\n};\nstruct Kvadrat kv[] = {\n\t{{5,5},0.5}, {{1,1},1}, {{1,1}, 0.3}, {{-11,-11},1}\n};\nint vel = izbaci_visak(kr, 3, kv, 4);\nint i;\nfor (i=0; i<vel; i++) {\n\tprintf (\"(%g,%g) %g\\n\", kv[i].dl.x, kv[i].dl.y, kv[i].stranica);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "(5,5) 0.5\\n(1,1) 0.3\\n(-11,-11) 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Izbacivanje dva susjedna kvadrata. Kvadrat sa stranicom 0 prihvatamo\n   (to je u biti tacka) *\/\nstruct Kruznica kr[] = {\n\t{{1,1},1}, {{5,5},2}, {{-10,-10}, 3}\n};\nstruct Kvadrat kv[] = {\n\t{{4,4},0.5}, {{1,1},1}, {{1,1}, 0.8}, {{-9,-9},1}, {{-10, -10}, 0}\n};\nint vel = izbaci_visak(kr, 3, kv, 5);\nint i;\nfor (i=0; i<vel; i++) {\n\tprintf (\"(%g,%g) %g\\n\", kv[i].dl.x, kv[i].dl.y, kv[i].stranica);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "(4,4) 0.5\\n(-9,-9) 1\\n(-10,-10) 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Preciznost epsilona *\/\nstruct Kruznica kr[] = {\n    {{1,1},1}, {{5,5},2}, {{-10,-10}, 3}\n};\nstruct Kvadrat kv[] = {\n    {{4,4},0.5}, {{1,1},1}, {{-10, -10}, 0.8}, {{-10,-10},0.71}\n};\nkv[1].stranica = sin(M_PI\/4) + 0.001;\ndouble a = 0.01;\ndouble b = a + 0.09;\nkv[2].stranica = sin(M_PI\/4) * b * 10;\nkr[2].poluprecnik = 1;\nint vel = izbaci_visak(kr, 3, kv, 4);\nint i;\nfor (i=0; i<vel; i++) {\n    printf (\"(%g,%g) %g\\n\", kv[i].dl.x, kv[i].dl.y, kv[i].stranica);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "(4,4) 0.5\\n(-10,-10) 0.707107"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Ponasanje sa praznim nizovima i kada se ne izbacuje nista *\/\nstruct Kruznica kr[] = {\n\t{{1,1},1}, {{5,5},2}, {{-10,-10}, 3}\n};\nstruct Kvadrat kv[] = {\n\t{{4,4},0.5}, {{1,1},0.5}, {{1,1}, 0.7}, {{-9,-9},1}, {{-10, -10}, 0}\n};\nint vel = izbaci_visak(kr, 3, kv, 5);\nprintf(\"Vel: %d\\n\", vel);\nvel = izbaci_visak(kr, 3, kv, 0);\nprintf(\"Vel: %d\\n\", vel);\nkv[1].stranica = 1;\nvel = izbaci_visak(kr, 3, kv, 5);\nprintf(\"Vel: %d\\n\", vel);\nvel = izbaci_visak(kr, 0, kv, 4);\nprintf(\"Vel: %d\\n\", vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 5\\nVel: 0\\nVel: 4\\nVel: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Izbacuje se nista ili sve iz niza *\/\nstruct Kruznica kr[] = {\n\t{{1,1},1}, {{5,5},2}, {{-10,-10}, 3}\n};\nstruct Kvadrat kv[] = {\n\t{{1,1},0.5}, {{1,1},0.5}, {{-9,-9},1}\n};\nint vel = izbaci_visak(kr, 3, kv, 3);\nprintf(\"Vel: %d\\n\", vel);\nkv[0].dl.x=3;\nkv[1].stranica=1;\nkv[2].stranica=3;\nvel = izbaci_visak(kr, 3, kv, 3);\nprintf(\"Vel: %d\\n\", vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 3\\nVel: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT6: Pogresne implementacije *\/\nstruct Kruznica kr[] = {\n    {{1,1},1}, {{5,5},2}, {{-10,-10}, 1}\n};\nstruct Kvadrat kv[] = {\n    {{4,4},0.5}, {{1.5,1.5},1}, {{3.6, 6}, 0.8}, {{-10,-11},0}\n};\nkv[1].stranica = sin(M_PI\/4) - 0.001;\nint vel = izbaci_visak(kr, 3, kv, 4);\nint i;\nfor (i=0; i<vel; i++) {\n    printf (\"(%g,%g) %g\\n\", kv[i].dl.x, kv[i].dl.y, kv[i].stranica);\n}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "(4,4) 0.5\\n(-10,-11) 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

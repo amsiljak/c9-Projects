@@ -1,0 +1,7 @@
+/rhome/a/asiljak1/workspace/OR/T10/Z2/main.c: In function ‘rot13’:
+/rhome/a/asiljak1/workspace/OR/T10/Z2/main.c:7:14: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+   if(*s>='A' && *s<='M' || *s>='a' && *s<='m') {
+      ~~~~~~~~^~~~~~~~~~
+/rhome/a/asiljak1/workspace/OR/T10/Z2/main.c:10:19: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+   else if(*s>='N' && *s<='Z' || *s>='n' && *s<='z') {
+           ~~~~~~~~^~~~~~~~~~

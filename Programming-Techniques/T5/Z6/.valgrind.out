@@ -1,0 +1,31 @@
+==6780== Memcheck, a memory error detector
+==6780== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==6780== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==6780== Command: /rhome/a/asiljak1/workspace/TP/T5/Z6/.runme
+==6780== Parent PID: 6760
+==6780== 
+==6780== 
+==6780== Process terminating with default action of signal 15 (SIGTERM)
+==6780==    at 0x56EF081: read (read.c:27)
+==6780==    by 0x566C147: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:531)
+==6780==    by 0x566D3F1: _IO_default_uflow (genops.c:380)
+==6780==    by 0x512B95C: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==6780==    by 0x51396F9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==6780==    by 0x513996D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==6780==    by 0x108E1A: main (main.cpp:54)
+==6780== 
+==6780== HEAP SUMMARY:
+==6780==     in use at exit: 16 bytes in 2 blocks
+==6780==   total heap usage: 4 allocs, 2 frees, 73,744 bytes allocated
+==6780== 
+==6780== LEAK SUMMARY:
+==6780==    definitely lost: 0 bytes in 0 blocks
+==6780==    indirectly lost: 0 bytes in 0 blocks
+==6780==      possibly lost: 0 bytes in 0 blocks
+==6780==    still reachable: 16 bytes in 2 blocks
+==6780==         suppressed: 0 bytes in 0 blocks
+==6780== Reachable blocks (those to which a pointer was found) are not shown.
+==6780== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==6780== 
+==6780== For counts of detected and suppressed errors, rerun with: -v
+==6780== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

@@ -1,0 +1,15 @@
+/rhome/a/asiljak1/workspace/OR/P1/Z17/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/P1/Z17/main.c:15:58: warning: statement with no effect [-Wunused-value]
+   for((j==0 && i>0 && i<n-1) || (j==n-1 && i>0 && i<n-1) || (j==2*n-2 && i>0 && i<n-1)) {
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/rhome/a/asiljak1/workspace/OR/P1/Z17/main.c:15:87: error: expected ‘;’ before ‘)’ token
+   for((j==0 && i>0 && i<n-1) || (j==n-1 && i>0 && i<n-1) || (j==2*n-2 && i>0 && i<n-1)) {
+                                                                                       ^
+/rhome/a/asiljak1/workspace/OR/P1/Z17/main.c:15:87: error: expected expression before ‘)’ token
+/rhome/a/asiljak1/workspace/OR/P1/Z17/main.c: At top level:
+/rhome/a/asiljak1/workspace/OR/P1/Z17/main.c:23:2: error: expected identifier or ‘(’ before ‘return’
+  return 0;
+  ^~~~~~
+/rhome/a/asiljak1/workspace/OR/P1/Z17/main.c:24:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^

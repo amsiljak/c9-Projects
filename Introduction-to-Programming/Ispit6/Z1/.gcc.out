@@ -1,0 +1,11 @@
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z1/main.c: In function ‘izbaci_dvije_decimale’:
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z1/main.c:12:28: warning: unused variable ‘i’ [-Wunused-variable]
+     int k1,k2,zbir=0, temp,i;
+                            ^
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z1/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z1/main.c:52:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+     for (i=0; i<vel; i++)
+     ^~~
+/rhome/a/asiljak1/workspace/OR/Ispit6/Z1/main.c:54:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  return 0;
+  ^~~~~~

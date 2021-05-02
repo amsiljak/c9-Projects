@@ -1,0 +1,77 @@
+{
+    "buildhost_description": {
+        "id": "lab002c18",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1170": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. realan broj: Unesite 2. realan broj: Unesite 3. realan broj: Unesite 4. realan broj: Unesite 5. realan broj: Unesite 6. realan broj: Unesite 7. realan broj: Unesite 8. realan broj: Unesite 9. realan broj: Unesite 10. realan broj: Sortiran niz:\n98.7 8.3 5.3 4.111 3.1 1.2 1.19 0.1 -1.19 -3 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1479": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. realan broj: Unesite 2. realan broj: Unesite 3. realan broj: Unesite 4. realan broj: Unesite 5. realan broj: Unesite 6. realan broj: Unesite 7. realan broj: Unesite 8. realan broj: Unesite 9. realan broj: Unesite 10. realan broj: Sortiran niz:\n0 0 0 0 0 0 0 0 0 0 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1480": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. realan broj: Unesite 2. realan broj: Unesite 3. realan broj: Unesite 4. realan broj: Unesite 5. realan broj: Unesite 6. realan broj: Unesite 7. realan broj: Unesite 8. realan broj: Unesite 9. realan broj: Unesite 10. realan broj: Sortiran niz:\n10 9 8 7 6 5 4 3 2 1 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1481": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. realan broj: Unesite 2. realan broj: Unesite 3. realan broj: Unesite 4. realan broj: Unesite 5. realan broj: Unesite 6. realan broj: Unesite 7. realan broj: Unesite 8. realan broj: Unesite 9. realan broj: Unesite 10. realan broj: Sortiran niz:\n10 9 8 7 6 5 4 3 2 1 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1544898409
+}

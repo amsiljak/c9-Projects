@@ -1,0 +1,13 @@
+/rhome/a/asiljak1/workspace/TP/ZSR3/Z4/main.cpp: In function ‘int main()’:
+/rhome/a/asiljak1/workspace/TP/ZSR3/Z4/main.cpp:19:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  for(auto e : a) e *= 5; for(auto &e : a) std::cout << e << " ";
+  ^~~
+/rhome/a/asiljak1/workspace/TP/ZSR3/Z4/main.cpp:19:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  for(auto e : a) e *= 5; for(auto &e : a) std::cout << e << " ";
+                          ^~~
+/rhome/a/asiljak1/workspace/TP/ZSR3/Z4/main.cpp:20:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  for(auto &e : a) e *= 5; for(auto e : a) std::cout << e << " ";
+  ^~~
+/rhome/a/asiljak1/workspace/TP/ZSR3/Z4/main.cpp:20:27: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  for(auto &e : a) e *= 5; for(auto e : a) std::cout << e << " ";
+                           ^~~

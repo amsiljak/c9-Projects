@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/OR/ZSR13/Z1/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/ZSR13/Z1/main.c:9:9: warning: variable ‘niz2’ set but not used [-Wunused-but-set-variable]
+     int niz2[100];
+         ^~~~

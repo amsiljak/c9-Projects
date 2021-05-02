@@ -1,0 +1,185 @@
+{
+    "id": 5599,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Ispit 6, zadatak 4",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "FILE* txt = fopen(\"skladiste.txt\", \"w\");\nfputs(\"86,24,127,1,49,28,99,0,28\", txt);\nfclose(txt);\n\n_main();\n\nFILE* bin = fopen(\"skladiste.dat\", \"rb\");\nunsigned char tip;\nfread(&tip, 1, 1, bin);\nprintf(\"Tip: %d\\n\", tip);\nunsigned char niz[100];\nint vel = fread(niz, 1, 100, bin);\nint i;\nfor (i=0; i<vel; i++)\n   printf(\"%d \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tip: 1\\n86 24 127 1 49 28 99 0 28"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "FILE* txt = fopen(\"skladiste.txt\", \"w\");\nfputs(\"-10,0,-55,127,4,-128,15\", txt);\nfclose(txt);\n\n_main();\n\nFILE* bin = fopen(\"skladiste.dat\", \"rb\");\nunsigned char tip;\nfread(&tip, 1, 1, bin);\nprintf(\"Tip: %d\\n\", tip);\nsigned char niz[100];\nint vel = fread(niz, 1, 100, bin);\nint i;\nfor (i=0; i<vel; i++)\n   printf(\"%d \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tip: 2\\n-10 0 -55 127 4 -128 15"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "FILE* txt = fopen(\"skladiste.txt\", \"w\");\nfputs(\"200,150,100,50,0,250,123\", txt);\nfclose(txt);\n\n_main();\n\nFILE* bin = fopen(\"skladiste.dat\", \"rb\");\nunsigned char tip;\nfread(&tip, 1, 1, bin);\nprintf(\"Tip: %d\\n\", tip);\nunsigned char niz[100];\nint vel = fread(niz, 1, 100, bin);\nint i;\nfor (i=0; i<vel; i++)\n   printf(\"%d \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tip: 1\\n200 150 100 50 0 250 123"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "FILE* txt = fopen(\"skladiste.txt\", \"w\");\nfputs(\"-1,1000,2000,0,15\", txt);\nfclose(txt);\n\n_main();\n\nFILE* bin = fopen(\"skladiste.dat\", \"rb\");\nunsigned char tip;\nfread(&tip, 1, 1, bin);\nprintf(\"Tip: %d\\n\", tip);\nsigned short niz[100];\nint vel = fread(niz, 2, 100, bin);\nint i;\nfor (i=0; i<vel; i++)\n   printf(\"%d \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tip: 4\\n-1 1000 2000 0 15"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "FILE* txt = fopen(\"skladiste.txt\", \"w\");\nfputs(\"1000,2000,3000,4000,5000\", txt);\nfclose(txt);\n\n_main();\n\nFILE* bin = fopen(\"skladiste.dat\", \"rb\");\nunsigned char tip;\nfread(&tip, 1, 1, bin);\nprintf(\"Tip: %d\\n\", tip);\nunsigned short niz[100];\nint vel = fread(niz, 2, 100, bin);\nint i;\nfor (i=0; i<vel; i++)\n   printf(\"%d \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tip: 3\\n1000 2000 3000 4000 5000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "FILE* txt = fopen(\"skladiste.txt\", \"w\");\nfputs(\"45000,-1,56,0\", txt);\nfclose(txt);\n\n_main();\n\nFILE* bin = fopen(\"skladiste.dat\", \"rb\");\nunsigned char tip;\nfread(&tip, 1, 1, bin);\nprintf(\"Tip: %d\\n\", tip);\nint niz[100];\nint vel = fread(niz, 4, 100, bin);\nint i;\nfor (i=0; i<vel; i++)\n   printf(\"%d \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tip: 5\\n45000 -1 56 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "FILE* txt = fopen(\"skladiste.txt\", \"w\");\nfputs(\"10000,20000,30000,40000,50000,1,2,3\", txt);\nfclose(txt);\n\n_main();\n\nFILE* bin = fopen(\"skladiste.dat\", \"rb\");\nunsigned char tip;\nfread(&tip, 1, 1, bin);\nprintf(\"Tip: %d\\n\", tip);\nunsigned short niz[100];\nint vel = fread(niz, 2, 100, bin);\nint i;\nfor (i=0; i<vel; i++)\n   printf(\"%d \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tip: 3\\n10000 20000 30000 40000 50000 1 2 3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "FILE* txt = fopen(\"skladiste.txt\", \"w\");\nfputs(\"10000,20000,30000,40000,50000,60000,70000,80000,90000,100000\", txt);\nfclose(txt);\n\n_main();\n\nFILE* bin = fopen(\"skladiste.dat\", \"rb\");\nunsigned char tip;\nfread(&tip, 1, 1, bin);\nprintf(\"Tip: %d\\n\", tip);\nint niz[100];\nint vel = fread(niz, 4, 100, bin);\nint i;\nfor (i=0; i<vel; i++)\n   printf(\"%d \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tip: 5\\n10000 20000 30000 40000 50000 60000 70000 80000 90000 100000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

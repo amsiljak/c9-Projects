@@ -1,0 +1,205 @@
+{
+    "buildhost_description": {
+        "id": "lab002c18",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "\nPrije funkcije f:a=-5671,b=-783\nPoslije funkcije f:a=-5666,b=-783,c=-17013\nPrije funkcije f:a=-5671,b=-783",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "\nPrije funkcije f:a=0, b=0\nPoslije funkcije f: a=5, b=0 c=0\nc=-1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3.c: In function ‘main’:\nbs_test_3.c:25:1: error: ‘a’ undeclared (first use in this function)\n a=0;\n ^\nbs_test_3.c:25:1: note: each undeclared identifier is reported only once for each function it appears in\nbs_test_3.c:26:1: error: ‘b’ undeclared (first use in this function)\n b=0;\n ^\nbs_test_3.c:29:1: error: ‘c’ undeclared (first use in this function)\n c=f(&a,b);\n ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "1",
+                        "message": "'a' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_3.c:25:1: error: ‘a’ undeclared (first use in this function) a=0; ^",
+                        "code": "a=0;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "1",
+                        "message": "'b' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_3.c:26:1: error: ‘b’ undeclared (first use in this function) b=0; ^",
+                        "code": "b=0;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "1",
+                        "message": "'c' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_3.c:29:1: error: ‘c’ undeclared (first use in this function) c=f(&a,b); ^",
+                        "code": "c=f(&a,b);"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_4.c: In function ‘main’:\nbs_test_4.c:25:1: error: ‘a’ undeclared (first use in this function)\n a=-2;\n ^\nbs_test_4.c:25:1: note: each undeclared identifier is reported only once for each function it appears in\nbs_test_4.c:26:1: error: ‘b’ undeclared (first use in this function)\n b=-6;\n ^\nbs_test_4.c:29:1: error: ‘c’ undeclared (first use in this function)\n c=f(&a,b);\n ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "1",
+                        "message": "'a' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_4.c:25:1: error: ‘a’ undeclared (first use in this function) a=-2; ^",
+                        "code": "a=-2;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "1",
+                        "message": "'b' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_4.c:26:1: error: ‘b’ undeclared (first use in this function) b=-6; ^",
+                        "code": "b=-6;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "1",
+                        "message": "'c' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_4.c:29:1: error: ‘c’ undeclared (first use in this function) c=f(&a,b); ^",
+                        "code": "c=f(&a,b);"
+                    }
+                ]
+            }
+        },
+        "5": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_5.c: In function ‘main’:\nbs_test_5.c:32:3: error: ‘a’ undeclared (first use in this function)\n   a=niz2[i];\n   ^\nbs_test_5.c:32:3: note: each undeclared identifier is reported only once for each function it appears in\nbs_test_5.c:33:3: error: ‘b’ undeclared (first use in this function)\n   b=niz2[i+2];\n   ^\nbs_test_5.c:36:3: error: ‘c’ undeclared (first use in this function)\n   c=f(&a,b);\n   ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 10,
+                        "col": "3",
+                        "message": "'a' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_5.c:32:3: error: ‘a’ undeclared (first use in this function)   a=niz2[i];   ^",
+                        "code": "a=niz2[i];"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 11,
+                        "col": "3",
+                        "message": "'b' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_5.c:33:3: error: ‘b’ undeclared (first use in this function)   b=niz2[i+2];   ^",
+                        "code": "b=niz2[i+2];"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 14,
+                        "col": "3",
+                        "message": "'c' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_5.c:36:3: error: ‘c’ undeclared (first use in this function)   c=f(&a,b);   ^",
+                        "code": "c=f(&a,b);"
+                    }
+                ]
+            }
+        },
+        "6": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_6.c: In function ‘main’:\nbs_test_6.c:26:1: error: ‘a’ undeclared (first use in this function)\n a=niz1[0];\n ^\nbs_test_6.c:26:1: note: each undeclared identifier is reported only once for each function it appears in\nbs_test_6.c:27:1: error: ‘b’ undeclared (first use in this function)\n b=niz1[6];\n ^\nbs_test_6.c:30:1: error: ‘c’ undeclared (first use in this function)\n c=f(&a,b);\n ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "1",
+                        "message": "'a' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_6.c:26:1: error: ‘a’ undeclared (first use in this function) a=niz1[0]; ^",
+                        "code": "a=niz1[0];"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "1",
+                        "message": "'b' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_6.c:27:1: error: ‘b’ undeclared (first use in this function) b=niz1[6]; ^",
+                        "code": "b=niz1[6];"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 8,
+                        "col": "1",
+                        "message": "'c' undeclared",
+                        "output": "/tmp/buildservice/bs_2331/bs_test_6.c:30:1: error: ‘c’ undeclared (first use in this function) c=f(&a,b); ^",
+                        "code": "c=f(&a,b);"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1548867595
+}

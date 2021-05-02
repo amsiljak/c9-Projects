@@ -1,0 +1,102 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘prva_rijec’:\nmain.c:28:24: warning: ‘pozicija’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n  if (broj!=1) *pozicija='\\0';\n               ~~~~~~~~~^~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "28",
+                "col": "24",
+                "message": "'pozicija' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_5680/main.c:28:24: warning: ‘pozicija’ may be used uninitialized in this function [-Wmaybe-uninitialized]  if (broj!=1) *pozicija='\\0';               ~~~~~~~~~^~~~~",
+                "code": "if (broj!=1) *pozicija='\\0';"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "809": {
+            "status": 1,
+            "run_result": {
+                "output": "Broj rijeci u recenici je: 6\nDanas   ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "810": {
+            "status": 1,
+            "run_result": {
+                "output": "Broj rijeci u recenici je: 1\nPopokatepetl",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "811": {
+            "status": 1,
+            "run_result": {
+                "output": "Broj rijeci u recenici je: 4\nI",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "812": {
+            "status": 1,
+            "run_result": {
+                "output": "Broj rijeci u recenici je: 4\n    I    ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "813": {
+            "status": 1,
+            "run_result": {
+                "output": "3\nda",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1567979413
+}

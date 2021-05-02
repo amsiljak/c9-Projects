@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/OR/T10/Z4/main.c: In function ‘whitespace’:
+/rhome/a/asiljak1/workspace/OR/T10/Z4/main.c:16:10: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    while(*poc++=*kraj++);
+          ^

@@ -1,0 +1,32 @@
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp: In function ‘bool operator==(const Kompleksni&, const Kompleksni&)’:
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:44:20: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   return a.re == b.re && a.im == b.im;
+                    ^~
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:44:36: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   return a.re == b.re && a.im == b.im;
+                                    ^~
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp: In function ‘std::ostream& operator<<(std::ostream&, const Kompleksni&)’:
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:80:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   if(a.re!=0)
+            ^
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:83:14: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(a.im==-1) tok<<"-i";
+              ^
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:84:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    else if(a.im==1) tok<<"+i";
+                  ^
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:86:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    else if(a.im!=0)tok<<"+"<<a.im<<"i";
+                  ^
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:90:14: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(a.im==-1) tok<<"-i";
+              ^
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:91:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    else if(a.im==1) tok<<"+i";
+                  ^
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:93:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    else if(a.im!=0)tok<<"+"<<a.im<<"i";
+                  ^
+/rhome/a/asiljak1/workspace/TP/T12/Z4/main.cpp:94:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    else if(a.im==0) tok<<0;
+                  ^

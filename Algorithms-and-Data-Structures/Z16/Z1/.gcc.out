@@ -1,0 +1,18 @@
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp: In function ‘bool Test3()’:
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp:288:19: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     if(mapa[3.4]!=5.5) return false;
+                   ^~~
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp: In instantiation of ‘TipVrijednosti& NizMapa<TipKljuca, TipVrijednosti>::operator[](TipKljuca) [with TipKljuca = double; TipVrijednosti = double]’:
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp:285:13:   required from here
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp:218:32: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+                 if(niz[i].first== kljuc) return niz[i].second;
+                    ~~~~~~~~~~~~^~~~~~~~
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp: In instantiation of ‘TipVrijednosti NizMapa<TipKljuca, TipVrijednosti>::operator[](TipKljuca) const [with TipKljuca = double; TipVrijednosti = double]’:
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp:335:1:   required from here
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp:234:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+                 if(niz[i].first == kljuc) return niz[i].second;
+                    ~~~~~~~~~~~~~^~~~~~~~
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp: In instantiation of ‘void NizMapa<TipKljuca, TipVrijednosti>::obrisi(const TipKljuca&) [with TipKljuca = double; TipVrijednosti = double]’:
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp:335:1:   required from here
+/rhome/a/asiljak1/workspace/ASP/Z16/Z1/main.cpp:251:40: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+                 if(niz.trenutni().first==kljuc) {

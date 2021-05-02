@@ -1,0 +1,319 @@
+{
+    "id": 393703,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 9, Zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Sara Sarac ima najvisi prosjek (8.50) *\/\nstruct Ocjena niz[] = {\n\t{ { \"Meho\", \"Mehic\"}, \"OR\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"OR\", 9},\n\t{ { \"Meho\", \"Mehic\"}, \"IM1\", 10},\n\t{ { \"Iva\", \"Ivic\"}, \"TP\", 8},\n\t{ { \"Pero\", \"Peric\"}, \"TP\", 7},\n\t{ { \"Sara\", \"Sarac\"}, \"IM1\", 8},\n};\nstruct Student s = top_student(niz, 6);\nprintf(\"%s %s\", s.ime, s.prezime);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sara Sarac"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Iva Ivic, Meho Mehic i Sara Sarac imaju isti prosjek (8.00),\n   ali je Iva Ivic po leksikografskom poretku prva *\/\nstruct Ocjena niz[] = {\n\t{ { \"Meho\", \"Mehic\"}, \"OR\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"OR\", 9},\n\t{ { \"Meho\", \"Mehic\"}, \"IM1\", 10},\n\t{ { \"Iva\", \"Ivic\"}, \"TP\", 8},\n\t{ { \"Pero\", \"Peric\"}, \"TP\", 7},\n\t{ { \"Sara\", \"Sarac\"}, \"IM1\", 7},\n};\nstruct Student s = top_student(niz, 6);\nprintf(\"%s %s\", s.ime, s.prezime);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Iva Ivic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Razlika u drugoj decimali *\/\nstruct Ocjena niz[] = {\n\t{ { \"Meho\", \"Mehic\"}, \"OR\", 6},\n\t{ { \"Meho\", \"Mehic\"}, \"OE\", 6},\n\t{ { \"Meho\", \"Mehic\"}, \"LAG\", 6},\n\t{ { \"Meho\", \"Mehic\"}, \"IF1\", 6},\n\t{ { \"Meho\", \"Mehic\"}, \"IM1\", 7},\n\t{ { \"Meho\", \"Mehic\"}, \"IF2\", 6},\n\t{ { \"Meho\", \"Mehic\"}, \"IM2\", 6},\n\t{ { \"Meho\", \"Mehic\"}, \"EK1\", 6},\n\t{ { \"Meho\", \"Mehic\"}, \"EES\", 6},\n\t{ { \"Meho\", \"Mehic\"}, \"TP\", 7},\n\t{ { \"Meho\", \"Mehic\"}, \"IM3\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"OR\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"OE\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"LAG\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"IF1\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"IM1\", 8},\n\t{ { \"Sara\", \"Sarac\"}, \"IF2\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"IM2\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"EK1\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"EES\", 6},\n\t{ { \"Sara\", \"Sarac\"}, \"TP\", 7},\n\t{ { \"Sara\", \"Sarac\"}, \"IM3\", 6},\n};\nstruct Student s = top_student(niz, 22);\nprintf(\"%s %s\", s.ime, s.prezime);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sara Sarac"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Razlika samo u imenu *\/\nstruct Ocjena niz[] = {\n    { { \"Meho\", \"Mehic\"}, \"OR\", 6},\n    { { \"Sara\", \"Mehic\"}, \"OR\", 9},\n    { { \"Meho\", \"Mehic\"}, \"IM1\", 10},\n    { { \"Iva\", \"Mehic\"}, \"TP\", 8},\n    { { \"Pero\", \"Mehic\"}, \"TP\", 7},\n    { { \"Sara\", \"Mehic\"}, \"IM1\", 8},\n};\nstruct Student s = top_student(niz, 6);\nprintf(\"%s %s\", s.ime, s.prezime);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sara Mehic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Razlika samo u prezimenu *\/\nstruct Ocjena niz[] = {\n    { { \"Igor\", \"Mehic\"}, \"OR\", 6},\n    { { \"Igor\", \"Sarac\"}, \"OR\", 9},\n    { { \"Igor\", \"Mehic\"}, \"IM1\", 10},\n    { { \"Igor\", \"Ivic\"}, \"TP\", 8},\n    { { \"Igor\", \"Peric\"}, \"TP\", 7},\n    { { \"Igor\", \"Sarac\"}, \"IM1\", 7},\n};\nstruct Student s = top_student(niz, 6);\nprintf(\"%s %s\", s.ime, s.prezime);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Igor Ivic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Puno ocjena *\/\nint i;\nstruct Student s1 = { \"Jure\", \"Juric\" };\nstruct Student s2 = { \"Alma\", \"Almic\" };\nstruct Student s3 = { \"Fata\", \"Fatic\" };\nstruct Ocjena niz[100];\n\n\/* Sva tri studenta imaju po 33 devetke *\/\nfor (i=0; i<33; i++) {\n\tniz[i].s = s1;\n\tniz[i].predmet[0] = 'A'+i;\n\tniz[i].predmet[1] = '\\0';\n\tniz[i].ocjena = 9;\n}\nfor (i=33; i<66; i++) {\n\tniz[i].s = s2;\n\tniz[i].predmet[0] = 'A'+i;\n\tniz[i].predmet[1] = '\\0';\n\tniz[i].ocjena = 9;\n}\nfor (i=66; i<99; i++) {\n\tniz[i].s = s3;\n\tniz[i].predmet[0] = 'A'+i;\n\tniz[i].predmet[1] = '\\0';\n\tniz[i].ocjena = 9;\n}\n\n\/* Dajemo Almi Almic jos jednu desetku da bi imala najvisi prosjek *\/\nniz[99].s = s2;\nniz[99].predmet[0] = 'a';\nniz[99].predmet[1] = '\\0';\nniz[99].ocjena = 10;\n\nstruct Student s = top_student(niz, 100);\nprintf(\"%s %s\", s.ime, s.prezime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Alma Almic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 11,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Provjera funkcije zapisi_predmete *\/\nstruct Predmet niz[] = {\n\t{ 1, \"Osnove rac\", 7.51},\n\t{ 2, \"Inz fiz 1\", 7.9},\n\t{ 3, \"Linearna algebra\", 8},\n\t{ 4, \"Inz mat 1\", 6.8}\n};\nzapisi_predmete(niz, 4);\n\nint c;\nFILE* provjera = fopen(\"predmeti.txt\", \"r\");\ndo {\n\tc = fgetc(provjera);\n\tif (c != EOF) printf(\"%c\", c);\n} while(c != EOF);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1,Osnove rac,7.51\\n2,Inz fiz 1,7.90\\n3,Linearna algebra,8.00\\n4,Inz mat 1,6.80"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 12,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Provjera funkcije ucitaj_predmete *\/\nstruct Predmet niz[100];\nint vel, i;\nFILE* provjera = fopen(\"predmeti.txt\", \"w\");\nfprintf(provjera, \"1,Osnove rac,7.51\\n2,Inz fiz 1,7.90\\n3,Linearna algebra,8.00\\n4,Inz mat 1,6.80\");\nfclose(provjera);\n\t\nvel = ucitaj_predmete(niz, 100);\n\nfor (i=0; i<vel; i++) {\n\tprintf(\"%d '%s' - %g\\n\", niz[i].id, niz[i].naziv, niz[i].prosjek);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 'Osnove rac' - 7.51\\n2 'Inz fiz 1' - 7.9\\n3 'Linearna algebra' - 8\\n4 'Inz mat 1' - 6.8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 13,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Ponasanje funkcije ucitaj_predmete u slucaju prekoracenja *\/\nstruct Predmet niz[2];\nint vel, i;\nFILE* provjera = fopen(\"predmeti.txt\", \"w\");\nfprintf(provjera, \"1,Osnove rac,7.51\\n2,Inz fiz 1,7.90\\n3,Linearna algebra,8.00\\n4,Inz mat 1,6.80\");\nfclose(provjera);\n\t\nvel = ucitaj_predmete(niz, 2);\n\t\nfor (i=0; i<vel; i++) {\n\tprintf(\"%d '%s' - %g\\n\", niz[i].id, niz[i].naziv, niz[i].prosjek);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 'Osnove rac' - 7.51\\n2 'Inz fiz 1' - 7.9"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 14,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Provjera funkcije ucitaj_ocjene *\/\nstruct Ocjena niz[100];\nint i, vel;\n\t\nvel = ucitaj_ocjene(niz, 100);\n\t\nfor (i=0; i<vel; i++)\n\tprintf(\"'%s %s' - %s %d\\n\", niz[i].s.ime, niz[i].s.prezime, niz[i].predmet, niz[i].ocjena);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Meho Mehic' - Osnove rac 6\\n'Sara Sarac' - Osnove rac 9\\n'Meho Mehic' - Inz mat 1 10\\n'Iva Ivic' - Tehnike programiranja 8\\n'Pero Peric' - Tehnike programiranja 7\\n'Sara Sarac' - Inz mat 1 8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 15,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Provjera funkcije max_prosjek *\/\nstruct Predmet niz[] = {\n    { 1, \"Osnove rac\", 7.51},\n    { 2, \"Inz fiz 1\", 7.9},\n    { 3, \"Linearna algebra\", 8},\n    { 4, \"Inz mat 1\", 6.8}\n};\nstruct Predmet p = max_prosjek(niz, 4);\nprintf(\"%s\", p.naziv);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Linearna algebra"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 16,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Provjera funkcije predmet_studenti *\/\nstruct Predmet predmeti[] = {\n    { 1, \"Osnove rac\", 7.51},\n    { 2, \"Inz fiz 1\", 7.9},\n    { 3, \"Linearna algebra\", 8},\n    { 4, \"Inz mat 1\", 8.2}\n};\nstruct Ocjena ocjene[100];\nint vel;\nvel = ucitaj_ocjene(ocjene, 100);\n\npredmet_studenti(predmeti, 4, ocjene, vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Meho Mehic 10\\nSara Sarac 8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

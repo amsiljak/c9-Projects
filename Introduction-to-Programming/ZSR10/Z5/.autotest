@@ -1,0 +1,101 @@
+{
+    "id": 7221,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 10, zadatak 5",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2180,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "const char *tekst = \"   Zeko     pije     mlijeko!          \";\nchar rijec[101]; \/\/pretpostavimo da nije duza od 100 znakova\nNtaRijec(tekst, rijec, 2); \/\/ 2. rijec po redu (\"pije\")\nprintf (\"2. rijec: '%s'\", rijec);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2. rijec: 'pije'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2181,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "const char *tekst = \"   Zeko     pije     mlijeko!          \";\nchar rijec[101]; \nNtaRijec(tekst, rijec, 4);\nprintf (\"%d\", rijec[0]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2182,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "const char *tekst = \"ovo,je.jako-nepismen tekst .\";\nchar rijec[101];\nNtaRijec(tekst, rijec, 3); \nprintf (\"3. rijec: '%s'\", rijec);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3. rijec: 'jako'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2183,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "const char *tekst = \"neka proba\";\nchar rijec[101];\nNtaRijec(tekst, rijec, 1); \nprintf (\"1. rijec: '%s'\", rijec);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1. rijec: 'neka'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

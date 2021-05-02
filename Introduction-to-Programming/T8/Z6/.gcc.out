@@ -1,0 +1,5 @@
+/rhome/a/asiljak1/workspace/OR/T8/Z6/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/T8/Z6/main.c:26:11: warning: format ‘%f’ expects argument of type ‘float *’, but argument 2 has type ‘double *’ [-Wformat=]
+   scanf("%f", &niz[vel]);
+          ~^   ~~~~~~~~~
+          %lf

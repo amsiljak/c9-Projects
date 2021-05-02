@@ -1,0 +1,88 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:26:11: warning: format ‘%f’ expects argument of type ‘float *’, but argument 2 has type ‘double *’ [-Wformat=]\n   scanf(\"%f\", &niz[vel]);\n           ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "26",
+                "col": "11",
+                "message": "format '%f' expects argument of type 'float *', but argument 2 has type 'double *'",
+                "output": "/tmp/buildservice/bs_6321/main.c:26:11: warning: format ‘%f’ expects argument of type ‘float *’, but argument 2 has type ‘double *’ [-Wformat=]   scanf(\"%f\", &niz[vel]);           ^",
+                "code": "scanf(\"%f\", &niz[vel]);"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "766": {
+            "status": 1,
+            "run_result": {
+                "output": "0 0 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "767": {
+            "status": 1,
+            "run_result": {
+                "output": "-3 -1.19 0.1 1.19 1.2 3.1 4.111 5.3 8.3 98.7 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "768": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 3 4 5 6 7 8 9 10 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "769": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 3 4 5 6 7 8 9 10 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1567979510
+}

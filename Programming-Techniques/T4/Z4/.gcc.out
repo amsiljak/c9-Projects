@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/TP/T4/Z4/main.cpp: In function ‘int main()’:
+/rhome/a/asiljak1/workspace/TP/T4/Z4/main.cpp:31:48: warning: ‘baza’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         for(int i=0;i<eksponent-1;i++) suma*=1./baza;
+                                              ~~^~~~~

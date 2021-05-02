@@ -1,0 +1,7 @@
+Koliko zelite kreirati trouglova: Unesite podatke za 1. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Unesite vektor translacije (dx dy): Unesite ugao rotacije: Unesite faktor skaliranja: Trouglovi nakon obavljenih transformacija: 
+((2.69085,-0.264601),(17.7043,13.8633),(27.3146,19.5765))
+((3.50635,3.90931),(17.3241,6.921),(7.09336,37.258))
+Trougao sa najmanjim obimom: ((2.69085,-0.264601),(17.7043,13.8633),(27.3146,19.5765))
+Nema identicnih trouglova!
+Nema podudarnih trouglova!
+Nema slicnih trouglova!

@@ -1,0 +1,164 @@
+{
+    "id": 5310,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR1, zadatak 15",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 5311,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();\n\/\/AT1: 18 je i u A i u B, ali nije u C stoga pripada intervalu",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "18"
+            },
+            "expected": [
+                "Unesite cijeli broj: Nalazi"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5312,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();\n\/\/AT2: 6 pripada u sva tri intervala, odnosno pripada C sto je zabranjeno postavkom",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6"
+            },
+            "expected": [
+                "Unesite cijeli broj: Ne nalazi"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5313,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();\n\/\/AT3: Ne pripada nijednom intervalu",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "16"
+            },
+            "expected": [
+                "Unesite cijeli broj: Ne nalazi"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5314,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();\n\/\/AT4: Pripada samo A i B",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "30"
+            },
+            "expected": [
+                "Unesite cijeli broj: Nalazi"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5315,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();\n\/\/AT5",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0"
+            },
+            "expected": [
+                "Unesite cijeli broj: Nalazi"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5316,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();\n\/\/AT6: Ne pripada A",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "15"
+            },
+            "expected": [
+                "Unesite cijeli broj: Ne nalazi"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5317,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();\n\/\/AT7: Ne pripada B",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-2"
+            },
+            "expected": [
+                "Unesite cijeli broj: Ne nalazi"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

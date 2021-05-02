@@ -1,0 +1,143 @@
+{
+    "id": 7210,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 13, zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "remove(\"usmeni.dat\");\n\nFILE* dat = fopen(\"ispit.txt\", \"w\");\nfputs(\"Anic           Ana        7 11\\nMarkovic       Marko     11 7\\nIvic           Ivica     20 14\\nMajic          Maja      12 2\\nIsovic         Ismet      5 2\\nMuharemovic    Muharem    7 14\\nAlmirovic      Almir     10 11\\nZdravkovic     Zdravko    8 12\\nRadic          Rade      19 10\\nDanilovic      Danilo    12 2\\n\", dat);\nfclose(dat);\nint i;\n\n_main();\n\n\/\/Definicija nove strukture u koju se upisuju podaci za binarnu datoteku\nstruct binarniStudent {\n\tchar prezime[20];\n\tchar ime[15];\n\tint  broj_bodova;\n} studenti[1000];\n\nFILE *usmeni = fopen(\"usmeni.dat\", \"rb\");\nint br = fread(studenti, sizeof(struct binarniStudent), 1000, usmeni);\nfor (i=0; i<br; i++)\n\tprintf(\"%s %s %d\\n\", studenti[i].prezime, studenti[i].ime, studenti[i].broj_bodova);\nfclose(usmeni);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka usmeni.dat je kreirana\\nIvic Ivica 34\\nRadic Rade 29\\nAlmirovic Almir 21"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2: Testiramo da li se ispravno spasavaju studenti koji mogu na usmeni\n        \nremove(\"usmeni.dat\");\nstruct Student studenti[] = {\n\t{\"Mehic\", \"Meho\", 10, 7},\n\t{\"Sabic\", \"Sabo\", 7, 7},\n\t{\"Nikic\", \"Niko\", 10, 17},\n\t{\"Nekic\", \"Neko\", 0, 20},\n\t{\"Alic\", \"Alo\", 10, 10}\n};\nconst int n = sizeof(studenti) \/ sizeof *studenti;\nint i;\nFILE *dat = fopen(\"ispit.txt\", \"w\");\nfor (i = 0; i < n; ++i) {\n\tstruct Student s = studenti[i];\n\tfprintf (dat, \"%-20s%-15s %2d %2d\\n\", s.prezime, s.ime, s.broj_bodova1, s.broj_bodova2);\n}\nfclose(dat);\n\n\/\/sada pozovemo studentski main koji ce ucitati ispiti.txt i upisati u binarnu datoteku usmeni.dat\n_main();\n\n\/\/sada citamo binarnu datoteku i ocekujemo u njoj 2 studenta (Nikic Niko i Alic Alo)\ndat = fopen(\"usmeni.dat\", \"rb\");\nif (dat == NULL) {\n\tprintf (\"Studentki main nije napravio datoteku usmeni.dat ili je nije zatvorio (fclose)!\");\n} else {\n\tstruct binarniStudent {\n\t\tchar prezime[20];\n\t\tchar ime[15];\n\t\tint  broj_bodova;\n\t} studenti[1000];\n\tstruct binarniStudent ucitani[2];\n\tint broj = fread(ucitani, sizeof *ucitani, 10 \/*namjerno stavljamo da vise ucita ako ima *\/, dat);\n\tfclose(dat);\n\tif (broj != 2) {\n\t\tprintf (\"Ocekivani broj studenata: 2, ucitano: %d!\\n\", broj);\n\t}\n\tprintf (\"Ucitani studenti iz datoteke usmeni.dat:\\n\");\n\tfor (i = 0; i < broj; ++i) {\n\t\tstruct binarniStudent s = ucitani[i];\n\t\tprintf (\"'%s' '%s' %d\\n\", s.prezime, s.ime, s.broj_bodova);\n\t}\n\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka usmeni.dat je kreirana\\nUcitani studenti iz datoteke usmeni.dat:\\n'Nikic' 'Niko' 27\\n'Alic' 'Alo' 20"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3: Testiramo da li je datoteka usmeni.dat dobro sortirana\n        \nremove(\"usmeni.dat\");\nstruct Student studenti[] = {\n\t{\"Mehic\", \"Meho\", 10, 17},\n\t{\"Sabic\", \"Sabo\", 17, 17},\n\t{\"Nikic\", \"Niko\", 10, 17},\n\t{\"Nekic\", \"Neko\", 20, 20},\n\t{\"Pihic\", \"Piho\", 20, 9},\n\t{\"Alic\", \"Alo\", 10, 18}\n};\nconst int n = sizeof(studenti) \/ sizeof *studenti;\nint i;\nFILE *dat = fopen(\"ispit.txt\", \"w\");\nfor (i = 0; i < n; ++i) {\n\tstruct Student s = studenti[i];\n\tfprintf (dat, \"%-20s%-15s %2d %2d\\n\", s.prezime, s.ime, s.broj_bodova1, s.broj_bodova2);\n}\nfclose(dat);\n\/\/sada pozovemo studentski main koji ce ucitati ispiti.txt i upisati u binarnu datoteku usmeni.dat\n_main();\ndat = fopen(\"usmeni.dat\", \"rb\");\nif (dat == NULL) {\n\tprintf (\"Studentki main nije napravio datoteku usmeni.dat ili je nije zatvorio (fclose)!\");\n} else {\n\tstruct binarniStudent {\n\t\tchar prezime[20];\n\t\tchar ime[15];\n\t\tint  broj_bodova;\n\t};\n\tstruct binarniStudent ucitani[5];\n\tint broj = fread(ucitani, sizeof *ucitani, 10 \/*namjerno stavljamo da vise ucita ako ima *\/, dat);\n\tfclose(dat);\n\tif (broj != 5) {\n\t\tprintf (\"Ocekivani broj studenata: 5, ucitano: %d!\\n\", broj);\n\t}\n\tprintf (\"Ucitani studenti iz datoteke usmeni.dat:\\n\");\n\tfor (i = 0; i < broj; ++i) {\n\t\tstruct binarniStudent s = ucitani[i];\n\t\tprintf (\"'%s' '%s' %d\\n\", s.prezime, s.ime, s.broj_bodova);\n\t}\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka usmeni.dat je kreirana\\nUcitani studenti iz datoteke usmeni.dat:\\n'Nekic' 'Neko' 40\\n'Sabic' 'Sabo' 34\\n'Alic' 'Alo' 28\\n'Nikic' 'Niko' 27\\n'Mehic' 'Meho' 27\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT4: Niko nije polozio\nremove(\"usmeni.dat\");\nstruct Student studenti[] = {\n\t{\"Mehic\", \"Meho\", 0, 17},\n\t{\"Sabic\", \"Sabo\", 7, 17},\n\t{\"Nikic\", \"Niko\", 0, 17},\n\t{\"Nekic\", \"Neko\", 0, 20},\n\t{\"Pihic\", \"Piho\", 0, 9},\n\t{\"Alic\", \"Alo\", 10, 0}\n};\nconst int n = sizeof(studenti) \/ sizeof *studenti;\nint i;\nFILE *dat = fopen(\"ispit.txt\", \"w\");\nfor (i = 0; i < n; ++i) {\n\tstruct Student s = studenti[i];\n\tfprintf (dat, \"%-20s%-15s %2d %2d\\n\", s.prezime, s.ime, s.broj_bodova1, s.broj_bodova2);\n}\nfclose(dat);\n\/\/sada pozovemo studentski main koji ce ucitati ispiti.txt i upisati u binarnu datoteku usmeni.dat\n_main();\ndat = fopen(\"usmeni.dat\", \"rb\");\nif (dat == NULL) {\n\tprintf (\"Studentki main nije napravio datoteku usmeni.dat ili je nije zatvorio (fclose)!\");\n} else {\n    struct binarniStudent {\n        char prezime[20];\n        char ime[15];\n        int  broj_bodova;\n    };\n    struct binarniStudent ucitani[5];\n    int broj = fread(ucitani, sizeof *ucitani, 10 \/*namjerno stavljamo da vise ucita ako ima *\/, dat);\n    fclose(dat);\n    if (broj != 0) {\n        printf (\"Ocekivani broj studenata: 0, ucitano: %d!\\n\", broj);\n    }\n    printf (\"Ucitani studenti iz datoteke usmeni.dat:\\n\");\n    for (i = 0; i < broj; ++i) {\n        struct binarniStudent s = ucitani[i];\n        printf (\"'%s' '%s' %d\\n\", s.prezime, s.ime, s.broj_bodova);\n    }\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka usmeni.dat je kreirana\\nUcitani studenti iz datoteke usmeni.dat:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5: Datoteka ispit.txt je prazna\n        \nremove(\"usmeni.dat\");\nint i;\nFILE *dat = fopen(\"ispit.txt\", \"w\"); \/\/otvorimo\/kreiramo, da bude prazna\nfclose(dat);\n\/\/sada pozovemo studentski main koji ce ucitati ispiti.txt i upisati u binarnu datoteku usmeni.dat\n_main();\ndat = fopen(\"usmeni.dat\", \"rb\");\nif (dat == NULL) {\n\tprintf (\"Studentki main nije napravio datoteku usmeni.dat ili je nije zatvorio (fclose)!\");\n} else {\n    struct binarniStudent {\n        char prezime[20];\n        char ime[15];\n        int  broj_bodova;\n    };\n    struct binarniStudent ucitani[5];\n    int broj = fread(ucitani, sizeof *ucitani, 10 \/*namjerno stavljamo da vise ucita ako ima *\/, dat);\n    fclose(dat);\n    if (broj != 0) {\n        printf (\"Ocekivani broj studenata: 0, ucitano: %d!\\n\", broj);\n    }\n    printf (\"Ucitani studenti iz datoteke usmeni.dat:\\n\");\n    for (i = 0; i < broj; ++i) {\n        struct binarniStudent s = ucitani[i];\n        printf (\"'%s' '%s' %d\\n\", s.prezime, s.ime, s.broj_bodova);\n    }\n\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka usmeni.dat je kreirana\\nUcitani studenti iz datoteke usmeni.dat:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT6: Datoteka ispit.txt ima samo jednog studenta koji je polozio\n        \nremove(\"usmeni.dat\");\nstruct Student studenti[] = {\n\t{\"AAAAAAAAAAAA\", \"BBBBBBBBBBB\", 19, 17}\n};\nconst int n = sizeof(studenti) \/ sizeof *studenti;\nint i;\nFILE *dat = fopen(\"ispit.txt\", \"w\");\nfor (i = 0; i < n; ++i) {\n\tstruct Student s = studenti[i];\n\tfprintf (dat, \"%-20s%-15s %2d %2d\\n\", s.prezime, s.ime, s.broj_bodova1, s.broj_bodova2);\n}\nfclose(dat);\n\/\/sada pozovemo studentski main koji ce ucitati ispiti.txt i upisati u binarnu datoteku usmeni.dat\n_main();\ndat = fopen(\"usmeni.dat\", \"rb\");\nif (dat == NULL) {\n\tprintf (\"Studentki main nije napravio datoteku usmeni.dat ili je nije zatvorio (fclose)!\");\n} else {\n    struct binarniStudent {\n        char prezime[20];\n        char ime[15];\n        int  broj_bodova;\n    };\n    struct binarniStudent ucitani[5];\n    int broj = fread(ucitani, sizeof *ucitani, 10 \/*namjerno stavljamo da vise ucita ako ima *\/, dat);\n    fclose(dat);\n    if (broj != 1) {\n        printf (\"Ocekivani broj studenata: 1, ucitano: %d!\\n\", broj);\n    }\n    printf (\"Ucitani studenti iz datoteke usmeni.dat:\\n\");\n    for (i = 0; i < broj; ++i) {\n        struct binarniStudent s = ucitani[i];\n        printf (\"'%s' '%s' %d\\n\", s.prezime, s.ime, s.broj_bodova);\n    }\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka usmeni.dat je kreirana\\nUcitani studenti iz datoteke usmeni.dat:\\n'AAAAAAAAAAAA' 'BBBBBBBBBBB' 36"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

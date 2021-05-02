@@ -1,0 +1,122 @@
+{
+    "id": 7164,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR10, zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1316,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char rijec[] = \" Danas je divan Dan u sarajevu!\";\nprintf (\"'%s'\", kapitaliziraj(rijec)); ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "' Danas Je Divan Dan U Sarajevu!'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1317,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char s[] = \"treba nekada krenuti i od Prvog slova\";\nprintf (\"%s\", kapitaliziraj(s)); ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Treba Nekada Krenuti I Od Prvog Slova"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1318,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char s[] = \"  0Rijeci 1koje 3Pocinju   -znakovima x  \";\nprintf (\"'%s'\", kapitaliziraj(s)); ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'  0Rijeci 1koje 3Pocinju   -znakovima X  '"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1319,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char s[] = \"\";\nchar s2[] = \"  \";\nchar s3[] = \"...\";\nprintf (\"'%s'\", kapitaliziraj(s)); \nprintf (\"'%s'\", kapitaliziraj(s2)); \nprintf (\"'%s'\", kapitaliziraj(s3)); ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'''  ''...'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1320,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": " Sada cu Unijeti 1primjer teksta. . .\n"
+            },
+            "expected": [
+                "Unesite neki tekst:  Sada Cu Unijeti 1primjer Teksta. . .\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

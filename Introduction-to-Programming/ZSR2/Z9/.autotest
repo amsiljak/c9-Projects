@@ -1,0 +1,101 @@
+{
+    "id": 5263,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR1, zadatak 9",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 5264,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "102 7374 0 123 727 7349272 73 111 82824 1"
+            },
+            "expected": [
+                "Unesite 10 prirodnih brojeva: 000000000000102\\n000000000007374\\n000000000000000\\n123\\n727\\n000000007349272\\n73\\n111\\n000000000082824\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5265,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0 0 0 0 0 0 0 0 0 0"
+            },
+            "expected": [
+                "Unesite 10 prirodnih brojeva: 000000000000000\\n000000000000000\\n000000000000000\\n000000000000000\\n000000000000000\\n000000000000000\\n000000000000000\\n000000000000000\\n000000000000000\\n000000000000000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5266,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 3 5 7 9 11 13 15 17 19"
+            },
+            "expected": [
+                "Unesite 10 prirodnih brojeva: 1\\n3\\n5\\n7\\n9\\n11\\n13\\n15\\n17\\n19"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5267,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "561156 32115 186213 21345486 1221315 1235453 2133556 1231457 115646 321155"
+            },
+            "expected": [
+                "Unesite 10 prirodnih brojeva: 000000000561156\\n32115\\n186213\\n000000021345486\\n1221315\\n1235453\\n000000002133556\\n1231457\\n000000000115646\\n321155"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

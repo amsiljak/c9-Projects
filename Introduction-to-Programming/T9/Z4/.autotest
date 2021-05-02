@@ -1,0 +1,80 @@
+{
+    "id": 7165,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Tutorijal 9, Zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1322,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "printf(\"%c\\n\", max_slovo(\"Ovo je probni primjer.\"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "O"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1323,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "printf(\"%c\\n\", max_slovo(\"bBbAAAaBA\"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "A"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1324,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* Ne znamo sta treba raditi ako je string prazan, ali ne treba da se krahira *\/\nmax_slovo(\"\");\nmax_slovo(\"   \");\nmax_slovo(\".,;'!@#$\");\nprintf(\"%c\", max_slovo(\"x\"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "X"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

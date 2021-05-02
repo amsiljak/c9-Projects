@@ -1,0 +1,206 @@
+{
+    "id": 5439,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 5, Zadatak 1",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Jednostavan primjer, treba dodati \\\\ izme\u0111u tekuceg i relativne putanje *\/\nchar rel[100] = \"dir1\\\\file.txt\";\nprintf(\"%s\", apsolutna(rel, \"C:\\\\Users\\\\Student\\\\Desktop\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "C:\\Users\\Student\\Desktop\\dir1\\file.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Jednostavan primjer, ne treba dodati \\\\  *\/\nchar rel[100] = \"dir1\\\\file.txt\";\nprintf(\"%s\", apsolutna(rel, \"C:\\\\\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "C:\\dir1\\file.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Primjer sa .. *\/\nchar rel[100] = \"..\\\\dir1\\\\file.txt\";\nprintf(\"%s\", apsolutna(rel, \"C:\\\\Users\\\\Student\\\\Desktop\\\\\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "C:\\Users\\Student\\dir1\\file.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Primjer sa dva puta .. *\/\nchar rel[100] = \"..\\\\..\\\\dir1\\\\file.txt\";\nprintf(\"%s\", apsolutna(rel, \"C:\\\\Users\\\\Student\\\\Desktop\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "C:\\Users\\dir1\\file.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Primjer sa . i .. *\/\nchar rel[100] = \"..\\\\.\\\\dir1\\\\file.txt\";\nprintf(\"%s\", apsolutna(rel, \"C:\\\\Users\\\\Student\\\\Desktop\\\\\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "C:\\Users\\Student\\dir1\\file.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT6: Primjer sa velikim brojem . i .., tekuci dir je kraci od dijela\nkoji se ubacuje pa je ovdje ustvari izbacivanje iz stringa *\/\nchar rel[100] = \".\\\\.\\\\..\\\\.\\\\..\\\\.\\\\..\\\\dir1\\\\file.txt\";\nprintf(\"%s\", apsolutna(rel, \"Z:\\\\A\\\\B\\\\C\\\\\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Z:\\dir1\\file.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT7: Relativna putanja nije relativna nego apsolutna\n   (drugi poziv funkcije je provjera za funkciju koja ne radi nista) *\/\nchar rel[100] = \"E:\\\\dir1\\\\file.txt\";\nprintf(\"%s\\n\", apsolutna(rel, \"C:\\\\Users\\\\Student\\\\Desktop\"));\nchar rel2[100] = \"file.txt\";\nprintf(\"%s\", apsolutna(rel2, \"C:\\\\Users\\\\Student\\\\Desktop\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "E:\\dir1\\file.txt\\nC:\\Users\\Student\\Desktop\\file.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT8: U drugom pozivu funkcije se ne moze formirati apsolutna putanja,\n   jer se .. pojavljuje previse puta *\/\nchar rel[100] = \"..\\\\file.txt\";\nprintf(\"%s\\n\", apsolutna(rel, \"C:\\\\Users\\\\\"));\nchar rel2[100] = \"..\\\\..\\\\file.txt\";\nprintf(\"%s\", apsolutna(rel2, \"C:\\\\Users\\\\\"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "C:\\file.txt\\n..\\..\\file.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT9: Test sa praznim stringovima *\/\nchar rel[100] = \"\";\nprintf(\"%s\\n\", apsolutna(rel, \"C:\\\\Users\\\\\"));\nchar rel2[100] = \"user\\\\dir\\\\file.txt\";\nprintf(\"%s\\n\", apsolutna(rel2, \"\"));\nchar rel3[100] = \"..\\\\user\\\\dir\\\\file.txt\";\nprintf(\"%s\", apsolutna(rel3, \"\"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "C:\\Users\\\r\\nuser\\dir\\file.txt\\n..\\user\\dir\\file.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

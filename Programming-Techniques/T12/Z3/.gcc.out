@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/TP/T12/Z3/main.cpp: In function ‘Dani& operator++(Dani&, int)’:
+/rhome/a/asiljak1/workspace/TP/T12/Z3/main.cpp:23:7: warning: reference to local variable ‘pomocni’ returned [-Wreturn-local-addr]
+  Dani pomocni(d);
+       ^~~~~~~

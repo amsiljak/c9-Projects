@@ -1,0 +1,111 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3489": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3489.cpp: In function ‘void Test()’:\nbs_test_3489.cpp:22:22: error: ‘plus2’ was not declared in this scope\n  std::cout << plus2(3)(5) << std::endl;\n                      ^\nbs_test_3489.cpp:23:24: error: ‘plus3’ was not declared in this scope\n    std::cout << plus3(3)(5)(6) << std::endl;\n                        ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 3,
+                        "col": "22",
+                        "message": "'plus2' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1086/bs_test_3489.cpp:22:22: error: ‘plus2’ was not declared in this scope  std::cout << plus2(3)(5) << std::endl;                      ^",
+                        "code": "std::cout << plus2(3)(5) << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 4,
+                        "col": "24",
+                        "message": "'plus3' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1086/bs_test_3489.cpp:23:24: error: ‘plus3’ was not declared in this scope    std::cout << plus3(3)(5)(6) << std::endl;                        ^",
+                        "code": "std::cout << plus3(3)(5)(6) << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3490": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3490.cpp: In function ‘void Test1()’:\nbs_test_3490.cpp:22:22: error: ‘plus2’ was not declared in this scope\n  std::cout << plus2(0)(5.55) << std::endl;\n                      ^\nbs_test_3490.cpp:23:29: error: ‘plus3’ was not declared in this scope\n    std::cout << plus3(103.15)(0.)(1e-7) << std::endl;\n                             ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 3,
+                        "col": "22",
+                        "message": "'plus2' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1086/bs_test_3490.cpp:22:22: error: ‘plus2’ was not declared in this scope  std::cout << plus2(0)(5.55) << std::endl;                      ^",
+                        "code": "std::cout << plus2(0)(5.55) << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 4,
+                        "col": "29",
+                        "message": "'plus3' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1086/bs_test_3490.cpp:23:29: error: ‘plus3’ was not declared in this scope    std::cout << plus3(103.15)(0.)(1e-7) << std::endl;                             ^",
+                        "code": "std::cout << plus3(103.15)(0.)(1e-7) << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3491": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3491.cpp: In function ‘void Test2()’:\nbs_test_3491.cpp:22:24: error: ‘plus2’ was not declared in this scope\n  std::cout << plus2(0.0)(1e-5) << std::endl;\n                        ^\nbs_test_3491.cpp:23:28: error: ‘plus3’ was not declared in this scope\n    std::cout << plus3(15e-5)(0.)(1e-7) << std::endl;\n                            ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 3,
+                        "col": "24",
+                        "message": "'plus2' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1086/bs_test_3491.cpp:22:24: error: ‘plus2’ was not declared in this scope  std::cout << plus2(0.0)(1e-5) << std::endl;                        ^",
+                        "code": "std::cout << plus2(0.0)(1e-5) << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 4,
+                        "col": "28",
+                        "message": "'plus3' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1086/bs_test_3491.cpp:23:28: error: ‘plus3’ was not declared in this scope    std::cout << plus3(15e-5)(0.)(1e-7) << std::endl;                            ^",
+                        "code": "std::cout << plus3(15e-5)(0.)(1e-7) << std::endl;"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1556624604
+}

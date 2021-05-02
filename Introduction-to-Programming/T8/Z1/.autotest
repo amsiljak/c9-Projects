@@ -1,0 +1,143 @@
+{
+    "id": 7016,
+    "name": "Osnove ra\u010dunarstva (2015\/2016), Tutorijal 8, zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    int a=-5671,b=-783,c;\n    printf(\"\\nPrije funkcije f:a=%d,b=%d\",a,b);\n    c=f(&a,a*2);\n    printf(\"\\nPoslije funkcije f:a=%d,b=%d,c=%d\",a,b,c);\n    a-=10;\n    c=f(&a,a*2);\n    printf(\"\\nPrije funkcije f:a=%d,b=%d\",a,b);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prije funkcije f:a=-5671,b=-783\\nPoslije funkcije f:a=-5666,b=-783,c=-17013\\nPrije funkcije f:a=-5671,b=-783"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int a = 0, b = 0, c;\nprintf(\"\\nPrije funkcije f:a=%d, b=%d\", a, b);\nc = f(&a , b);\nprintf(\"\\nPoslije funkcije f: a=%d, b=%d c=%d\", a, b, c);\nc--;\nprintf(\"\\nc=%d\", c);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prije funkcije f:a=0, b=0                                    \\nPoslije funkcije f: a=5, b=0 c=0                             \\nc=-1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/*Test sa nulama*\/\nint a = 0, b = 0, c;\n        \nprintf(\"\\nPrije funkcije f:a=%d, b=%d\",a,b);\nc=f(&a,b);\nprintf(\"\\nPoslije funkcije f:a=%d, b=%d, c=%d\\n\",a,b,c);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prije funkcije f:a=0, b=0\\nPoslije funkcije f:a=5, b=0, c=0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/*Test sa negativnim brojevima*\/\nint a = -2, b = -6, c;\n\nprintf(\"\\nPrije funkcije f:a=%d, b=%d\",a,b);\nc=f(&a,b);\nprintf(\"\\nPoslije funkcije f:a=%d, b=%d, c=%d\\n\",a,b,c);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prije funkcije f:a=-2, b=-6\\nPoslije funkcije f:a=3, b=-6, c=-8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/*Prolazimo kroz niz i provjeravamo mjenjajuci vrijednost od a i b sa petljom*\/\nint niz2[5]={-2,6,12,44,87};\nint i, a, b, c;\n\nfor(i=0; i<5; i++){\n\t\n\tif(i<=2){\n\t\ta=niz2[i];\n\t\tb=niz2[i+2];\n\t\t\n\t\tprintf(\"\\nPrije funkcije f:a=%d, b=%d\",a,b);\n\t\tc=f(&a,b);\n\t\tprintf(\"\\nPoslije funkcije f:a=%d, b=%d, c=%d\",a,b,c);\n\t}\n\telse{\n\t\ta=niz2[i];\n\t\tb=niz2[i-1];\n\t\t\n\t\tprintf(\"\\nPrije funkcije f:a=%d, b=%d\",a,b);\n\t\tc=f(&a,b);\n\t\tprintf(\"\\nPoslije funkcije f:a=%d, b=%d, c=%d\\n\",a,b,c);\n\t}\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prije funkcije f:a=-2, b=12\\nPoslije funkcije f:a=3, b=12, c=10\\nPrije funkcije f:a=6, b=44\\nPoslije funkcije f:a=11, b=44, c=50\\nPrije funkcije f:a=12, b=87\\nPoslije funkcije f:a=17, b=87, c=99\\nPrije funkcije f:a=44, b=12\\nPoslije funkcije f:a=49, b=12, c=56\\nPrije funkcije f:a=87, b=44\\nPoslije funkcije f:a=92, b=44, c=131"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* Test sa nekim nizom *\/\nint a,b,c;\nint niz1[10]={1,2,3,4,5,6,7,8,9,10};\na=niz1[0];\nb=niz1[6];\n\nprintf(\"\\nPrije funkcije f:a=%d, b=%d\",a,b);\nc=f(&a,b);\nprintf(\"\\nPoslije funkcije f:a=%d, b=%d, c=%d\\n\",a,b,c);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prije funkcije f:a=1, b=7\\nPoslije funkcije f:a=6, b=7, c=8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

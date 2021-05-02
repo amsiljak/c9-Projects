@@ -1,0 +1,11 @@
+/rhome/a/asiljak1/workspace/ASP/PZ2/Z1/main.cpp: In function ‘bool Test1()’:
+/rhome/a/asiljak1/workspace/ASP/PZ2/Z1/main.cpp:430:29: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     if(nizlista.trenutni()!=3) return false;
+                             ^
+/rhome/a/asiljak1/workspace/ASP/PZ2/Z1/main.cpp:432:29: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     if(nizlista.trenutni()!=8.4) return false;
+                             ^~~
+/rhome/a/asiljak1/workspace/ASP/PZ2/Z1/main.cpp: In function ‘bool Test6()’:
+/rhome/a/asiljak1/workspace/ASP/PZ2/Z1/main.cpp:490:39: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     if(jednostrukalista.trenutni() != 3) return false;
+                                       ^

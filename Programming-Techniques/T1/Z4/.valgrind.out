@@ -1,0 +1,25 @@
+==15186== Memcheck, a memory error detector
+==15186== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==15186== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==15186== Command: /rhome/a/asiljak1/workspace/TP/T1/Z4/.runme
+==15186== Parent PID: 15167
+==15186== 
+==15186== 
+==15186== Process terminating with default action of signal 1 (SIGHUP)
+==15186==    at 0x54D7152: write (write.c:27)
+==15186==    by 0x54521BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
+==15186==    by 0x5452B2E: new_do_write (fileops.c:457)
+==15186==    by 0x5452B2E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1277)
+==15186==    by 0x5446976: fwrite (iofwrite.c:39)
+==15186==    by 0x5151E93: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==15186==    by 0x5152206: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==15186==    by 0x108BDF: main (main.cpp:12)
+==15186== 
+==15186== HEAP SUMMARY:
+==15186==     in use at exit: 0 bytes in 0 blocks
+==15186==   total heap usage: 6 allocs, 6 frees, 73,956 bytes allocated
+==15186== 
+==15186== All heap blocks were freed -- no leaks are possible
+==15186== 
+==15186== For counts of detected and suppressed errors, rerun with: -v
+==15186== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

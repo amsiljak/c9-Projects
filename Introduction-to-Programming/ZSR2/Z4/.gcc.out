@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z4/main.c: In function ‘posljednja_rijec’:
+/rhome/a/asiljak1/workspace/OR/ZSR2/Z4/main.c:7:8: warning: unused variable ‘tmp’ [-Wunused-variable]
+  char* tmp=s;
+        ^~~

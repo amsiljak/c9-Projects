@@ -1,0 +1,143 @@
+{
+    "id": 7214,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 12, zadatak 5",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2126,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Pogresan unos *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0"
+            },
+            "expected": [
+                "Unesite broj: Pogresan unos"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2127,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Primjer iz zadatka *\/\n\/* Kreiramo ulaznu datoteku *\/\nFILE* ulaz = fopen(\"input.txt\", \"w\");\nfputs(\"AAAbbCCCCy@AAxxxxxx!AAA\", ulaz);\nfclose(ulaz);\n\n\/* Pozivamo program *\/\n_main();\n\n\/* Da li je izlazna datoteka ok? *\/\nprintf(\"IZLAZNA:\\n\");\nFILE* izlaz = fopen(\"output.txt\", \"r\");\nint c;\nif (izlaz == NULL) {\n    printf(\"Izlazna datoteka ne postoji!\");\n    return 0;\n}\ndo {\n    c = fgetc(izlaz);\n    if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3"
+            },
+            "expected": [
+                "Unesite broj: IZLAZNA:\\nAAACCCCxxxxxxAAA"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2128,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Primjer 2 iz zadatka *\/\n\/* Kreiramo ulaznu datoteku *\/\nFILE* ulaz = fopen(\"input.txt\", \"w\");\nfputs(\"ABCDEFGGGHHHIJKLMMMNNN\", ulaz);\nfclose(ulaz);\n\n\/* Pozivamo program *\/\n_main();\n\n\/* Da li je izlazna datoteka ok? *\/\nFILE* izlaz = fopen(\"output.txt\", \"r\");\nint c;\nif (izlaz == NULL) {\n    printf(\"Izlazna datoteka ne postoji!\");\n    return 0;\n}\nc = fgetc(izlaz);\nif (c == EOF) \n   printf(\"Izlazna datoteka prazna!\");\nelse\n   printf(\"Izlazna datoteka nije prazna (prvi karakter: %c)\", c);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4"
+            },
+            "expected": [
+                "Unesite broj: Izlazna datoteka prazna!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2129,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Svi karakteri *\/\n\/* Kreiramo ulaznu datoteku *\/\nint i;\nFILE* ulaz = fopen(\"input.txt\", \"w\");\nfor (i=32; i<128; i++)\n   fputc(i, ulaz);\nfclose(ulaz);\n\n\/* Pozivamo program *\/\n_main();\n\n\/* Da li je izlazna datoteka ok? *\/\nFILE* izlaz = fopen(\"output.txt\", \"r\");\nint c;\ni=32;\nif (izlaz == NULL) {\n    printf(\"Izlazna datoteka ne postoji!\");\n    return 0;\n}\ndo {\n    c = fgetc(izlaz);\n    if (c != EOF && c != i) printf(\"Pogresan karakter %c, treba %c\\n\", c, i);\n    i++;\n} while (c != EOF);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1"
+            },
+            "expected": [
+                "Unesite broj:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2130,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Svi karakteri (bez ispisa) *\/\n\/* Kreiramo ulaznu datoteku *\/\nint i;\nFILE* ulaz = fopen(\"input.txt\", \"w\");\nfor (i=32; i<128; i++)\n   fputc(i, ulaz);\nfclose(ulaz);\n\n\/* Pozivamo program *\/\n_main();\n\n\/* Da li je izlazna datoteka ok? *\/\nFILE* izlaz = fopen(\"output.txt\", \"r\");\nint c;\nif (izlaz == NULL) {\n    printf(\"Izlazna datoteka ne postoji!\");\n    return 0;\n}\nc = fgetc(izlaz);\nif (c == EOF) \n   printf(\"Izlazna datoteka prazna!\");\nelse\n   printf(\"Izlazna datoteka nije prazna (prvi karakter: %c)\", c);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2"
+            },
+            "expected": [
+                "Unesite broj: Izlazna datoteka prazna!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2131,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT6: 100000 karaktera *\/\n\/* Kreiramo ulaznu datoteku *\/\nint i;\nFILE* ulaz = fopen(\"input.txt\", \"w\");\nfor (i=0; i<99999; i++)\n   fputc('A', ulaz);\nfor (i=0; i<100000; i++)\n   fputc('B', ulaz);\nfor (i=0; i<99999; i++)\n   fputc('C', ulaz);\nfclose(ulaz);\n\n\/* Pozivamo program *\/\n_main();\n\n\/* Da li je izlazna datoteka ok? *\/\nFILE* izlaz = fopen(\"output.txt\", \"r\");\nint c;\ni=0;\nif (izlaz == NULL) {\n    printf(\"Izlazna datoteka ne postoji!\");\n    return 0;\n}\ndo {\n    c = fgetc(izlaz);\n    if (c != EOF && c != 'B') printf(\"Pogresan karakter %c na mjestu %d\\n\", c, i);\n    if (c != EOF) i++;\n} while (c != EOF);\nfclose(izlaz);\nprintf(\"Slovo B se ponavlja %d puta\", i);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "100000"
+            },
+            "expected": [
+                "Unesite broj: Slovo B se ponavlja 100000 puta"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

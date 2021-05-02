@@ -1,0 +1,80 @@
+{
+    "id": 5572,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Tutorijal 12, zadatak 1",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "tes.txt\n"
+            },
+            "expected": [
+                "Unesite ime datoteke: Pogreska kod otvaranja datoteke tes.txt!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "test"
+            },
+            "expected": [
+                "Unesite ime datoteke: Pogreska kod otvaranja datoteke test!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "test();\n_main();",
+            "global_above_main": "void test(){\n   FILE* izlaz;\n   izlaz=fopen(\"test.txt\",\"w\");\n   fprintf(izlaz,\"Kako spremiti pet ispita\\n za pet dana?\");\n   fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "test.txt"
+            },
+            "expected": [
+                "Unesite ime datoteke: Broj redova: 2\\nBroj rijeci: 7\\nBroj znakova: 31"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

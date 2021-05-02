@@ -1,0 +1,169 @@
+{
+    "id": 7218,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 12, zadatak 11",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2158,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Primjer iz zadatka *\/\nstruct Pravougaonik niz[3] ={{{1, 1}, 5, 3}, {{3, 3}, 7, 6}, \n{{ 5, 7}, 5, 3}};\nint BrojUspjesnih = CrtajPravougaonike(niz, 3);\nprintf(\"Broj uspjesnih je: %d\", BrojUspjesnih);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " *****\\n *   *\\n *********\\n   *     *\\n   *   *****\\n   *   * * *\\n   *   *****\\n   *******\\nBroj uspjesnih je: 3\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2159,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Preklapanje pravougaonika *\/\nstruct Pravougaonik niz[3] ={{{0, 0}, 5, 5}, {{0, 0}, 5, 5},\n{{0, 0}, 5, 5}};\nint BrojUspjesnih = CrtajPravougaonike(niz, 3);\nprintf(\"Broj uspjesnih je: %d\", BrojUspjesnih);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "*****\\n*   *\\n*   *\\n*   *\\n*****\\nBroj uspjesnih je: 3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2160,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Ugnijezdeni pravougaonici *\/\nstruct Pravougaonik niz[3] ={{{1, 1}, 7, 7}, {{3, 3}, 3, 3}};\nint BrojUspjesnih = CrtajPravougaonike(niz, 2);\nprintf(\"Broj uspjesnih je: %d\", BrojUspjesnih);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " *******\\n *     *\\n * *** *\\n * * * *\\n * *** *\\n *     *\\n *******\\nBroj uspjesnih je: 2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2161,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Pravougaonici dijelom van ekrana *\/\nstruct Pravougaonik niz[3] ={{{0, 0}, 5, 5}, {{15, -2}, 5, 5},\n{{99, 101}, 5, 5}};\nint BrojUspjesnih = CrtajPravougaonike(niz, 3);\nprintf(\"Broj uspjesnih je: %d\", BrojUspjesnih);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "*****\\n*   *\\n*   *\\n*   *\\n*****\\n***                                                                                                  \\n  *                                                                                                  \\n  *                                                                                                  \\n  *                                                                                                  \\n***                                                                                                  \\n*      \\nBroj uspjesnih je: 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3104,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Pravougaonici kompletno van ekrana *\/\nstruct Pravougaonik niz[4] ={{{0, 0}, 5, 5}, {{15, -8}, 5, 5},\n{{-8, 15}, 5, 5}, {{101, 101}, 5, 5}};\nint BrojUspjesnih = CrtajPravougaonike(niz, 4);\nprintf(\"Broj uspjesnih je: %d\", BrojUspjesnih);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "*****\\n*   *\\n*   *\\n*   *\\n*****\\nBroj uspjesnih je: 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3105,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Nema nista na ekranu *\/\nstruct Pravougaonik niz[3] ={{{15, -8}, 5, 5},\n{{-8, 15}, 5, 5}, {{101, 101}, 5, 5}};\nint BrojUspjesnih = CrtajPravougaonike(niz, 3);\nprintf(\"Broj uspjesnih je: %d\", BrojUspjesnih);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj uspjesnih je: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

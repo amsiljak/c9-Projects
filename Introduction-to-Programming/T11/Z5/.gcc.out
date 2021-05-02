@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/OR/T11/Z5/main.c: In function ‘proteklo’:
+/rhome/a/asiljak1/workspace/OR/T11/Z5/main.c:14:12: warning: ‘s3’ is used uninitialized in this function [-Wuninitialized]
+  v3.sati=s3/3600;
+          ~~^~~~~

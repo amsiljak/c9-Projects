@@ -1,0 +1,66 @@
+==14458== Memcheck, a memory error detector
+==14458== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==14458== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==14458== Command: /rhome/a/asiljak1/workspace/TP/T4/Z5/.runme
+==14458== Parent PID: 14427
+==14458== 
+==14458== Conditional jump or move depends on uninitialised value(s)
+==14458==    at 0x10BB1B: std::_Vector_base<float, std::allocator<float> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==14458==    by 0x10AF3C: std::_Vector_base<float, std::allocator<float> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+==14458==    by 0x10A6DA: std::_Vector_base<float, std::allocator<float> >::_Vector_base(unsigned long, std::allocator<float> const&) (stl_vector.h:138)
+==14458==    by 0x109C9D: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (stl_vector.h:284)
+==14458==    by 0x1093A7: main (main.cpp:36)
+==14458== 
+==14458== Conditional jump or move depends on uninitialised value(s)
+==14458==    at 0x10C843: __gnu_cxx::new_allocator<float>::allocate(unsigned long, void const*) (new_allocator.h:101)
+==14458==    by 0x10C437: std::allocator_traits<std::allocator<float> >::allocate(std::allocator<float>&, unsigned long) (alloc_traits.h:436)
+==14458==    by 0x10BB2F: std::_Vector_base<float, std::allocator<float> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==14458==    by 0x10AF3C: std::_Vector_base<float, std::allocator<float> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+==14458==    by 0x10A6DA: std::_Vector_base<float, std::allocator<float> >::_Vector_base(unsigned long, std::allocator<float> const&) (stl_vector.h:138)
+==14458==    by 0x109C9D: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (stl_vector.h:284)
+==14458==    by 0x1093A7: main (main.cpp:36)
+==14458== 
+==14458== 
+==14458== Process terminating with default action of signal 1 (SIGHUP)
+==14458==    at 0x56EF152: write (write.c:27)
+==14458==    by 0x566A1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
+==14458==    by 0x566AB2E: new_do_write (fileops.c:457)
+==14458==    by 0x566AB2E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1277)
+==14458==    by 0x565E976: fwrite (iofwrite.c:39)
+==14458==    by 0x50D2AB5: __gnu_cxx::__verbose_terminate_handler() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==14458==    by 0x50D0A05: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==14458==    by 0x50D0A40: std::terminate() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==14458==    by 0x50D0C73: __cxa_throw (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==14458==    by 0x50F8ED1: std::__throw_bad_alloc() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==14458==    by 0x10C849: __gnu_cxx::new_allocator<float>::allocate(unsigned long, void const*) (new_allocator.h:102)
+==14458==    by 0x10C437: std::allocator_traits<std::allocator<float> >::allocate(std::allocator<float>&, unsigned long) (alloc_traits.h:436)
+==14458==    by 0x10BB2F: std::_Vector_base<float, std::allocator<float> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==14458== 
+==14458== HEAP SUMMARY:
+==14458==     in use at exit: 152 bytes in 2 blocks
+==14458==   total heap usage: 4 allocs, 2 frees, 73,880 bytes allocated
+==14458== 
+==14458== 136 bytes in 1 blocks are possibly lost in loss record 2 of 2
+==14458==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14458==    by 0x50CF83F: __cxa_allocate_exception (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==14458==    by 0x50F8EAD: std::__throw_bad_alloc() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==14458==    by 0x10C849: __gnu_cxx::new_allocator<float>::allocate(unsigned long, void const*) (new_allocator.h:102)
+==14458==    by 0x10C437: std::allocator_traits<std::allocator<float> >::allocate(std::allocator<float>&, unsigned long) (alloc_traits.h:436)
+==14458==    by 0x10BB2F: std::_Vector_base<float, std::allocator<float> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==14458==    by 0x10AF3C: std::_Vector_base<float, std::allocator<float> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+==14458==    by 0x10A6DA: std::_Vector_base<float, std::allocator<float> >::_Vector_base(unsigned long, std::allocator<float> const&) (stl_vector.h:138)
+==14458==    by 0x109C9D: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (stl_vector.h:284)
+==14458==    by 0x1093A7: main (main.cpp:36)
+==14458== 
+==14458== LEAK SUMMARY:
+==14458==    definitely lost: 0 bytes in 0 blocks
+==14458==    indirectly lost: 0 bytes in 0 blocks
+==14458==      possibly lost: 136 bytes in 1 blocks
+==14458==    still reachable: 16 bytes in 1 blocks
+==14458==         suppressed: 0 bytes in 0 blocks
+==14458== Reachable blocks (those to which a pointer was found) are not shown.
+==14458== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==14458== 
+==14458== For counts of detected and suppressed errors, rerun with: -v
+==14458== Use --track-origins=yes to see where uninitialised values come from
+==14458== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

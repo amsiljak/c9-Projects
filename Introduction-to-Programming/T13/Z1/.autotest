@@ -1,0 +1,80 @@
+{
+    "id": 5574,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Tutorijal 13, zadatak 1",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Da li je student kreirao datoteku ispit.txt trazenu u tutorijalu? *\/\n_main();\n\nprintf(\"ispit_sortiran.txt:\\n\");\nFILE* izlaz=fopen(\"ispit_sortiran.txt\",\"r\");\nif(izlaz==NULL){\n          printf(\"Greska pri otvaranju datoteke ispit_sortiran.txt\");\n          return 0;\n        }\nint c;\ndo{\n  c=fgetc(izlaz);\n  if(c!=EOF) printf(\"%c\",c);\n }while(c!=EOF);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka ispit_sortiran.txt je kreirana\\nispit_sortiran.txt:\\nIvic                Ivica          20\\nRadic               Rade           19\\nMarkovic            Marko          14\\nMajic               Maja           12\\nDanilovic           Danilo         12\\nAlmirovic           Almir          10\\nZdravkovic          Zdravko         8\\nMuharemovic         Muharem         7\\nAnic                Ana             7\\nIsovic              Ismet           5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Kreiramo vlastitu datoteku *\/\nFILE* ulaz=fopen(\"ispit.txt\",\"w\");\nfputs(\"Medo                Brundo          7\\nMujo                Mujic          10\\n\" ,ulaz);\nfputs(\"Nikola              Tesla          20\\n\", ulaz);\nfputs(\"Masa                Masic          13\\nAlbert              Ajnstajn       19\\n\", ulaz);\nfclose(ulaz);\n\n_main();\n\n\/\/ispis na ekran datoteke\nprintf(\"ispit_sortiran.txt:\\n\");\nFILE* izlaz=fopen(\"ispit_sortiran.txt\",\"r\");\nif(izlaz==NULL){\n          printf(\"Greska pri otvaranju datoteke ispit_sortiran.txt\");\n          return 0;\n        }\nint c;\ndo{\n  c=fgetc(izlaz);\n  if(c!=EOF) printf(\"%c\",c);\n }while(c!=EOF);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka ispit_sortiran.txt je kreirana\\nispit_sortiran.txt: \\nNikola              Tesla          20\\nAlbert              Ajnstajn       19\\nMasa                Masic          13\\nMujo                Mujic          10\\nMedo                Brundo          7        "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Da li dobijemo gresku ako datoteka ne postoji? *\/\nchar staro_ime_datoteke[100]=\"ispit.txt\", novo_ime_datoteke[100]=\"ispit\";\nrename(staro_ime_datoteke, novo_ime_datoteke);\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Greska pri otvaranju datoteke ispit.txt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+/rhome/a/asiljak1/workspace/TP/T1/Z4/main.cpp: In function ‘int main()’:
+/rhome/a/asiljak1/workspace/TP/T1/Z4/main.cpp:10:48: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         while(!(std::cin>>n) || n<0 || n!=int(n)) 
+                                                ^
+/rhome/a/asiljak1/workspace/TP/T1/Z4/main.cpp:18:15: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if(n==0) 
+               ^
+/rhome/a/asiljak1/workspace/TP/T1/Z4/main.cpp:30:22: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if(suma==n) std::cout<<"Broj "<<n<<" je savrsen!"<<std::endl;
+                      ^

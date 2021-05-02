@@ -1,0 +1,88 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:18:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n   else if(D==0)\n            ^~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "18",
+                "col": "12",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_7931/main.c:18:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]   else if(D==0)            ^~",
+                "code": "else if(D==0)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "876": {
+            "status": 1,
+            "run_result": {
+                "output": "\n Unesite koeficijente kvadratne jednadzbe a,b,c:\n Rjesenja su: x1=1.511636   x2=0.029225\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1170": {
+            "status": 1,
+            "run_result": {
+                "output": "\n Unesite koeficijente kvadratne jednadzbe a,b,c:\n Rjesenja su: x1=-0.381966   x2=-2.618034\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1277": {
+            "status": 1,
+            "run_result": {
+                "output": "\n Unesite koeficijente kvadratne jednadzbe a,b,c:\n Rjesenja su: x1=x2=-1.000000\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1278": {
+            "status": 1,
+            "run_result": {
+                "output": "\n Unesite koeficijente kvadratne jednadzbe a,b,c:\n Rjesenja su: x1 = (-0.500000,0.866025)\n x2 = (-0.500000,-0.866025)",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1548868728
+}

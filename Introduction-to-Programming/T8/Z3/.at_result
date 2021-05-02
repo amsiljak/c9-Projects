@@ -1,0 +1,116 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘maxtemp’:\nmain.c:9:12: warning: ‘max’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n     return max;\n            ^~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "9",
+                "col": "12",
+                "message": "'max' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_4669/main.c:9:12: warning: ‘max’ may be used uninitialized in this function [-Wmaybe-uninitialized]     return max;            ^~~",
+                "code": "return max;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "751": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj mjerenja: Unesite temperature: Maksimalna temperatura: 20.0\nProsjecna temperatura: 14.0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "752": {
+            "status": 1,
+            "run_result": {
+                "output": "10.70",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "753": {
+            "status": 1,
+            "run_result": {
+                "output": "4.46",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "754": {
+            "status": 1,
+            "run_result": {
+                "output": "0.00 0.00",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1542": {
+            "status": 1,
+            "run_result": {
+                "output": "OK",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1548": {
+            "status": 1,
+            "run_result": {
+                "output": "99.99 49.99",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1567979501
+}

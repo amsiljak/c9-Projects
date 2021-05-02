@@ -1,0 +1,16 @@
+/rhome/a/asiljak1/workspace/OR/Z4/Z3/main.c: In function ‘dvostruko’:
+/rhome/a/asiljak1/workspace/OR/Z4/Z3/main.c:7:8: warning: unused variable ‘p’ [-Wunused-variable]
+  char* p;
+        ^
+/rhome/a/asiljak1/workspace/OR/Z4/Z3/main.c:6:18: warning: unused variable ‘br2’ [-Wunused-variable]
+  int k=0, br1=0, br2=0;
+                  ^~~
+/rhome/a/asiljak1/workspace/OR/Z4/Z3/main.c:6:11: warning: unused variable ‘br1’ [-Wunused-variable]
+  int k=0, br1=0, br2=0;
+           ^~~
+/rhome/a/asiljak1/workspace/OR/Z4/Z3/main.c:6:6: warning: unused variable ‘k’ [-Wunused-variable]
+  int k=0, br1=0, br2=0;
+      ^
+/rhome/a/asiljak1/workspace/OR/Z4/Z3/main.c:5:9: warning: unused variable ‘temp’ [-Wunused-variable]
+  int m, temp;
+         ^~~~

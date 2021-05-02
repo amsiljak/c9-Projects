@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/OR/ZSR4/Z4/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/ZSR4/Z4/main.c:4:46: warning: unused variable ‘L’ [-Wunused-variable]
+  int i,br=0,niz[100]={2,2,2,3,2,3,2,2},N=8,j,L;
+                                              ^

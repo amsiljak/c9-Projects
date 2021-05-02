@@ -1,0 +1,122 @@
+{
+    "id": 7174,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 10, zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1403,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\nchar niz1[] = \"abcdef cde AbCDE\";\nchar niz2[] = \"abcdef cde AbCDE\";\nprintf(\"'%s'\\n\", IzbaciTekst(niz1, \"abc\", 1));\nprintf(\"'%s'\", IzbaciTekst(niz2, \"abc\", 0));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'def cde AbCDE'\\n'def cde DE'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1404,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/by rpedljak1 aka doktor_laga\nchar niz[] = \"RI ri rI Ri kurs KURS kUrS je najbolji smjer\";\nprintf(\"'%s'\", IzbaciTekst(niz, \"RI KURS\", 0));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'RI je najbolji smjer'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1405,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Ne treba izbaciti nista *\/\nchar niz[] = \"RI je najbolji smjer\";\nprintf(\"'%s'\", IzbaciTekst(niz, \"\", 0));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'RI je najbolji smjer'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1406,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Ostali samo razmaci *\/\nchar niz[] = \"abcABC aBC ABcAbC\";\nprintf(\"'%s'\", IzbaciTekst(niz, \"abc\", 0));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'  '"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1407,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Sve izbaceno *\/\nchar niz[] = \"xXxXxYYYyy\";\nprintf(\"'%s'\", IzbaciTekst(niz, \"xy\", 0));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "''"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

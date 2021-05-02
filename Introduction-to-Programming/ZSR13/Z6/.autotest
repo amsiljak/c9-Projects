@@ -1,0 +1,80 @@
+{
+    "id": 5600,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), ZSR 13, zadatak 6",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ZSR 13 zadatak 6, test 1\n\/\/Autotest provjerava da li se datoteka a\u017eurira nakon svake promjene!\n\n\/*Kreiramo novu datoteku*\/\nFILE* ulaz=fopen(\"automobili.txt\",\"w\");\nfputs(\"Audi                321-M-987 1\\nGolf                321-M-988 1\\n\" ,ulaz);\nfclose(ulaz);\n\n\n\/* Pozivamo main, koji treba raditi sa datotekom *\/\nprintf(\"\\n\");\n_main();\n\/* Provjera da li se datoteka a\u017eurira nakon svake promjene *\/\nprintf(\"\\nautomobili.txt:\\n\");\nFILE* izlaz = fopen(\"automobili.txt\", \"r\");\nif (izlaz == NULL) {\n    printf(\"Datoteka ne postoji!\");\n    return 0;\n}\n\n\n\n\/\/Ispis na ekran datoteke sa automobilima\nint c;\ndo {\n   c = fgetc(izlaz);\n   if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\n321-M-987\n0"
+            },
+            "expected": [
+                "Unesite 1 za brisanje automobila, 2 za brisanje korisnika, 3 za provjeru pretplate, 4 za (ponovno)ucitavanje podataka, 5 za a\u017euriranje datoteke, 0 za izlaz: Molimo unesite registraciju automobila kojeg treba izbaciti: Unesite 1 za brisanje automobila, 2 za brisanje korisnika, 3 za provjeru pretplate, 4 za (ponovno)ucitavanje podataka, 5 za a\u017euriranje datoteke, 0 za izlaz: \\nautomobili.txt:\\nGolf                321-M-988 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ZSR 13 zadatak 6, test 2\n\n\/\/Da li program brise nepravilne podatke(automobile ciji vlasnici vi\u0161e nisu korisnici parkinga)\n\n\/*Kreiramo nove datoteke*\/\nFILE* ulaz=fopen(\"automobili.txt\",\"w\");\nfputs(\"Audi                321-M-987 1\\nGolf                321-M-988 2\\n\" ,ulaz);\nfclose(ulaz);\nFILE* ulaz=fopen(\"korisnici.txt\",\"w\");\nfputs(\"1 MehoMehic                     1 1 2020\\n2 HanaHanic                     1 1 2020\\n\" ,ulaz);\nfclose(ulaz);\n\n\n\n\/* Pozivamo main, koji treba raditi sa datotekom *\/\nprintf(\"\\n\");\n_main();\n\/* Provjera da li se datoteka a\u017eurira nakon svake promjene *\/\nprintf(\"\\nautomobili.txt:\\n\");\nFILE* izlaz = fopen(\"automobili.txt\", \"r\");\nif (izlaz == NULL) {\n    printf(\"Datoteka ne postoji!\");\n    return 0;\n}\n\n\n\n\/\/Ispis na ekran datoteke sa automobilima\nint c;\ndo {\n   c = fgetc(izlaz);\n   if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\n2\n0"
+            },
+            "expected": [
+                "Unesite 1 za brisanje automobila, 2 za brisanje korisnika, 3 za provjeru pretplate, 4 za (ponovno)ucitavanje podataka, 5 za a\u017euriranje datoteke, 0 za izlaz: Molimo unesite id korisnika kojeg treba izbrisati: Unesite 1 za brisanje automobila, 2 za brisanje korisnika, 3 za provjeru pretplate, 4 za (ponovno)ucitavanje podataka, 5 za a\u017euriranje datoteke, 0 za izlaz: \\nautomobili.txt:\\nAudi                321-M-987 1\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ZSR 13 zadatak 6, test 3\n\n\/\/Da li program brise automobile \u010dijim vlasnicima je istekla pretplata\n\n\/*Kreiramo nove datoteke*\/\nFILE* ulaz=fopen(\"automobili.txt\",\"w\");\nfputs(\"BMW                 321-M-987 1\\nOpel                321-M-928 2\\n\" ,ulaz);\nfclose(ulaz);\nFILE* ulaz=fopen(\"korisnici.txt\",\"w\");\nfputs(\"1 MehoMehic                     1 1 2016\\n2 HanaHanic                     1 1 2020\\n\" ,ulaz);\nfclose(ulaz);\n\n\n\n\/* Pozivamo main, koji treba raditi sa datotekom *\/\nprintf(\"\\n\");\n_main();\n\/* Provjera da li se datoteka a\u017eurira nakon svake promjene *\/\nprintf(\"\\nautomobili.txt:\\n\");\nFILE* izlaz = fopen(\"automobili.txt\", \"r\");\nif (izlaz == NULL) {\n    printf(\"Datoteka ne postoji!\");\n    return 0;\n}\n\n\n\n\/\/Ispis na ekran datoteke sa automobilima\nint c;\ndo {\n   c = fgetc(izlaz);\n   if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0"
+            },
+            "expected": [
+                "Unesite 1 za brisanje automobila, 2 za brisanje korisnika, 3 za provjeru pretplate, 4 za (ponovno)ucitavanje podataka, 5 za a\u017euriranje datoteke, 0 za izlaz: \\nautomobili.txt:\\nOpel                321-M-927 2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

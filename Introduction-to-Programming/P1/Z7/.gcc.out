@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/OR/P1/Z7/main.c: In function ‘main’:
+/rhome/a/asiljak1/workspace/OR/P1/Z7/main.c:5:5: warning: ‘niz[0]’ is used uninitialized in this function [-Wuninitialized]
+  min=niz[0];
+  ~~~^~~~~~~

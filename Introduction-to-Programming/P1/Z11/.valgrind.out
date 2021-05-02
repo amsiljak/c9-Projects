@@ -1,0 +1,6 @@
+==2257== Memcheck, a memory error detector
+==2257== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2257== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==2257== Command: /rhome/a/asiljak1/workspace/OR/P1/Z11/.runme
+==2257== Parent PID: 2252
+==2257== 

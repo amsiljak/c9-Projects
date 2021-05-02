@@ -1,0 +1,4 @@
+/rhome/a/asiljak1/workspace/TP/Z2/Z5/main.cpp: In lambda function:
+/rhome/a/asiljak1/workspace/TP/Z2/Z5/main.cpp:52:65: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+     if(ZaSve(s.begin(),s.end(), [](char s){if(!(toupper(s)>='A' && toupper(s)<='Z' || s>='0' && s<='9')) return false; else return true;})) {
+                                                 ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~

@@ -1,0 +1,23 @@
+==32037== Memcheck, a memory error detector
+==32037== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==32037== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==32037== Command: /rhome/a/asiljak1/workspace/OR/T6/Z5/.runme
+==32037== Parent PID: 32024
+==32037== 
+==32037== 
+==32037== Process terminating with default action of signal 15 (SIGTERM)
+==32037==    at 0x514E081: read (read.c:27)
+==32037==    by 0x50CB147: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:531)
+==32037==    by 0x50CC3F1: _IO_default_uflow (genops.c:380)
+==32037==    by 0x50A9BE9: _IO_vfscanf (vfscanf.c:630)
+==32037==    by 0x50B9FD7: __isoc99_scanf (isoc99_scanf.c:37)
+==32037==    by 0x108755: main (main.c:8)
+==32037== 
+==32037== HEAP SUMMARY:
+==32037==     in use at exit: 0 bytes in 0 blocks
+==32037==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==32037== 
+==32037== All heap blocks were freed -- no leaks are possible
+==32037== 
+==32037== For counts of detected and suppressed errors, rerun with: -v
+==32037== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

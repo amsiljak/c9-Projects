@@ -1,0 +1,153 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘bool TestPerioda(std::vector<double>, int)’:\nmain.cpp:9:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n             if(v.at(i)!=v.at(i+p)) return false;\n                                 ^\nmain.cpp: In function ‘int main()’:\nmain.cpp:33:15: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if(n==0.f) break;\n               ^~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "9",
+                "col": "33",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_6528/main.cpp:9:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]             if(v.at(i)!=v.at(i+p)) return false;                                 ^",
+                "code": "if(v.at(i)!=v.at(i+p)) return false;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "33",
+                "col": "15",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_6528/main.cpp:33:15: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if(n==0.f) break;               ^~~",
+                "code": "if(n==0.f) break;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3153": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): Slijed je periodican sa osnovnim periodom 5.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3154": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): Slijed nije periodican!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3155": {
+            "status": 1,
+            "run_result": {
+                "output": "false true false false true false false false",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3156": {
+            "status": 1,
+            "run_result": {
+                "output": "true false false false false true false false true false",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3157": {
+            "status": 1,
+            "run_result": {
+                "output": "0 0 5 8",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3158": {
+            "status": 1,
+            "run_result": {
+                "output": "0 5 8 10 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3159": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): Slijed je periodican sa osnovnim periodom 4.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3160": {
+            "status": 1,
+            "run_result": {
+                "output": "1\n1000\n1001\n1001\n0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1553018167
+}
